@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">libs/modules/MessageFactory.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  <a href="identifiers.html">Identifier</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="git+ssh://git@gitlab.com/hftl/wonder_2.0.git">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/wonder.js~WONDER.html">WONDER</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">modules</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Conversation.js~Conversation.html">Conversation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/DataChannelEvtHandler.js~DataChannelEvtHandler.html">DataChannelEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Demand.js~Demand.html">Demand</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Identity.js~Identity.html">Identity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Idp.js~Idp.html">Idp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Message.js~Message.html">Message</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MessageFactory.js~MessageFactory.html">MessageFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MsgEvtHandler.js~MsgEvtHandler.html">MsgEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Participant.js~Participant.html">Participant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/RtcEvtHandler.js~RtcEvtHandler.html">RtcEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-errorHandler">errorHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DataChannelEvtType">DataChannelEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MessageType">MessageType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PayloadType">PayloadType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-RtcEvtType">RtcEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-GUID">GUID</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">libs/modules/MessageFactory.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other
+ * This framework is based on @see https://github.com/hypercomm/wonder
+ * @author Danny Koppenhagen &lt;mail@d-koppenhagen.de&gt;
+ * @author Johannes Hamfler &lt;jh@z7k.de&gt;
+ */
+
+&apos;use strict&apos;;
+
+/**
+ * @class
+ * @desc This class creates WONDER-compliant messages.
+ * Please note that all functions in this class are static,
+ * so there is no need to create MessageFactory objects.
+ */
+class MessageFactory {
+  /**
+   * @constructor
+   */
+  constructor() {}
+    /**
+     * @desc Creates an invitation message
+     * @param {Identity} from - The identity from which the message will be or was sent
+     * @param {Identity|Array&lt;Identity&gt;} to - The identity to which the message will be or was sent
+     * @param {GUID} conversationId - The conversationId of the conversation which is related to the invitation
+     * @param {Object} demand - The demanded resources for the conversation
+     * @param {Object} sessionDescription - The local description &quot;offer&quot; of the peer connection on the invitation sender&apos;s end
+     * @return {Message}
+     * @example MessageFactory.invitation(from, to, conversationId, demand, sessionDescription);
+     */
+  static invitation(from, to, conversationId, demand, sessionDescription) {
+    if (!(from instanceof Identity)) return new Error(&apos;[MessageFactory.invitation] from should be an instance of Identity&apos;);
+    if (!(to instanceof Identity || (typeof to == &apos;array&apos; || to instanceof Array) &amp;&amp; !to.find(function(i) {
+        return !(i instanceof Identity)
+      }))) return new Error(&apos;[MessageFactory.invitation] to should be an instance of Identity or an Array with Identities&apos;);
+    if (!(typeof conversationId == &apos;string&apos; || conversationId instanceof String)) return new Error(&apos;[MessageFactory.invitation] conversationId should be a string&apos;);
+    if (!(typeof demand == &apos;object&apos; || demand instanceof Object)) return new Error(&apos;[MessageFactory.invitation] demand should be an object&apos;);
+
+    var misc = {
+      &apos;demand&apos;: demand,
+      &apos;sessionDescription&apos;: sessionDescription
+    }
+    return new Message(from, to, MessageType.invitation, conversationId, misc);
+  }
+
+
+
+  /**
+   * @desc Creates a message to accept an invitation
+   * @param {Identity} from - The identity from which the message will be or was sent
+   * @param {Identity|Array&lt;Identity&gt;} to - The identity to which the message will be or was sent
+   * @param {GUID} conversationId - The conversationId of the conversation which is related to the invitation
+   * @param {Object} demand - The demanded resources for the conversation
+   * @param {Object} sessionDescription - The local description &quot;answer&quot; of the peer connection on the invitation reveiving end
+   * @return {Message}
+   * @example MessageFactory.accepted(from, to, conversationId, demand, sessionDescription);
+   */
+  static accepted(from, to, conversationId, demand, sessionDescription) {
+    if (!(from instanceof Identity)) return new Error(&apos;[MessageFactory.accepted] from should be an instance of Identity&apos;);
+    if (!(to instanceof Identity || (typeof to == &apos;array&apos; || to instanceof Array) &amp;&amp; !to.find(function(i) {
+        return !(i instanceof Identity)
+      }))) return new Error(&apos;[MessageFactory.accepted] to should be an instance of Identity or an Array with Identities&apos;);
+    if (!(typeof conversationId == &apos;string&apos; || conversationId instanceof String)) return new Error(&apos;[MessageFactory.accepted] conversationId should be a string&apos;);
+    if (!(typeof demand == &apos;object&apos; || demand instanceof Object)) return new Error(&apos;[MessageFactory.accepted] demand should be an object&apos;);
+
+    var misc = {
+      &apos;demand&apos;: demand,
+      &apos;sessionDescription&apos;: sessionDescription
+    }
+    return new Message(from, to, MessageType.accepted, conversationId, misc);
+  }
+
+
+
+  /**
+   * @desc Creates a message to decline an invitation
+   * @param {Identity} from - The identity from which the message will be or was sent
+   * @param {Identity|Array&lt;Identity&gt;} to - The identity to which the message will be or was sent
+   * @param {GUID} conversationId - The conversationId of the conversation which is related to the invitation
+   * @example MessageFactory.declined(from, to, conversationId);
+   * @return {Message}
+   */
+  static declined(from, to, conversationId) {
+    console.log(from, to, conversationId);
+    if (!(from instanceof Identity)) return new Error(&apos;[MessageFactory.declined] from should be an instance of Identity&apos;);
+    if (!(to instanceof Identity || (typeof to == &apos;array&apos; || to instanceof Array) &amp;&amp; !to.find(function(i) {
+        return !(i instanceof Identity)
+      }))) return new Error(&apos;[MessageFactory.declined] to should be an instance of Identity or an Array with Identities&apos;);
+    if (!(typeof conversationId == &apos;string&apos; || conversationId instanceof String)) return new Error(&apos;[MessageFactory.declined] conversationId should be a string&apos;);
+
+    return new Message(from, to, MessageType.declined, conversationId);
+  }
+
+
+
+  /**
+   * @desc Creates a message to end a conversation
+   * @param {Identity} from - The identity from which the message will be or was sent
+   * @param {Identity|Array&lt;Identity&gt;} to - The identity to which the message will be or was sent
+   * @param {GUID} conversationId - The conversationId of the conversation which is related to the invitation
+   * @example MessageFactory.bye(from, to, conversationId);
+   * @return {Message}
+   */
+  static bye(from, to, conversationId) {
+    if (!(from instanceof Identity)) return new Error(&apos;[MessageFactory.bye] from should be an instance of Identity&apos;);
+    if (!(to instanceof Identity || (typeof to == &apos;array&apos; || to instanceof Array) &amp;&amp; !to.find(function(i) {
+        return !(i instanceof Identity)
+      }))) return new Error(&apos;[MessageFactory.bye] to should be an instance of Identity or an Array with Identities&apos;);
+    if (!(typeof conversationId == &apos;string&apos; || conversationId instanceof String)) return new Error(&apos;[MessageFactory.bye] conversationId should be a string&apos;);
+
+    return new Message(from, to, MessageType.bye, conversationId);
+  }
+
+
+  /**
+   * @desc Creates a message containing the new demand
+   * @param {Identity} from - The identity from which the message will be or was sent
+   * @param {Identity|Array&lt;Identity&gt;} to - The identity to which the message will be or was sent
+   * @param {GUID} conversationId - The conversationId of the conversation which is related to the invitation
+   * @param {Object} demand - The demanded resources for the conversation
+   * @example MessageFactory.updateConstraints(from, to, conversationId, demand);
+   * @return {Message}
+   * @TODO rename the message to updateDemand
+   */
+  static updateConstraints(from, to, conversationId, demand) {
+    if (!(from instanceof Identity)) return new Error(&apos;[MessageFactory.updateConstraints] from should be an instance of Identity&apos;);
+    if (!(to instanceof Identity || (typeof to == &apos;array&apos; || to instanceof Array) &amp;&amp; !to.find(function(i) {
+        return !(i instanceof Identity)
+      }))) return new Error(&apos;[MessageFactory.updateConstraints] to should be an instance of Identity or an Array with Identities&apos;);
+    if (!(typeof conversationId == &apos;string&apos; || conversationId instanceof String)) return new Error(&apos;[MessageFactory.updateConstraints] conversationId should be a string&apos;);
+    if (!(typeof demand == &apos;object&apos; || demand instanceof Object)) return new Error(&apos;[MessageFactory.updateConstraints] demand should be an object&apos;);
+
+    var misc = {
+      &apos;demand&apos;: demand,
+    }
+    return new Message(from, to, MessageType.update, conversationId, misc);
+  }
+
+
+
+  /**
+   * @desc Creates an message to update ICE candidates of a peer connection
+   * @param {Identity} from - The identity from which the message will be or was sent
+   * @param {Identity|Array&lt;Identity&gt;} to - The identity to which the message will be or was sent
+   * @param {GUID} conversationId - The conversationId of the conversation which is related to the invitation
+   * @param {Object} iceCandidates - An object containing new ICE candidates (STUN, TURN)
+   * @example MessageFactory.updateIceCandidates(from, to, conversationId, iceCandidates);
+   * @return {Message}
+   */
+  static updateIceCandidates(from, to, conversationId, iceCandidates) {
+    if (!(from instanceof Identity)) return new Error(&apos;[MessageFactory.updateIceCandidates] from should be an instance of Identity&apos;);
+    if (!(to instanceof Identity || (typeof to == &apos;array&apos; || to instanceof Array) &amp;&amp; !to.find(function(i) {
+        return !(i instanceof Identity)
+      }))) return new Error(&apos;[MessageFactory.updateIceCandidates] to should be an instance of Identity or an Array with Identities&apos;);
+    if (!(typeof conversationId == &apos;string&apos; || conversationId instanceof String)) return new Error(&apos;[MessageFactory.updateIceCandidates] conversationId should be a string&apos;);
+
+    return new Message(from, to, MessageType.connectivityCandidate, conversationId, iceCandidates);
+  }
+
+
+  /**
+   * @desc Creates a message containing the new session description
+   * @param {Identity} from - The identity from which the message will be or was sent
+   * @param {Identity|Array&lt;Identity&gt;} to - The identity to which the message will be or was sent
+   * @param {GUID} conversationId - The conversationId of the conversation which is related to the invitation
+   * @param {Object} sdp - The SDP object of the peer connection
+   * @example MessageFactory.updateSdp(from, to, conversationId, sdp);
+   * @return {Message}
+   */
+  static updateSdp(from, to, conversationId, sdp) {
+    if (!(from instanceof Identity)) return new Error(&apos;[MessageFactory.updateConstraints] from should be an instance of Identity&apos;);
+    if (!(to instanceof Identity || (typeof to == &apos;array&apos; || to instanceof Array) &amp;&amp; !to.find(function(i) {
+        return !(i instanceof Identity)
+      }))) return new Error(&apos;[MessageFactory.updateConstraints] to should be an instance of Identity or an Array with Identities&apos;);
+    if (!(typeof conversationId == &apos;string&apos; || conversationId instanceof String)) return new Error(&apos;[MessageFactory.updateConstraints] conversationId should be a string&apos;);
+    //if( !(typeof sdp == &apos;object&apos; || demand instanceof Object) ) return new Error(&apos;[MessageFactory.updateConstraints] demand should be an object&apos;);
+
+    var misc = {
+      &apos;sdp&apos;: sdp,
+    }
+    return new Message(from, to, MessageType.updateSdp, conversationId, misc);
+  }
+
+
+
+  /**
+   * @desc Creates a message to announce the current presence status
+   * @param {Identity} from - The identity from which the message will be or was sent
+   * @param {Identity|Array&lt;Identity&gt;} to - The identity to which the message will be or was sent
+   * @param {GUID} conversationId - The conversationId of the conversation which is related to the invitation
+   * @param {string} status - The presence state of the identity from which the message is sent
+   * @example MessageFactory.presence(from, to, conversationId, status);
+   * @return {Message}
+   * @TODO use it in the communication
+   */
+  static presence(from, to, conversationId, status) {
+    if (!(from instanceof Identity)) return new Error(&apos;[MessageFactory.presence] from should be an instance of Identity&apos;);
+    if (!(to instanceof Identity || (typeof to == &apos;array&apos; || to instanceof Array) &amp;&amp; !to.find(function(i) {
+        return !(i instanceof Identity)
+      }))) return new Error(&apos;[MessageFactory.presence] to should be an instance of Identity or an Array with Identities&apos;);
+    if (!(typeof conversationId == &apos;string&apos; || conversationId instanceof String)) return new Error(&apos;[MessageFactory.presence] conversationId should be a string&apos;);
+
+    return new Message(from, to, MessageType.presence, conversationId);
+  }
+
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.3.1)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

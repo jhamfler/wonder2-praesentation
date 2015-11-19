@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">libs/modules/Types.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  <a href="identifiers.html">Identifier</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="git+ssh://git@gitlab.com/hftl/wonder_2.0.git">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/wonder.js~WONDER.html">WONDER</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">modules</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Conversation.js~Conversation.html">Conversation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/DataChannelEvtHandler.js~DataChannelEvtHandler.html">DataChannelEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Demand.js~Demand.html">Demand</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Identity.js~Identity.html">Identity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Idp.js~Idp.html">Idp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Message.js~Message.html">Message</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MessageFactory.js~MessageFactory.html">MessageFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MsgEvtHandler.js~MsgEvtHandler.html">MsgEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Participant.js~Participant.html">Participant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/RtcEvtHandler.js~RtcEvtHandler.html">RtcEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-errorHandler">errorHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DataChannelEvtType">DataChannelEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MessageType">MessageType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PayloadType">PayloadType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-RtcEvtType">RtcEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-GUID">GUID</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">libs/modules/Types.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other
+ * This framework is based on @see https://github.com/hypercomm/wonder
+ * @author Steffen Druesedow &lt;Steffen.Druesedow@telekom.de&gt;
+ * @author Danny Koppenhagen &lt;mail@d-koppenhagen.de&gt;
+ * @author Johannes Hamfler &lt;jh@z7k.de&gt;
+ */
+
+&apos;use strict&apos;;
+
+/**
+ * Enummeration for message types
+ * @typedef {String} MessageType
+ * @type {Object} MessageType
+ *
+ */
+var MessageType = {
+  /** Message to invite a peer to a conversation. */
+  invitation: &apos;invitation&apos;,
+  /** Answer for conversation accepted. */
+  accepted: &apos;accepted&apos;,
+  /** Answer for conversation not accepted. */
+  declined: &apos;declined&apos;,
+  /** Message from a peer to leave a conversation */
+  bye: &apos;bye&apos;,
+  /** Message to add a new {@link Demand} */
+  update: &apos;update&apos;,
+  /** Message to process a new SDP offer or Answer
+  * @TODO use update instead of invitations when being in a conversation already
+  * use updatedSdp when sending the SDP answer and a conversation is already present */
+  updateSdp: &apos;updateSdp&apos;,
+  /** Answer when successfully added the new {@link Demand} */
+  updated: &apos;updated&apos;,
+  /** Message to publish the presence status of the identity */
+  presence: &apos;presence&apos;,
+  /** Message to be used when no predefined type suits the Message
+  * @TODO implement it  */
+  message: &apos;message&apos;,
+  /** Message contains an ICE candidate */
+  connectivityCandidate: &apos;connectivityCandidate&apos;
+}
+
+/**
+ * Enumeration for the peer connection (RTC) event types
+ * @typedef {Object} RtcEvtType
+ * @type {Object} RtcEvtType
+ */
+var RtcEvtType = {
+  /** Event fired when the remote end adds a audio or video stream to its the peer connection */
+  onaddstream: &apos;addstream&apos;,
+  /** Event occuring when a local audio or video stream is added; this is not a standard peer connection event */
+  onaddlocalstream: &apos;onaddlocalstream&apos;,
+  /** Event fired when the SDP of the peer connection changes and a new SDP negotiation needs to be done */
+  onnegotiationneeded: &apos;onnegotiationneeded&apos;,
+  /** Event occuring each time a new ICE candidate is found and needs to be sent to the remote peer*/
+  onicecandidate: &apos;icecandidate&apos;,
+  /** Event rising when the peer connection signaling state changes */
+  onsignalingstatechange: &apos;onsignalingstatechange&apos;,
+  /** Event triggered when a stream is removed */
+  onremovestream: &apos;onremovestream&apos;,
+  /** Event emerging when the state of the ICE gathering phanse changes **/
+  oniceconnectionstatechange: &apos;oniceconnectionstatechange&apos;,
+  /** Event rising locally when a datachannel is added to the peer connection */
+  ondatachannel: &apos;datachannel&apos;
+};
+
+/**
+ * Enumeration for the DataChannelEvt types
+ * @typedef {Object} DataChannelEvtType
+ * @type {Object} DataChannelEvtType
+ */
+var DataChannelEvtType = {
+  /** Event seen when a data channel is opened */
+  onopen: &apos;open&apos;,
+  /** Event occuring when the datachannel is closed */
+  onclose: &apos;onclose&apos;,
+  /** Event rising when a message is received through a data channel */
+  onmessage: &apos;message&apos;
+};
+
+
+/**
+ * Enumeration for common payload types
+ * @typedef {Object} PayloadType
+ * @type {Object} PayloadType
+ */
+var PayloadType = {
+  /** Plain data codec, sends and receives data without altering it */
+  plain: &apos;plain&apos;,
+  /** Data codec for sending files */
+  file: &apos;file&apos;,
+  /** Codec for chat messages */
+  chat: &apos;chat&apos;,
+  /** Codec to send and view images */
+  image: &apos;image&apos;,
+  /** Codec to deal with voice data */
+  voice: &apos;voice&apos;,
+  /** Video codec for non RTC video transportation */
+  video: &apos;video&apos;
+};
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.3.1)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">libs/modules/Idp.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  <a href="identifiers.html">Identifier</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="git+ssh://git@gitlab.com/hftl/wonder_2.0.git">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/wonder.js~WONDER.html">WONDER</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">modules</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Conversation.js~Conversation.html">Conversation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/DataChannelEvtHandler.js~DataChannelEvtHandler.html">DataChannelEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Demand.js~Demand.html">Demand</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Identity.js~Identity.html">Identity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Idp.js~Idp.html">Idp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Message.js~Message.html">Message</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MessageFactory.js~MessageFactory.html">MessageFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MsgEvtHandler.js~MsgEvtHandler.html">MsgEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Participant.js~Participant.html">Participant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/RtcEvtHandler.js~RtcEvtHandler.html">RtcEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-errorHandler">errorHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DataChannelEvtType">DataChannelEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MessageType">MessageType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PayloadType">PayloadType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-RtcEvtType">RtcEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-GUID">GUID</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">libs/modules/Idp.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other
+ * This framework is based on @see https://github.com/hypercomm/wonder
+ * @author Steffen Druesedow &lt;Steffen.Druesedow@telekom.de&gt;
+ * @author Danny Koppenhagen &lt;mail@d-koppenhagen.de&gt;
+ * @author Johannes Hamfler &lt;jh@z7k.de&gt;
+ */
+
+
+&apos;use strict&apos;;
+
+/**
+ * @class
+ * @desc This class is the central class for resolving identities and exists only once in each wonder instance.
+ * The Idp is a singleton object, there will always be just one instance of it, no matter how often the constructor is called.
+ */
+class Idp {
+  /**
+   * @constructor
+   * @param {String} [remoteIdp] - The url string to a remote Idp.
+   * @param {Identity} [myIdentity] - The own Identity
+   */
+  constructor(remoteIdp, myIdentity) {
+    /**
+     * @type {String|Object} remoteIdp
+     * @desc The url string to a remote Idp or an string for a well-known IdP like &apos;webfinger&apos;. Default: webfinger
+     */
+    this.remoteIdp = remoteIdp || &apos;webfinger&apos;;
+
+    /**
+     * @type {Array&lt;Identity&gt;} resolvedIdentities
+     * @desc containing already known identities.
+     */
+    this.resolvedIdentities = [];
+
+    /**
+     * @type {String} messagingServer
+     * @desc contains the url to the messaging server, which is received from the remote Idp.
+     */
+    this.messagingServer = null;
+
+    /**
+     * @type {Identity} myIdentity
+     * @desc contains the identity of the local user
+     */
+    this.myIdentity = myIdentity;
+  }
+
+
+  /**
+   * @desc Return an Identity by searching resolved ones XOR resolve them on the fly
+   * @param {String} rtcIdentity - identity identifier to resolve an identity
+   * @param {Object} credentials - additional credentials of the identity
+   * @return {Promise&lt;Identity&gt;}
+   */
+  getIdentity(rtcIdentity, credentials) {
+    var that = this;
+
+    return new Promise(function(resolve, reject) {
+      if (!rtcIdentity) reject(new Error(&apos;[Idp getIdentity] no rtcIdentity parameter&apos;));
+
+      // return the resolved identity if it exists
+      for (var i = 0; i &lt; that.resolvedIdentities.length; i++) {
+        if (that.resolvedIdentities[i].rtcIdentity === rtcIdentity) {
+          console.log(&apos;[Idp getIdentity] identity already exists in:&apos;, that.resolvedIdentities);
+          resolve(that.resolvedIdentities[i]);
+          return; // needs to be here because resolve isn&apos;t leaving the function
+        }
+      }
+
+
+      // otherwise ask the remote idp
+      that.askRemoteIdp(rtcIdentity, credentials)
+        // both remote idp and msg download server answered correctly
+        .then(function(identity) {
+          if (identity) resolve(identity);
+          else reject(new Error(&apos;[Idp getIdentity] no identity resolved from remote idp&apos;));
+        })
+        // an error was thrown, possibly due to the network
+        .catch(function(error) {
+          reject(error);
+        });
+
+    });
+  }
+
+
+
+  /**
+   * @desc Resolve an identity by asking the remote idp for information
+   * @param {String} rtcIdentity - Identity identifier to resolve an identity from the remote idp
+   * @param {Object} credentials - additional credentials of the identity
+   * @return {Promise&lt;Identity&gt;}
+   */
+  askRemoteIdp(rtcIdentity, credentials) {
+    var that = this;
+    var localMsgStubUrl = null;
+    var remoteMsgStubUrl = null;
+    var messagingServer = null;
+    var remoteMessagingServer = null;
+    var codecs = {};
+
+    return new Promise(function(resolve, reject) {
+      if (!rtcIdentity) reject(new Error(&apos;[Idp askRemoteIdp] no rtcIdentity in parameter&apos;));
+      console.log(&apos;[Idp askRemoteIdp] asking remote Idp...&apos;);
+
+      if (that.remoteIdp === &apos;webfinger&apos;) {
+        require([&apos;webfinger&apos;], function() {
+          askWebFinger();
+        }, function(error) {
+          reject(new Error(&apos;[Idp askRemoteIdp] webfinger not found&apos;, error));
+        });
+      } else askJsonpIdp();
+
+
+      /**
+       * askWebFinger will search for identities using the webfinger protocol
+       */
+      function askWebFinger() {
+        // using the webfinger class
+        var webfinger = new WebFinger({
+          webfist_fallback: false, // defaults to false, fallback to webfist
+          tls_only: false, // defaults to true
+          uri_fallback: true, // defaults to false
+          request_timeout: 10000, // defaults to 10000
+        });
+
+        webfinger.lookup(rtcIdentity, function(err, data) {
+          if (err) {
+            reject((new Error(&apos;[Idp askRemoteIdp] error: &apos;, err.message)));
+          } else {
+            console.log(&apos;[Idp askRemoteIdp] found Webfinger entry for &apos; + rtcIdentity + &apos;: &apos;, data);
+
+            /**
+             * get the MessagingStub URL&apos;s
+             * possibly there are different URL&apos;s for local and remote stubs depending on the domain
+             */
+            for (var val in data.object.properties) {
+              if (data.object.properties[val] === &apos;localStub&apos;) localMsgStubUrl = val;
+              if (data.object.properties[val] === &apos;remoteStub&apos;) remoteMsgStubUrl = val;
+              if (data.object.properties[val] === &apos;messagingServer&apos;) messagingServer = val;
+              if (data.object.properties[val] === &apos;messagingServer_remote&apos;) remoteMessagingServer = val;
+              if (data.object.properties[val].substr(0, 5) == &apos;codec&apos;) {
+                var codecKey = data.object.properties[val].substr(6); // cut &apos;codec_&apos;
+                codecs[codecKey] = val;
+              }
+            };
+            console.log(&apos;[Idp askRemoteIdp] extracted codec URIs&apos;, codecs);
+
+            if ( remoteMsgStubUrl &amp;&amp; remoteMessagingServer ) {
+                var localDomain = that.myIdentity.split(&quot;@&quot;)[1];
+                var requestedDomain = rtcIdentity.split(&quot;@&quot;)[1];
+                if ( localDomain != requestedDomain ) {
+                    console.log(&quot;[Idp askRemoteIdp] using remote MsgStub &apos;&quot; + remoteMsgStubUrl + &quot;&apos; for identity: &quot; + rtcIdentity );
+                    localMsgStubUrl = remoteMsgStubUrl;
+                    messagingServer = remoteMessagingServer;
+                }
+            }
+
+            that.getMsgStub(localMsgStubUrl)
+              // successfully resolved the messaging stub
+              .then(function(msgStub) {
+                var identity = new Identity(rtcIdentity, that.remoteIdp, msgStub, localMsgStubUrl, messagingServer, codecs, credentials);
+                that.resolvedIdentities.push(identity); // store identity in array
+                resolve(identity); // return the identity
+              })
+              // failed to resolve the messaging stub
+              .catch(function(error) {
+                reject(error);
+              });
+          }
+        });
+      }
+
+
+      /**
+       * askOtherIdp is trying to connect to an IdP using the given IdP-options
+       */
+      function askJsonpIdp() {
+        require([that.remoteIdp + rtcIdentity],
+          // successfully received the identity
+          function(data) {
+            console.log(&apos;[Idp askJsonpIdp] remote idp answered: &apos;, data);
+            localMsgStubUrl = data.rows[0].messagingStubURL;
+            messagingServer = data.rows[0].messagingServer;
+            codecs = {};
+
+            for (val in data.rows[0]) {
+              if (val.substr(0, 5) === &apos;codec&apos;) {
+                var codecKey = val.substr(6); // cut &apos;codec_&apos;
+                codecs[codecKey] = data.rows[0][val];
+                console.log(&apos;[Idp askRemoteIdp] extracted codec URIs&apos;, codecs);
+              }
+            }
+
+            that.getMsgStub(localMsgStubUrl)
+              // successfully resolved the messaging stub
+              .then(function(msgStub) {
+                var identity = new Identity(rtcIdentity, that.remoteIdp, msgStub, localMsgStubUrl, messagingServer, codecs, credentials);
+                that.resolvedIdentities.push(identity); // store identity in the idp
+                resolve(identity); // return the identity
+              })
+              // failed to resolve the messaging stub
+              .catch(function(error) {
+                reject(new Error(&apos;[Idp askJsonpIdp] the messaging stub could not be loaded for &apos; + rtcIdentity + &apos;: &apos;, error));
+              });
+          },
+          // failed to receive the identity
+          function(error) {
+            reject(new Error(&apos;[Idp askJsonpIdp] the identity could not be resolved from remote idp: &apos;, error));
+          }
+        );
+      }
+
+
+    });
+  }
+
+
+
+  /**
+   * @desc Resolve a messaging stub by asking a stub providing server
+   * @param {string} localMsgStubUrl - URL to a messaging stub for a specific messaging server
+   * @return {MessagingStub}
+   */
+  getMsgStub(localMsgStubUrl) {
+    var that = this;
+    console.log(&apos;[Idp getMsgStub] asking stub server for an implementation: &apos;, localMsgStubUrl);
+
+    return new Promise(function(resolve, reject) {
+      require([localMsgStubUrl],
+        // successfully received the messaging stub
+        function(msgStub) {
+          console.log(&apos;[Idp getMsgStub] received stub: &apos;, msgStub);
+          resolve(msgStub);
+        },
+        // messaging stub download failed
+        function(error) {
+          reject(Error(&apos;[Idp getMsgStub] messaging stub could not be retrieved from URL; possibly a malformed URL or the server is unreachable: &apos;, error));
+        }
+      );
+    });
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.3.1)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

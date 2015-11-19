@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">libs/modules/Participant.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  <a href="identifiers.html">Identifier</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="git+ssh://git@gitlab.com/hftl/wonder_2.0.git">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/wonder.js~WONDER.html">WONDER</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">modules</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Conversation.js~Conversation.html">Conversation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/DataChannelEvtHandler.js~DataChannelEvtHandler.html">DataChannelEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Demand.js~Demand.html">Demand</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Identity.js~Identity.html">Identity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Idp.js~Idp.html">Idp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Message.js~Message.html">Message</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MessageFactory.js~MessageFactory.html">MessageFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MsgEvtHandler.js~MsgEvtHandler.html">MsgEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Participant.js~Participant.html">Participant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/RtcEvtHandler.js~RtcEvtHandler.html">RtcEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-errorHandler">errorHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DataChannelEvtType">DataChannelEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MessageType">MessageType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PayloadType">PayloadType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-RtcEvtType">RtcEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-GUID">GUID</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">libs/modules/Participant.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other
+ * This framework is based on @see https://github.com/hypercomm/wonder
+ * @author Danny Koppenhagen &lt;mail@d-koppenhagen.de&gt;
+ * @author Johannes Hamfler &lt;jh@z7k.de&gt;
+ */
+
+&apos;use strict&apos;;
+
+/**
+ * @class
+ * @desc This class represents a participant of a conversation.
+ * Identities can be stored in multiple participants but participants
+ * with the same identity cannot be in the same conversation.
+ */
+class Participant {
+  /**
+   * @constructor
+   * @param {WONDER} wonderInstance - The instance of the WONDER class used as a backreference
+   * @param {Identity} identity - The identity of the participant
+   * @param {Demand} demand - The resources a participant demands for the communication
+   */
+  constructor(wonderInstance, identity, demand) {
+    /**
+     * @type {WONDER} wonderInstance
+     * @desc Backreference to the WONDER instance
+     */
+    this.wonderInstance = wonderInstance;
+
+    /**
+     * @type {Identity} identity
+     * @desc The identity of the participant
+     */
+    this.identity = identity;
+
+    /**
+     * @type {Demand} demand
+     * @desc The resources a participant demands for the communication
+     */
+    this.demand = new Demand(demand);
+
+    /**
+     * @type {RTCPeerConnection} peerConnection
+     * @desc Used to hold the RTCPeerConnection to this participant
+     */
+    this.peerConnection = null;
+  }
+
+  /**
+   * @desc Returns the RtcPeerConnection of this participant
+   * @return {RTCPeerConnection}
+   */
+  getRtcPeerConnection() {
+    return this.peerConnection;
+  }
+
+  /**
+   * @desc Sets the RtcPeerConnection of this participant
+   * @param {RTCPeerConnection} rtcPeerConnection - The rtcPeerConnection to be set for this participant
+   */
+  setRtcPeerConnection(rtcPeerConnection) {
+    this.peerConnection = rtcPeerConnection;
+    this.peerConnection.onaddstream = this.wonderInstance.conversations[0].rtcEvtHandler.onEvt.bind(this.wonderInstance.conversations[0].rtcEvtHandler);
+    this.peerConnection.onicecandidate = this.wonderInstance.conversations[0].rtcEvtHandler.onEvt.bind(this.wonderInstance.conversations[0].rtcEvtHandler);
+    this.peerConnection.onIceStateChange = this.wonderInstance.conversations[0].rtcEvtHandler.onEvt.bind(this.wonderInstance.conversations[0].rtcEvtHandler);
+  }
+
+  /**
+   * @desc This function updates the demand by adding the new demand to the existing demand
+   * @param {Demand} demand - The demand to be included in the currently stored demand
+   * @TODO rename the function to addDemand
+   */
+  updateDemand(demand) {
+    this.demand = Demand.updateDemandAllow(this.demand, demand);
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.3.1)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

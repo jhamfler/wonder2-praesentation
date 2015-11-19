@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">libs/modules/Demand.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  <a href="identifiers.html">Identifier</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="git+ssh://git@gitlab.com/hftl/wonder_2.0.git">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/wonder.js~WONDER.html">WONDER</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">modules</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Conversation.js~Conversation.html">Conversation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/DataChannelEvtHandler.js~DataChannelEvtHandler.html">DataChannelEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Demand.js~Demand.html">Demand</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Identity.js~Identity.html">Identity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Idp.js~Idp.html">Idp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Message.js~Message.html">Message</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MessageFactory.js~MessageFactory.html">MessageFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MsgEvtHandler.js~MsgEvtHandler.html">MsgEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Participant.js~Participant.html">Participant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/RtcEvtHandler.js~RtcEvtHandler.html">RtcEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-errorHandler">errorHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DataChannelEvtType">DataChannelEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MessageType">MessageType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PayloadType">PayloadType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-RtcEvtType">RtcEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-GUID">GUID</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">libs/modules/Demand.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other
+ * This framework is based on @see https://github.com/hypercomm/wonder
+ * @author Danny Koppenhagen &lt;mail@d-koppenhagen.de&gt;
+ * @author Johannes Hamfler &lt;jh@z7k.de&gt;
+ */
+
+&apos;use strict&apos;;
+
+/**
+ * @class
+ * @desc This class converts different data demand types to a pre-defined format.
+ * The Format contains an &apos;in&apos; and &apos;out&apos; object which is used to differentiate local and remote media access.
+ * The output could look like this:
+ * @TODO change data-object in demand to be ablte to hold an array or another object containing multiple payload types
+ * @example
+ * {
+ *  in: {
+ *    video: {
+ *      mandatory: { minAspectRatio: 1.333, maxAspectRatio: 1.334 },
+ *      optional : [
+ *        { minFrameRate: 60 },
+ *        { maxWidth: 640 },
+ *        { maxHeigth: 480 }
+ *      ]
+ *    }
+ *    audio: true,
+ *    data: true
+ *  },
+ *  out: {
+ *    video: {
+ *      mandatory: { minAspectRatio: 1.4},
+ *      optional : [
+ *        { minFrameRate: 20 },
+ *        { maxWidth: 800 }
+ *      ]
+ *    }
+ *    audio: false,
+ *    data: &quot;chat&quot;
+ *  }
+ * }
+ */
+class Demand {
+  /**
+   * @constructor
+   * @param {String|Array&lt;String&gt;|Object} data - The resources which are requested
+   * @example
+   * var demand = new Demand(&quot;all&quot;); // demand video, audio and a data channel
+   * var demand = new Demand(&quot;audio&quot;); // demands audio for both directions
+   * var demand = new Demand(&quot;noRealTypeLikeVideoOrAudioOrData&quot;); // demands nothing
+   * var demand = new Demand([&quot;audio&quot;,&quot;data&quot;]); // demands audio and data for both directions
+   * var demand = new Demand({in: &quot;video&quot;, out: &quot;audio&quot;}); // demands incoming video and outgoing audio
+   * var demand = new Demand({out:{data:true,video:false}}}); // demands only an outgoing data channel
+   * @desc The constructor can be called with different data types and converts it to the necessary object.
+   * It doesn&apos;t return the Demand-object itself rather than a general object describing the demand in a structured way.
+   */
+  constructor(data) {
+    return Demand.convertDemand(data, Demand.getStandardDemand());
+  }
+
+  /**
+   * @desc This defines the format for the output as an object.
+   * @return {Object}
+   */
+  static getStandardDemand() {
+    return {
+      in : {
+        &apos;audio&apos;: false,
+        &apos;video&apos;: false,
+        &apos;data&apos;: false
+      },
+      out: {
+        &apos;audio&apos;: false,
+        &apos;video&apos;: false,
+        &apos;data&apos;: false
+      }
+    };
+  }
+
+
+  /**
+   * @desc The function converts different demand requests to a unified format.
+   * @param {String|Array&lt;String&gt;|Object} data - The requested demand which should be converted
+   * @param {Object} demand - The standard demand object
+   * @return {Object}
+   */
+  static convertDemand(data, demand) {
+
+    // case data is a string
+    if (typeof data === &apos;string&apos; || data instanceof String) {
+      if (data === &apos;&apos; || data === &apos;all&apos;) return demandAll(demand);
+      else return stringToDemand(data, demand);
+    }
+
+    // case data is an array of Strings
+    else if (data instanceof Array) {
+      if (data.length === 0) return demandAll(demand);
+      else return arrayToDemand(data, demand);
+    }
+
+    // case data is an Object
+    else if (data instanceof Object) {
+      if (data === null || data === undefined || Object.keys(data).length === 0) return demandAll(demand);
+      return objectToDemand(data, demand);
+    }
+    else return demandAll(demand);
+
+
+    /**
+     * @desc Convertes a string to a standardized format
+     * @param {String} data - The requested demand which should be converted
+     * @param {Object} demand - The standard demand object
+     * @return {Object}
+     */
+    function stringToDemand(data, demand) {
+      console.log(&apos;[Demand convertDemand] converting String:&apos;, data, &apos;to Demand &apos;, demand);
+
+      if (demand.in.hasOwnProperty(data) &amp;&amp; demand.out.hasOwnProperty(data)) {
+        demand.in[data] = true;
+        demand.out[data] = true;
+      }
+      return demand;
+    }
+
+
+    /**
+     * @desc Convertes an array to a standardized format
+     * @param {Array&lt;String&gt;} data - The requested demand which should be converted
+     * @param {Object} demand - The standard demand object
+     * @return {Object}
+     */
+    function arrayToDemand(data, demand) {
+      console.log(&apos;[Demand convertDemand] converting Array:&apos;, data, &apos;to Demand&apos;);
+
+      for (var i = 0; i &lt; data.length; i++) {
+        if (demand.in.hasOwnProperty(data[i]) &amp;&amp; demand.out.hasOwnProperty(data[i])) {
+          demand.in[data[i]] = true;
+          demand.out[data[i]] = true;
+        }
+      }
+
+      return demand;
+    }
+
+
+    /**
+     * @desc Convertes an object to a standardized format
+     * @param {Object} data - The requested demand which should be converted
+     * @param {Object} demand - The standard demand object
+     * @return {Object}
+     */
+    function objectToDemand(data, demand) {
+      console.log(&apos;[Demand convertDemand] converting Object:&apos;, data, &apos;to Demand&apos;);
+
+      // if already has the sub-objects &quot;in&quot; and &quot;out&quot;
+      if (data.hasOwnProperty(&apos;in&apos;) || data.hasOwnProperty(&apos;out&apos;)) {
+        // iterate through &quot;in&quot; and &quot;out&quot;
+        for (var direction in demand) {
+          // iterate through demand types (&quot;audio&quot;, &quot;video&quot;, &quot;data&quot;)
+          for (var prop in demand[direction]) {
+            if (data[direction].hasOwnProperty(prop)) {
+              if (data[direction][prop] === true || data[direction][prop] === false || typeof data[direction][prop] == &apos;object&apos; || data[direction][prop] instanceof Object) {
+                demand[direction][prop] = data[direction][prop];
+              } else {
+                if (prop == &quot;data&quot;) {
+                  demand[direction][prop] = data[direction][prop]; // { data: &quot;chat&quot; }
+                }
+                else demand[direction][prop] = false;
+              }
+            }
+          }
+        }
+        // if &quot;in&quot; and &quot;out&quot; is not specified, set attributes for both directions
+      } else {
+        for (var prop in demand.in) {
+          if (data.hasOwnProperty(prop)) {
+            if (data[prop] === true || data[prop] === false || typeof data[prop] == &apos;object&apos; || data[prop] instanceof Object) {
+              demand.in[prop] = data[prop];
+              demand.out[prop] = data[prop];
+            } else {
+              if (typeof data[prop] == &apos;string&apos; || data[prop] instanceof String) {// { data: &quot;plain&quot; }
+                demand.in[prop] = data[prop]; // {in: {data : &quot;plain&quot;}}
+                demand.out[prop] = data[prop]; // {in: {data : &quot;plain&quot;}}
+              } else {
+                demand.in[prop] = false;
+                demand.out[prop] = false;
+              }
+            }
+          }
+        }
+      }
+
+      return demand;
+    }
+
+    /**
+     * @desc Returns a demand which requires everything as a standardized demand format
+     * @return {Object}
+     */
+    function demandAll() {
+      console.log(&apos;[Demand convertDemand] Wrong format:&apos;, data, &apos;using backup: set all to true&apos;);
+
+      return {
+        in : {
+          &apos;audio&apos;: true,
+          &apos;video&apos;: true,
+          &apos;data&apos;: true
+        },
+        out: {
+          &apos;audio&apos;: true,
+          &apos;video&apos;: true,
+          &apos;data&apos;: true
+        }
+      };
+
+    }
+  }
+
+
+  /**
+   * @desc The function assigns all properties which are wanted in the additional demand to the target demand.
+   * @param {Object} targetDemand - The targeted demand to be modified
+   * @param {Object} additionalDemand - The additinal demand which should be added to the targetDemand
+   * @return {Object}
+   * @example Demand.updateDemandAllow(demandToModify, demandToAdd);
+   */
+  static updateDemandAllow(targetDemand, additionalDemand){
+    targetDemand     = this.convertDemand(targetDemand    , this.getStandardDemand());
+    additionalDemand = this.convertDemand(additionalDemand, this.getStandardDemand());
+
+    // iterate through &quot;in&quot; and &quot;out&quot;
+    for (var direction in targetDemand) {
+      // iterate through demand types (&quot;audio&quot;, &quot;video&quot;, &quot;data&quot;)
+      for (var prop in targetDemand[direction]) {
+          // if the property is true in the additionalDemand then add it ti the targetDemand
+          if (additionalDemand[direction][prop]) targetDemand[direction][prop] = additionalDemand[direction][prop];
+      }
+    }
+    return targetDemand;
+  }
+
+
+   /**
+    * @desc The function sets all properties which are not wanted in the restrictive demand to false in the target demand.
+    * @param {Object} targetDemand - The targeted demand an which a specific demand type should be removed
+    * @param {Object} restrictiveDemand - The demand which should be set to false in the targetDemand
+    * @return {Object}
+    * @example
+    * Demand.updateDemandDisallow(demandToModify, demandToRemove);
+    * Demand.updateDemandDisallow(demandToModify, {data:true}) // sets data to false in demandToModify
+    */
+  static updateDemandDisallow(targetDemand, restrictiveDemand){
+    targetDemand      = this.convertDemand(targetDemand     , this.getStandardDemand());
+    restrictiveDemand = this.convertDemand(restrictiveDemand, this.getStandardDemand());
+
+    // iterate through &quot;in&quot; and &quot;out&quot;
+    for (var direction in targetDemand) {
+      // iterate through demand types (&quot;audio&quot;, &quot;video&quot;, &quot;data&quot;)
+      for (var prop in targetDemand[direction]) {
+          // if the property is false in the restriction, then add it to the targetDemand
+          if (restrictiveDemand[direction][prop]) targetDemand[direction][prop] = false;
+      }
+    }
+    return targetDemand;
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.3.1)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">libs/modules/webfinger.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  <a href="identifiers.html">Identifier</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="git+ssh://git@gitlab.com/hftl/wonder_2.0.git">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/wonder.js~WONDER.html">WONDER</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">modules</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Conversation.js~Conversation.html">Conversation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/DataChannelEvtHandler.js~DataChannelEvtHandler.html">DataChannelEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Demand.js~Demand.html">Demand</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Identity.js~Identity.html">Identity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Idp.js~Idp.html">Idp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Message.js~Message.html">Message</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MessageFactory.js~MessageFactory.html">MessageFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MsgEvtHandler.js~MsgEvtHandler.html">MsgEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Participant.js~Participant.html">Participant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/RtcEvtHandler.js~RtcEvtHandler.html">RtcEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-errorHandler">errorHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DataChannelEvtType">DataChannelEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MessageType">MessageType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PayloadType">PayloadType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-RtcEvtType">RtcEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-GUID">GUID</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">libs/modules/webfinger.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*!
+ * webfinger.js
+ *   version 2.2.0
+ *   http://github.com/silverbucket/webfinger.js
+ *
+ * Developed and Maintained by:
+ *   Nick Jennings &lt;nick@silverbucket.net&gt; 2012 - 2014
+ *
+ * webfinger.js is released under the AGPL (see LICENSE).
+ *
+ * You don&apos;t have to do anything special to choose one license or the other and you don&apos;t
+ * have to notify anyone which license you are using.
+ * Please see the corresponding license file for details of these licenses.
+ * You are free to use, modify and distribute this software, but all copyright
+ * information must remain.
+ *
+ */
+
+if (typeof XMLHttpRequest === &apos;undefined&apos;) {
+  XMLHttpRequest = require(&apos;xmlhttprequest&apos;).XMLHttpRequest;
+}
+
+(function (undefined) {
+
+  // URI to property name map
+  var LINK_URI_MAPS = {
+    &apos;http://webfist.org/spec/rel&apos;: &apos;webfist&apos;,
+    &apos;http://webfinger.net/rel/avatar&apos;: &apos;avatar&apos;,
+    &apos;remotestorage&apos;: &apos;remotestorage&apos;,
+    &apos;remoteStorage&apos;: &apos;remotestorage&apos;,
+    &apos;http://www.packetizer.com/rel/share&apos;: &apos;share&apos;,
+    &apos;http://webfinger.net/rel/profile-page&apos;: &apos;profile&apos;,
+    &apos;me&apos;: &apos;profile&apos;,
+    &apos;vcard&apos;: &apos;vcard&apos;,
+    &apos;blog&apos;: &apos;blog&apos;,
+    &apos;http://packetizer.com/rel/blog&apos;: &apos;blog&apos;,
+    &apos;http://schemas.google.com/g/2010#updates-from&apos;: &apos;updates&apos;,
+    &apos;https://camlistore.org/rel/server&apos;: &apos;camilstore&apos;
+  };
+
+  var LINK_PROPERTIES = {
+    &apos;avatar&apos;: [],
+    &apos;remotestorage&apos;: [],
+    &apos;blog&apos;: [],
+    &apos;vcard&apos;: [],
+    &apos;updates&apos;: [],
+    &apos;share&apos;: [],
+    &apos;profile&apos;: [],
+    &apos;webfist&apos;: [],
+    &apos;camlistore&apos;: []
+  };
+
+  // list of endpoints to try, fallback from beginning to end.
+  var URIS = [&apos;webfinger&apos;, &apos;host-meta&apos;, &apos;host-meta.json&apos;];
+
+  function _err(obj) {
+    obj.toString = function () {
+      return this.message;
+    };
+    return obj;
+  }
+
+  /**
+   * Function: WebFinger
+   *
+   * WebFinger constructor
+   *
+   * Returns:
+   *
+   *   return WebFinger object
+   */
+  function WebFinger(config) {
+    if (typeof config !== &apos;object&apos;) {
+      config = {};
+    }
+
+    this.config = {
+      tls_only:         (typeof config.tls_only !== &apos;undefined&apos;) ? config.tls_only : true,
+      webfist_fallback: (typeof config.webfist_fallback !== &apos;undefined&apos;) ? config.webfist_fallback : false,
+      uri_fallback:     (typeof config.uri_fallback !== &apos;undefined&apos;) ? config.uri_fallback : false,
+      request_timeout:  (typeof config.request_timeout !== &apos;undefined&apos;) ? config.request_timeout : 10000
+    };
+  }
+
+  // make an http request and look for JRD response, fails if request fails
+  // or response not json.
+  WebFinger.prototype._fetchJRD = function (url, cb) {
+    var self = this;
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          if (self._isValidJSON(xhr.responseText)) {
+            cb(null, xhr.responseText);
+          } else {
+            cb(_err({
+              message: &apos;invalid json&apos;,
+              url: url,
+              status: xhr.status
+            }));
+          }
+        } else if (xhr.status === 404) {
+          cb(_err({
+            message: &apos;endpoint unreachable&apos;,
+            url: url,
+            status: xhr.status
+          }));
+        } else {
+          cb(_err({
+            message: &apos;error during request&apos;,
+            url: url,
+            status: xhr.status
+          }));
+        }
+      }
+    };
+
+    xhr.open(&apos;GET&apos;, url, true);
+    xhr.setRequestHeader(&apos;Accept&apos;, &apos;application/jrd+json, application/json&apos;);
+    xhr.send();
+  };
+
+  WebFinger.prototype._isValidJSON = function (str) {
+    try {
+      JSON.parse(str);
+    } catch (e) {
+      return false;
+    }
+    return true;
+  };
+
+  WebFinger.prototype._isLocalhost = function (host) {
+    var local = /^localhost(\.localdomain)?(\:[0-9]+)?$/;
+    return local.test(host);
+  };
+
+  // processes JRD object as if it&apos;s a webfinger response object
+  // looks for known properties and adds them to profile datat struct.
+  WebFinger.prototype._processJRD = function (JRD, cb) {
+    var self = this;
+    var parsedJRD = JSON.parse(JRD);
+    if ((typeof parsedJRD !== &apos;object&apos;) ||
+        (typeof parsedJRD.links !== &apos;object&apos;)) {
+      if (typeof parsedJRD.error !== &apos;undefined&apos;) {
+        cb(_err({ message: parsedJRD.error }));
+      } else {
+        cb(_err({ message: &apos;unknown response from server&apos; }));
+      }
+      return false;
+    }
+
+    var links = parsedJRD.links;
+    var result = {  // webfinger JRD - object, json, and our own indexing
+      object: parsedJRD,
+      json: JRD,
+      idx: {}
+    };
+
+    result.idx.properties = {
+      &apos;name&apos;: undefined
+    };
+    result.idx.links = JSON.parse(JSON.stringify(LINK_PROPERTIES));
+
+    // process links
+    links.map(function (link, i) {
+      if (LINK_URI_MAPS.hasOwnProperty(link.rel)) {
+        if (result.idx.links[LINK_URI_MAPS[link.rel]]) {
+          var entry = {};
+          Object.keys(link).map(function (item, n) {
+            entry[item] = link[item];
+          });
+          result.idx.links[LINK_URI_MAPS[link.rel]].push(entry);
+        }
+      }
+    });
+
+    // process properties
+    var props = JSON.parse(JRD).properties;
+    for (var key in props) {
+      if (props.hasOwnProperty(key)) {
+        if (key === &apos;http://packetizer.com/ns/name&apos;) {
+          result.idx.properties.name = props[key];
+        }
+      }
+    }
+    cb(null, result);
+  };
+
+  WebFinger.prototype.lookup = function (address, cb) {
+    if (typeof address !== &apos;string&apos;) {
+      throw new Error(&apos;first parameter must be a user address&apos;);
+    } else if (typeof cb !== &apos;function&apos;) {
+      throw new Error(&apos;second parameter must be a callback&apos;);
+    }
+
+    var self = this;
+    var parts = address.replace(/ /g,&apos;&apos;).split(&apos;@&apos;);
+    var host = parts[1];    // host name for this useraddress
+    var uri_index = 0;      // track which URIS we&apos;ve tried already
+    var protocol = &apos;https&apos;; // we use https by default
+
+    if (parts.length !== 2) {
+      cb(_err({ message: &apos;invalid user address &apos; + address + &apos; ( expected format: user@host.com )&apos; }));
+      return false;
+    } else if (self._isLocalhost(host)) {
+      protocol = &apos;http&apos;;
+    }
+
+    function _buildURL() {
+      return protocol + &apos;://&apos; + host + &apos;/.well-known/&apos; +
+             URIS[uri_index] + &apos;?resource=acct:&apos; + address;
+    }
+
+    // control flow for failures, what to do in various cases, etc.
+    function _fallbackChecks(err) {
+      if ((self.config.uri_fallback) &amp;&amp; (host !== &apos;webfist.org&apos;) &amp;&amp; (uri_index !== URIS.length - 1)) { // we have uris left to try
+        uri_index = uri_index + 1;
+        _call();
+      } else if ((!self.config.tls_only) &amp;&amp; (protocol === &apos;https&apos;)) { // try normal http
+        uri_index = 0;
+        protocol = &apos;http&apos;;
+        _call();
+      } else if ((self.config.webfist_fallback) &amp;&amp; (host !== &apos;webfist.org&apos;)) { // webfist attempt
+        uri_index = 0;
+        protocol = &apos;http&apos;;
+        host = &apos;webfist.org&apos;;
+        // webfist will
+        // 1. make a query to the webfist server for the users account
+        // 2. from the response, get a link to the actual webfinger json data
+        //    (stored somewhere in control of the user)
+        // 3. make a request to that url and get the json
+        // 4. process it like a normal webfinger response
+        self._fetchJRD(_buildURL(), function (err, data) { // get link to users JRD
+          if (err) {
+            cb(err);
+            return false;
+          }
+          self._processJRD(data, function (err, result) {
+            if ((typeof result.idx.links.webfist === &apos;object&apos;) &amp;&amp;
+                (typeof result.idx.links.webfist[0].href === &apos;string&apos;)) {
+              self._fetchJRD(result.idx.links.webfist[0].href, function (err, JRD) {
+                if (err) {
+                  cb(err);
+                } else {
+                  self._processJRD(JRD, cb);
+                }
+              });
+            }
+          });
+        });
+      } else {
+        cb(err);
+        return false;
+      }
+    }
+
+    function _call() {
+      // make request
+      self._fetchJRD(_buildURL(), function (err, JRD) {
+        if (err) {
+          _fallbackChecks(err);
+        } else {
+          self._processJRD(JRD, cb);
+        }
+      });
+    }
+
+    setTimeout(_call, 0);
+  };
+
+  WebFinger.prototype.lookupLink = function (address, rel, cb) {
+    if (LINK_PROPERTIES.hasOwnProperty(rel)) {
+      this.lookup(address, function (err, p) {
+        var links  = p.idx.links[rel];
+        if (err) {
+          cb (err);
+        } else if (links.length === 0) {
+          cb (&apos;no links found with rel=&quot;&apos; + rel + &apos;&quot;&apos;);
+        } else {
+          cb (null, links[0]);
+        }
+      });
+    } else {
+      cb (&apos;unsupported rel &apos; + rel);
+    }
+  };
+
+  if (typeof window === &apos;object&apos;) {
+    window.WebFinger = WebFinger;
+  } else if (typeof (define) === &apos;function&apos; &amp;&amp; define.amd) {
+    define([], function () { return WebFinger; });
+  } else {
+    try {
+      module.exports = WebFinger;
+    } catch (e) {}
+  }
+})();
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.3.1)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

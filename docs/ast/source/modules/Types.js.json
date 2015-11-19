@@ -1,0 +1,3216 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "Literal",
+        "value": "use strict",
+        "raw": "'use strict'",
+        "range": [
+          351,
+          363
+        ],
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 0
+          },
+          "end": {
+            "line": 9,
+            "column": 12
+          }
+        }
+      },
+      "range": [
+        351,
+        364
+      ],
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 13
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other\n * This framework is based on @see https://github.com/hypercomm/wonder\n * @author Steffen Druesedow <Steffen.Druesedow@telekom.de>\n * @author Danny Koppenhagen <mail@d-koppenhagen.de>\n * @author Johannes Hamfler <jh@z7k.de>\n ",
+          "range": [
+            0,
+            349
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 7,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Enummeration for message types\n * @typedef {String} MessageType\n * @type {Object} MessageType\n *\n ",
+          "range": [
+            366,
+            473
+          ],
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 0
+            },
+            "end": {
+              "line": 16,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "MessageType",
+            "range": [
+              478,
+              489
+            ],
+            "loc": {
+              "start": {
+                "line": 17,
+                "column": 4
+              },
+              "end": {
+                "line": 17,
+                "column": 15
+              }
+            }
+          },
+          "init": {
+            "type": "ObjectExpression",
+            "properties": [
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "invitation",
+                  "range": [
+                    549,
+                    559
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 19,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 12
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "invitation",
+                  "raw": "'invitation'",
+                  "range": [
+                    561,
+                    573
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 19,
+                      "column": 14
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 26
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  549,
+                  573
+                ],
+                "loc": {
+                  "start": {
+                    "line": 19,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 19,
+                    "column": 26
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Message to invite a peer to a conversation. ",
+                    "range": [
+                      496,
+                      546
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 18,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 52
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "accepted",
+                  "range": [
+                    620,
+                    628
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 21,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 21,
+                      "column": 10
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "accepted",
+                  "raw": "'accepted'",
+                  "range": [
+                    630,
+                    640
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 21,
+                      "column": 12
+                    },
+                    "end": {
+                      "line": 21,
+                      "column": 22
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  620,
+                  640
+                ],
+                "loc": {
+                  "start": {
+                    "line": 21,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 21,
+                    "column": 22
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Answer for conversation accepted. ",
+                    "range": [
+                      577,
+                      617
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 20,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 20,
+                        "column": 42
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "declined",
+                  "range": [
+                    691,
+                    699
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 23,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 10
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "declined",
+                  "raw": "'declined'",
+                  "range": [
+                    701,
+                    711
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 23,
+                      "column": 12
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 22
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  691,
+                  711
+                ],
+                "loc": {
+                  "start": {
+                    "line": 23,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 23,
+                    "column": 22
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Answer for conversation not accepted. ",
+                    "range": [
+                      644,
+                      688
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 22,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 46
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "bye",
+                  "range": [
+                    768,
+                    771
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 25,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 25,
+                      "column": 5
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "bye",
+                  "raw": "'bye'",
+                  "range": [
+                    773,
+                    778
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 25,
+                      "column": 7
+                    },
+                    "end": {
+                      "line": 25,
+                      "column": 12
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  768,
+                  778
+                ],
+                "loc": {
+                  "start": {
+                    "line": 25,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 25,
+                    "column": 12
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Message from a peer to leave a conversation ",
+                    "range": [
+                      715,
+                      765
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 24,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 24,
+                        "column": 52
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "update",
+                  "range": [
+                    827,
+                    833
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 27,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 8
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "update",
+                  "raw": "'update'",
+                  "range": [
+                    835,
+                    843
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 27,
+                      "column": 10
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 18
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  827,
+                  843
+                ],
+                "loc": {
+                  "start": {
+                    "line": 27,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 27,
+                    "column": 18
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Message to add a new {@link Demand} ",
+                    "range": [
+                      782,
+                      824
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 26,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 44
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "updateSdp",
+                  "range": [
+                    1067,
+                    1076
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 31,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 31,
+                      "column": 11
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "updateSdp",
+                  "raw": "'updateSdp'",
+                  "range": [
+                    1078,
+                    1089
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 31,
+                      "column": 13
+                    },
+                    "end": {
+                      "line": 31,
+                      "column": 24
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  1067,
+                  1089
+                ],
+                "loc": {
+                  "start": {
+                    "line": 31,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 31,
+                    "column": 24
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Message to process a new SDP offer or Answer\n  * @TODO use update instead of invitations when being in a conversation already\n  * use updatedSdp when sending the SDP answer and a conversation is already present ",
+                    "range": [
+                      847,
+                      1064
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 28,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 30,
+                        "column": 87
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "updated",
+                  "range": [
+                    1156,
+                    1163
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 33,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 33,
+                      "column": 9
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "updated",
+                  "raw": "'updated'",
+                  "range": [
+                    1165,
+                    1174
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 33,
+                      "column": 11
+                    },
+                    "end": {
+                      "line": 33,
+                      "column": 20
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  1156,
+                  1174
+                ],
+                "loc": {
+                  "start": {
+                    "line": 33,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 33,
+                    "column": 20
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Answer when successfully added the new {@link Demand} ",
+                    "range": [
+                      1093,
+                      1153
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 32,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 32,
+                        "column": 62
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "presence",
+                  "range": [
+                    1242,
+                    1250
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 35,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 35,
+                      "column": 10
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "presence",
+                  "raw": "'presence'",
+                  "range": [
+                    1252,
+                    1262
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 35,
+                      "column": 12
+                    },
+                    "end": {
+                      "line": 35,
+                      "column": 22
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  1242,
+                  1262
+                ],
+                "loc": {
+                  "start": {
+                    "line": 35,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 35,
+                    "column": 22
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Message to publish the presence status of the identity ",
+                    "range": [
+                      1178,
+                      1239
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 34,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 63
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "message",
+                  "range": [
+                    1360,
+                    1367
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 38,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 9
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "message",
+                  "raw": "'message'",
+                  "range": [
+                    1369,
+                    1378
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 38,
+                      "column": 11
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 20
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  1360,
+                  1378
+                ],
+                "loc": {
+                  "start": {
+                    "line": 38,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 38,
+                    "column": 20
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Message to be used when no predefined type suits the Message\n  * @TODO implement it  ",
+                    "range": [
+                      1266,
+                      1357
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 36,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 37,
+                        "column": 26
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "connectivityCandidate",
+                  "range": [
+                    1425,
+                    1446
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 40,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 40,
+                      "column": 23
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "connectivityCandidate",
+                  "raw": "'connectivityCandidate'",
+                  "range": [
+                    1448,
+                    1471
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 40,
+                      "column": 25
+                    },
+                    "end": {
+                      "line": 40,
+                      "column": 48
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  1425,
+                  1471
+                ],
+                "loc": {
+                  "start": {
+                    "line": 40,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 40,
+                    "column": 48
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Message contains an ICE candidate ",
+                    "range": [
+                      1382,
+                      1422
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 39,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 39,
+                        "column": 42
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "range": [
+              492,
+              1473
+            ],
+            "loc": {
+              "start": {
+                "line": 17,
+                "column": 18
+              },
+              "end": {
+                "line": 41,
+                "column": 1
+              }
+            }
+          },
+          "range": [
+            478,
+            1473
+          ],
+          "loc": {
+            "start": {
+              "line": 17,
+              "column": 4
+            },
+            "end": {
+              "line": 41,
+              "column": 1
+            }
+          },
+          "trailingComments": [
+            {
+              "type": "Block",
+              "value": "*\n * Enumeration for the peer connection (RTC) event types\n * @typedef {Object} RtcEvtType\n * @type {Object} RtcEvtType\n ",
+              "range": [
+                1475,
+                1600
+              ],
+              "loc": {
+                "start": {
+                  "line": 43,
+                  "column": 0
+                },
+                "end": {
+                  "line": 47,
+                  "column": 3
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "kind": "var",
+      "range": [
+        474,
+        1601
+      ],
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 0
+        },
+        "end": {
+          "line": 48,
+          "column": 0
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Enummeration for message types\n * @typedef {String} MessageType\n * @type {Object} MessageType\n *\n ",
+          "range": [
+            366,
+            473
+          ],
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 0
+            },
+            "end": {
+              "line": 16,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "RtcEvtType",
+            "range": [
+              1605,
+              1615
+            ],
+            "loc": {
+              "start": {
+                "line": 48,
+                "column": 4
+              },
+              "end": {
+                "line": 48,
+                "column": 14
+              }
+            }
+          },
+          "init": {
+            "type": "ObjectExpression",
+            "properties": [
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "onaddstream",
+                  "range": [
+                    1719,
+                    1730
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 50,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 50,
+                      "column": 13
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "addstream",
+                  "raw": "'addstream'",
+                  "range": [
+                    1732,
+                    1743
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 50,
+                      "column": 15
+                    },
+                    "end": {
+                      "line": 50,
+                      "column": 26
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  1719,
+                  1743
+                ],
+                "loc": {
+                  "start": {
+                    "line": 50,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 50,
+                    "column": 26
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Event fired when the remote end adds a audio or video stream to its the peer connection ",
+                    "range": [
+                      1622,
+                      1716
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 49,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 49,
+                        "column": 96
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "onaddlocalstream",
+                  "range": [
+                    1861,
+                    1877
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 52,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 52,
+                      "column": 18
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "onaddlocalstream",
+                  "raw": "'onaddlocalstream'",
+                  "range": [
+                    1879,
+                    1897
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 52,
+                      "column": 20
+                    },
+                    "end": {
+                      "line": 52,
+                      "column": 38
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  1861,
+                  1897
+                ],
+                "loc": {
+                  "start": {
+                    "line": 52,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 52,
+                    "column": 38
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Event occuring when a local audio or video stream is added; this is not a standard peer connection event ",
+                    "range": [
+                      1747,
+                      1858
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 51,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 51,
+                        "column": 113
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "onnegotiationneeded",
+                  "range": [
+                    2009,
+                    2028
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 54,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 54,
+                      "column": 21
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "onnegotiationneeded",
+                  "raw": "'onnegotiationneeded'",
+                  "range": [
+                    2030,
+                    2051
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 54,
+                      "column": 23
+                    },
+                    "end": {
+                      "line": 54,
+                      "column": 44
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  2009,
+                  2051
+                ],
+                "loc": {
+                  "start": {
+                    "line": 54,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 54,
+                    "column": 44
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Event fired when the SDP of the peer connection changes and a new SDP negotiation needs to be done ",
+                    "range": [
+                      1901,
+                      2006
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 53,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 107
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "onicecandidate",
+                  "range": [
+                    2157,
+                    2171
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 56,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 56,
+                      "column": 16
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "icecandidate",
+                  "raw": "'icecandidate'",
+                  "range": [
+                    2173,
+                    2187
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 56,
+                      "column": 18
+                    },
+                    "end": {
+                      "line": 56,
+                      "column": 32
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  2157,
+                  2187
+                ],
+                "loc": {
+                  "start": {
+                    "line": 56,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 56,
+                    "column": 32
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Event occuring each time a new ICE candidate is found and needs to be sent to the remote peer",
+                    "range": [
+                      2055,
+                      2154
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 55,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 55,
+                        "column": 101
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "onsignalingstatechange",
+                  "range": [
+                    2262,
+                    2284
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 58,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 58,
+                      "column": 24
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "onsignalingstatechange",
+                  "raw": "'onsignalingstatechange'",
+                  "range": [
+                    2286,
+                    2310
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 58,
+                      "column": 26
+                    },
+                    "end": {
+                      "line": 58,
+                      "column": 50
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  2262,
+                  2310
+                ],
+                "loc": {
+                  "start": {
+                    "line": 58,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 58,
+                    "column": 50
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Event rising when the peer connection signaling state changes ",
+                    "range": [
+                      2191,
+                      2259
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 57,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 57,
+                        "column": 70
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "onremovestream",
+                  "range": [
+                    2364,
+                    2378
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 60,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 60,
+                      "column": 16
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "onremovestream",
+                  "raw": "'onremovestream'",
+                  "range": [
+                    2380,
+                    2396
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 60,
+                      "column": 18
+                    },
+                    "end": {
+                      "line": 60,
+                      "column": 34
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  2364,
+                  2396
+                ],
+                "loc": {
+                  "start": {
+                    "line": 60,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 60,
+                    "column": 34
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Event triggered when a stream is removed ",
+                    "range": [
+                      2314,
+                      2361
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 59,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 59,
+                        "column": 49
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "oniceconnectionstatechange",
+                  "range": [
+                    2476,
+                    2502
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 62,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 62,
+                      "column": 28
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "oniceconnectionstatechange",
+                  "raw": "'oniceconnectionstatechange'",
+                  "range": [
+                    2504,
+                    2532
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 62,
+                      "column": 30
+                    },
+                    "end": {
+                      "line": 62,
+                      "column": 58
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  2476,
+                  2532
+                ],
+                "loc": {
+                  "start": {
+                    "line": 62,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 62,
+                    "column": 58
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Event emerging when the state of the ICE gathering phanse changes *",
+                    "range": [
+                      2400,
+                      2473
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 61,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 61,
+                        "column": 75
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "ondatachannel",
+                  "range": [
+                    2617,
+                    2630
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 64,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 64,
+                      "column": 15
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "datachannel",
+                  "raw": "'datachannel'",
+                  "range": [
+                    2632,
+                    2645
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 64,
+                      "column": 17
+                    },
+                    "end": {
+                      "line": 64,
+                      "column": 30
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  2617,
+                  2645
+                ],
+                "loc": {
+                  "start": {
+                    "line": 64,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 64,
+                    "column": 30
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Event rising locally when a datachannel is added to the peer connection ",
+                    "range": [
+                      2536,
+                      2614
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 63,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 63,
+                        "column": 80
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "range": [
+              1618,
+              2647
+            ],
+            "loc": {
+              "start": {
+                "line": 48,
+                "column": 17
+              },
+              "end": {
+                "line": 65,
+                "column": 1
+              }
+            }
+          },
+          "range": [
+            1605,
+            2647
+          ],
+          "loc": {
+            "start": {
+              "line": 48,
+              "column": 4
+            },
+            "end": {
+              "line": 65,
+              "column": 1
+            }
+          }
+        }
+      ],
+      "kind": "var",
+      "range": [
+        1601,
+        2648
+      ],
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 0
+        },
+        "end": {
+          "line": 65,
+          "column": 2
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Enumeration for the peer connection (RTC) event types\n * @typedef {Object} RtcEvtType\n * @type {Object} RtcEvtType\n ",
+          "range": [
+            1475,
+            1600
+          ],
+          "loc": {
+            "start": {
+              "line": 43,
+              "column": 0
+            },
+            "end": {
+              "line": 47,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Enumeration for the DataChannelEvt types\n * @typedef {Object} DataChannelEvtType\n * @type {Object} DataChannelEvtType\n ",
+          "range": [
+            2650,
+            2778
+          ],
+          "loc": {
+            "start": {
+              "line": 67,
+              "column": 0
+            },
+            "end": {
+              "line": 71,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "DataChannelEvtType",
+            "range": [
+              2783,
+              2801
+            ],
+            "loc": {
+              "start": {
+                "line": 72,
+                "column": 4
+              },
+              "end": {
+                "line": 72,
+                "column": 22
+              }
+            }
+          },
+          "init": {
+            "type": "ObjectExpression",
+            "properties": [
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "onopen",
+                  "range": [
+                    2858,
+                    2864
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 74,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 74,
+                      "column": 8
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "open",
+                  "raw": "'open'",
+                  "range": [
+                    2866,
+                    2872
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 74,
+                      "column": 10
+                    },
+                    "end": {
+                      "line": 74,
+                      "column": 16
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  2858,
+                  2872
+                ],
+                "loc": {
+                  "start": {
+                    "line": 74,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 74,
+                    "column": 16
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Event seen when a data channel is opened ",
+                    "range": [
+                      2808,
+                      2855
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 73,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 73,
+                        "column": 49
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "onclose",
+                  "range": [
+                    2931,
+                    2938
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 76,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 76,
+                      "column": 9
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "onclose",
+                  "raw": "'onclose'",
+                  "range": [
+                    2940,
+                    2949
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 76,
+                      "column": 11
+                    },
+                    "end": {
+                      "line": 76,
+                      "column": 20
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  2931,
+                  2949
+                ],
+                "loc": {
+                  "start": {
+                    "line": 76,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 76,
+                    "column": 20
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Event occuring when the datachannel is closed ",
+                    "range": [
+                      2876,
+                      2928
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 75,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 75,
+                        "column": 54
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "onmessage",
+                  "range": [
+                    3025,
+                    3034
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 78,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 78,
+                      "column": 11
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "message",
+                  "raw": "'message'",
+                  "range": [
+                    3036,
+                    3045
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 78,
+                      "column": 13
+                    },
+                    "end": {
+                      "line": 78,
+                      "column": 22
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  3025,
+                  3045
+                ],
+                "loc": {
+                  "start": {
+                    "line": 78,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 78,
+                    "column": 22
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Event rising when a message is received through a data channel ",
+                    "range": [
+                      2953,
+                      3022
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 77,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 77,
+                        "column": 71
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "range": [
+              2804,
+              3047
+            ],
+            "loc": {
+              "start": {
+                "line": 72,
+                "column": 25
+              },
+              "end": {
+                "line": 79,
+                "column": 1
+              }
+            }
+          },
+          "range": [
+            2783,
+            3047
+          ],
+          "loc": {
+            "start": {
+              "line": 72,
+              "column": 4
+            },
+            "end": {
+              "line": 79,
+              "column": 1
+            }
+          }
+        }
+      ],
+      "kind": "var",
+      "range": [
+        2779,
+        3048
+      ],
+      "loc": {
+        "start": {
+          "line": 72,
+          "column": 0
+        },
+        "end": {
+          "line": 79,
+          "column": 2
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Enumeration for the DataChannelEvt types\n * @typedef {Object} DataChannelEvtType\n * @type {Object} DataChannelEvtType\n ",
+          "range": [
+            2650,
+            2778
+          ],
+          "loc": {
+            "start": {
+              "line": 67,
+              "column": 0
+            },
+            "end": {
+              "line": 71,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Enumeration for common payload types\n * @typedef {Object} PayloadType\n * @type {Object} PayloadType\n ",
+          "range": [
+            3051,
+            3161
+          ],
+          "loc": {
+            "start": {
+              "line": 82,
+              "column": 0
+            },
+            "end": {
+              "line": 86,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "id": {
+            "type": "Identifier",
+            "name": "PayloadType",
+            "range": [
+              3166,
+              3177
+            ],
+            "loc": {
+              "start": {
+                "line": 87,
+                "column": 4
+              },
+              "end": {
+                "line": 87,
+                "column": 15
+              }
+            }
+          },
+          "init": {
+            "type": "ObjectExpression",
+            "properties": [
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "plain",
+                  "range": [
+                    3255,
+                    3260
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 89,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 89,
+                      "column": 7
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "plain",
+                  "raw": "'plain'",
+                  "range": [
+                    3262,
+                    3269
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 89,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 89,
+                      "column": 16
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  3255,
+                  3269
+                ],
+                "loc": {
+                  "start": {
+                    "line": 89,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 89,
+                    "column": 16
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Plain data codec, sends and receives data without altering it ",
+                    "range": [
+                      3184,
+                      3252
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 88,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 88,
+                        "column": 70
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "file",
+                  "range": [
+                    3311,
+                    3315
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 91,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 91,
+                      "column": 6
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "file",
+                  "raw": "'file'",
+                  "range": [
+                    3317,
+                    3323
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 91,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 91,
+                      "column": 14
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  3311,
+                  3323
+                ],
+                "loc": {
+                  "start": {
+                    "line": 91,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 91,
+                    "column": 14
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Data codec for sending files ",
+                    "range": [
+                      3273,
+                      3308
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 90,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 90,
+                        "column": 37
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "chat",
+                  "range": [
+                    3360,
+                    3364
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 93,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 93,
+                      "column": 6
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "chat",
+                  "raw": "'chat'",
+                  "range": [
+                    3366,
+                    3372
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 93,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 93,
+                      "column": 14
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  3360,
+                  3372
+                ],
+                "loc": {
+                  "start": {
+                    "line": 93,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 93,
+                    "column": 14
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Codec for chat messages ",
+                    "range": [
+                      3327,
+                      3357
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 92,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 92,
+                        "column": 32
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "image",
+                  "range": [
+                    3415,
+                    3420
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 95,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 95,
+                      "column": 7
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "image",
+                  "raw": "'image'",
+                  "range": [
+                    3422,
+                    3429
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 95,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 95,
+                      "column": 16
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  3415,
+                  3429
+                ],
+                "loc": {
+                  "start": {
+                    "line": 95,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 95,
+                    "column": 16
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Codec to send and view images ",
+                    "range": [
+                      3376,
+                      3412
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 94,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 94,
+                        "column": 38
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "voice",
+                  "range": [
+                    3472,
+                    3477
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 97,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 97,
+                      "column": 7
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "voice",
+                  "raw": "'voice'",
+                  "range": [
+                    3479,
+                    3486
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 97,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 97,
+                      "column": 16
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  3472,
+                  3486
+                ],
+                "loc": {
+                  "start": {
+                    "line": 97,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 97,
+                    "column": 16
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Codec to deal with voice data ",
+                    "range": [
+                      3433,
+                      3469
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 96,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 96,
+                        "column": 38
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "Property",
+                "key": {
+                  "type": "Identifier",
+                  "name": "video",
+                  "range": [
+                    3544,
+                    3549
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 99,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 99,
+                      "column": 7
+                    }
+                  }
+                },
+                "value": {
+                  "type": "Literal",
+                  "value": "video",
+                  "raw": "'video'",
+                  "range": [
+                    3551,
+                    3558
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 99,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 99,
+                      "column": 16
+                    }
+                  }
+                },
+                "kind": "init",
+                "method": false,
+                "shorthand": false,
+                "computed": false,
+                "range": [
+                  3544,
+                  3558
+                ],
+                "loc": {
+                  "start": {
+                    "line": 99,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 99,
+                    "column": 16
+                  }
+                },
+                "leadingComments": [
+                  {
+                    "type": "Block",
+                    "value": "* Video codec for non RTC video transportation ",
+                    "range": [
+                      3490,
+                      3541
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 98,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 98,
+                        "column": 53
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "range": [
+              3180,
+              3560
+            ],
+            "loc": {
+              "start": {
+                "line": 87,
+                "column": 18
+              },
+              "end": {
+                "line": 100,
+                "column": 1
+              }
+            }
+          },
+          "range": [
+            3166,
+            3560
+          ],
+          "loc": {
+            "start": {
+              "line": 87,
+              "column": 4
+            },
+            "end": {
+              "line": 100,
+              "column": 1
+            }
+          }
+        }
+      ],
+      "kind": "var",
+      "range": [
+        3162,
+        3561
+      ],
+      "loc": {
+        "start": {
+          "line": 87,
+          "column": 0
+        },
+        "end": {
+          "line": 100,
+          "column": 2
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Enumeration for common payload types\n * @typedef {Object} PayloadType\n * @type {Object} PayloadType\n ",
+          "range": [
+            3051,
+            3161
+          ],
+          "loc": {
+            "start": {
+              "line": 82,
+              "column": 0
+            },
+            "end": {
+              "line": 86,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    351,
+    3561
+  ],
+  "loc": {
+    "start": {
+      "line": 9,
+      "column": 0
+    },
+    "end": {
+      "line": 100,
+      "column": 2
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other\n * This framework is based on @see https://github.com/hypercomm/wonder\n * @author Steffen Druesedow <Steffen.Druesedow@telekom.de>\n * @author Danny Koppenhagen <mail@d-koppenhagen.de>\n * @author Johannes Hamfler <jh@z7k.de>\n ",
+      "range": [
+        0,
+        349
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * Enummeration for message types\n * @typedef {String} MessageType\n * @type {Object} MessageType\n *\n ",
+      "range": [
+        366,
+        473
+      ],
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 0
+        },
+        "end": {
+          "line": 16,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Message to invite a peer to a conversation. ",
+      "range": [
+        496,
+        546
+      ],
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 2
+        },
+        "end": {
+          "line": 18,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Answer for conversation accepted. ",
+      "range": [
+        577,
+        617
+      ],
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 2
+        },
+        "end": {
+          "line": 20,
+          "column": 42
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Answer for conversation not accepted. ",
+      "range": [
+        644,
+        688
+      ],
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 2
+        },
+        "end": {
+          "line": 22,
+          "column": 46
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Message from a peer to leave a conversation ",
+      "range": [
+        715,
+        765
+      ],
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 2
+        },
+        "end": {
+          "line": 24,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Message to add a new {@link Demand} ",
+      "range": [
+        782,
+        824
+      ],
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 2
+        },
+        "end": {
+          "line": 26,
+          "column": 44
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Message to process a new SDP offer or Answer\n  * @TODO use update instead of invitations when being in a conversation already\n  * use updatedSdp when sending the SDP answer and a conversation is already present ",
+      "range": [
+        847,
+        1064
+      ],
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 2
+        },
+        "end": {
+          "line": 30,
+          "column": 87
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Answer when successfully added the new {@link Demand} ",
+      "range": [
+        1093,
+        1153
+      ],
+      "loc": {
+        "start": {
+          "line": 32,
+          "column": 2
+        },
+        "end": {
+          "line": 32,
+          "column": 62
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Message to publish the presence status of the identity ",
+      "range": [
+        1178,
+        1239
+      ],
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 2
+        },
+        "end": {
+          "line": 34,
+          "column": 63
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Message to be used when no predefined type suits the Message\n  * @TODO implement it  ",
+      "range": [
+        1266,
+        1357
+      ],
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 2
+        },
+        "end": {
+          "line": 37,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Message contains an ICE candidate ",
+      "range": [
+        1382,
+        1422
+      ],
+      "loc": {
+        "start": {
+          "line": 39,
+          "column": 2
+        },
+        "end": {
+          "line": 39,
+          "column": 42
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * Enumeration for the peer connection (RTC) event types\n * @typedef {Object} RtcEvtType\n * @type {Object} RtcEvtType\n ",
+      "range": [
+        1475,
+        1600
+      ],
+      "loc": {
+        "start": {
+          "line": 43,
+          "column": 0
+        },
+        "end": {
+          "line": 47,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Event fired when the remote end adds a audio or video stream to its the peer connection ",
+      "range": [
+        1622,
+        1716
+      ],
+      "loc": {
+        "start": {
+          "line": 49,
+          "column": 2
+        },
+        "end": {
+          "line": 49,
+          "column": 96
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Event occuring when a local audio or video stream is added; this is not a standard peer connection event ",
+      "range": [
+        1747,
+        1858
+      ],
+      "loc": {
+        "start": {
+          "line": 51,
+          "column": 2
+        },
+        "end": {
+          "line": 51,
+          "column": 113
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Event fired when the SDP of the peer connection changes and a new SDP negotiation needs to be done ",
+      "range": [
+        1901,
+        2006
+      ],
+      "loc": {
+        "start": {
+          "line": 53,
+          "column": 2
+        },
+        "end": {
+          "line": 53,
+          "column": 107
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Event occuring each time a new ICE candidate is found and needs to be sent to the remote peer",
+      "range": [
+        2055,
+        2154
+      ],
+      "loc": {
+        "start": {
+          "line": 55,
+          "column": 2
+        },
+        "end": {
+          "line": 55,
+          "column": 101
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Event rising when the peer connection signaling state changes ",
+      "range": [
+        2191,
+        2259
+      ],
+      "loc": {
+        "start": {
+          "line": 57,
+          "column": 2
+        },
+        "end": {
+          "line": 57,
+          "column": 70
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Event triggered when a stream is removed ",
+      "range": [
+        2314,
+        2361
+      ],
+      "loc": {
+        "start": {
+          "line": 59,
+          "column": 2
+        },
+        "end": {
+          "line": 59,
+          "column": 49
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Event emerging when the state of the ICE gathering phanse changes *",
+      "range": [
+        2400,
+        2473
+      ],
+      "loc": {
+        "start": {
+          "line": 61,
+          "column": 2
+        },
+        "end": {
+          "line": 61,
+          "column": 75
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Event rising locally when a datachannel is added to the peer connection ",
+      "range": [
+        2536,
+        2614
+      ],
+      "loc": {
+        "start": {
+          "line": 63,
+          "column": 2
+        },
+        "end": {
+          "line": 63,
+          "column": 80
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * Enumeration for the DataChannelEvt types\n * @typedef {Object} DataChannelEvtType\n * @type {Object} DataChannelEvtType\n ",
+      "range": [
+        2650,
+        2778
+      ],
+      "loc": {
+        "start": {
+          "line": 67,
+          "column": 0
+        },
+        "end": {
+          "line": 71,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Event seen when a data channel is opened ",
+      "range": [
+        2808,
+        2855
+      ],
+      "loc": {
+        "start": {
+          "line": 73,
+          "column": 2
+        },
+        "end": {
+          "line": 73,
+          "column": 49
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Event occuring when the datachannel is closed ",
+      "range": [
+        2876,
+        2928
+      ],
+      "loc": {
+        "start": {
+          "line": 75,
+          "column": 2
+        },
+        "end": {
+          "line": 75,
+          "column": 54
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Event rising when a message is received through a data channel ",
+      "range": [
+        2953,
+        3022
+      ],
+      "loc": {
+        "start": {
+          "line": 77,
+          "column": 2
+        },
+        "end": {
+          "line": 77,
+          "column": 71
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * Enumeration for common payload types\n * @typedef {Object} PayloadType\n * @type {Object} PayloadType\n ",
+      "range": [
+        3051,
+        3161
+      ],
+      "loc": {
+        "start": {
+          "line": 82,
+          "column": 0
+        },
+        "end": {
+          "line": 86,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Plain data codec, sends and receives data without altering it ",
+      "range": [
+        3184,
+        3252
+      ],
+      "loc": {
+        "start": {
+          "line": 88,
+          "column": 2
+        },
+        "end": {
+          "line": 88,
+          "column": 70
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Data codec for sending files ",
+      "range": [
+        3273,
+        3308
+      ],
+      "loc": {
+        "start": {
+          "line": 90,
+          "column": 2
+        },
+        "end": {
+          "line": 90,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Codec for chat messages ",
+      "range": [
+        3327,
+        3357
+      ],
+      "loc": {
+        "start": {
+          "line": 92,
+          "column": 2
+        },
+        "end": {
+          "line": 92,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Codec to send and view images ",
+      "range": [
+        3376,
+        3412
+      ],
+      "loc": {
+        "start": {
+          "line": 94,
+          "column": 2
+        },
+        "end": {
+          "line": 94,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Codec to deal with voice data ",
+      "range": [
+        3433,
+        3469
+      ],
+      "loc": {
+        "start": {
+          "line": 96,
+          "column": 2
+        },
+        "end": {
+          "line": 96,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "* Video codec for non RTC video transportation ",
+      "range": [
+        3490,
+        3541
+      ],
+      "loc": {
+        "start": {
+          "line": 98,
+          "column": 2
+        },
+        "end": {
+          "line": 98,
+          "column": 53
+        }
+      }
+    }
+  ]
+}

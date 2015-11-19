@@ -1,0 +1,3525 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "Literal",
+        "value": "use strict",
+        "raw": "'use strict'",
+        "range": [
+          291,
+          303
+        ],
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 0
+          },
+          "end": {
+            "line": 8,
+            "column": 12
+          }
+        }
+      },
+      "range": [
+        291,
+        304
+      ],
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 13
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other\n * This framework is based on @see https://github.com/hypercomm/wonder\n * @author Danny Koppenhagen <mail@d-koppenhagen.de>\n * @author Johannes Hamfler <jh@z7k.de>\n ",
+          "range": [
+            0,
+            289
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 6,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @class\n * @desc This class represents a participant of a conversation.\n * Identities can be stored in multiple participants but participants\n * with the same identity cannot be in the same conversation.\n ",
+          "range": [
+            306,
+            519
+          ],
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 0
+            },
+            "end": {
+              "line": 15,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "Participant",
+        "range": [
+          526,
+          537
+        ],
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 6
+          },
+          "end": {
+            "line": 16,
+            "column": 17
+          }
+        }
+      },
+      "superClass": null,
+      "body": {
+        "type": "ClassBody",
+        "body": [
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "constructor",
+              "range": [
+                821,
+                832
+              ],
+              "loc": {
+                "start": {
+                  "line": 23,
+                  "column": 2
+                },
+                "end": {
+                  "line": 23,
+                  "column": 13
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "wonderInstance",
+                  "range": [
+                    833,
+                    847
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 23,
+                      "column": 14
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 28
+                    }
+                  }
+                },
+                {
+                  "type": "Identifier",
+                  "name": "identity",
+                  "range": [
+                    849,
+                    857
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 23,
+                      "column": 30
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 38
+                    }
+                  }
+                },
+                {
+                  "type": "Identifier",
+                  "name": "demand",
+                  "range": [
+                    859,
+                    865
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 23,
+                      "column": 40
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 46
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            976,
+                            980
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 28,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 28,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "wonderInstance",
+                          "range": [
+                            981,
+                            995
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 28,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 28,
+                              "column": 23
+                            }
+                          }
+                        },
+                        "range": [
+                          976,
+                          995
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 28,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 28,
+                            "column": 23
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "wonderInstance",
+                        "range": [
+                          998,
+                          1012
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 28,
+                            "column": 26
+                          },
+                          "end": {
+                            "line": 28,
+                            "column": 40
+                          }
+                        }
+                      },
+                      "range": [
+                        976,
+                        1012
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 28,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 28,
+                          "column": 40
+                        }
+                      }
+                    },
+                    "range": [
+                      976,
+                      1013
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 28,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 28,
+                        "column": 41
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {WONDER} wonderInstance\n     * @desc Backreference to the WONDER instance\n     ",
+                        "range": [
+                          873,
+                          971
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 24,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 27,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Identity} identity\n     * @desc The identity of the participant\n     ",
+                        "range": [
+                          1019,
+                          1108
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 30,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 33,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1113,
+                            1117
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 34,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 34,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "identity",
+                          "range": [
+                            1118,
+                            1126
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 34,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 34,
+                              "column": 17
+                            }
+                          }
+                        },
+                        "range": [
+                          1113,
+                          1126
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 34,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 34,
+                            "column": 17
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "identity",
+                        "range": [
+                          1129,
+                          1137
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 34,
+                            "column": 20
+                          },
+                          "end": {
+                            "line": 34,
+                            "column": 28
+                          }
+                        }
+                      },
+                      "range": [
+                        1113,
+                        1137
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 34,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 34,
+                          "column": 28
+                        }
+                      }
+                    },
+                    "range": [
+                      1113,
+                      1138
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 34,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 29
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Identity} identity\n     * @desc The identity of the participant\n     ",
+                        "range": [
+                          1019,
+                          1108
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 30,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 33,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Demand} demand\n     * @desc The resources a participant demands for the communication\n     ",
+                        "range": [
+                          1144,
+                          1255
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 36,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 39,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1260,
+                            1264
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 40,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 40,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "demand",
+                          "range": [
+                            1265,
+                            1271
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 40,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 40,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "range": [
+                          1260,
+                          1271
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 40,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 40,
+                            "column": 15
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "NewExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "Demand",
+                          "range": [
+                            1278,
+                            1284
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 40,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 40,
+                              "column": 28
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "name": "demand",
+                            "range": [
+                              1285,
+                              1291
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 40,
+                                "column": 29
+                              },
+                              "end": {
+                                "line": 40,
+                                "column": 35
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          1274,
+                          1292
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 40,
+                            "column": 18
+                          },
+                          "end": {
+                            "line": 40,
+                            "column": 36
+                          }
+                        }
+                      },
+                      "range": [
+                        1260,
+                        1292
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 40,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 40,
+                          "column": 36
+                        }
+                      }
+                    },
+                    "range": [
+                      1260,
+                      1293
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 40,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 40,
+                        "column": 37
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Demand} demand\n     * @desc The resources a participant demands for the communication\n     ",
+                        "range": [
+                          1144,
+                          1255
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 36,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 39,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {RTCPeerConnection} peerConnection\n     * @desc Used to hold the RTCPeerConnection to this participant\n     ",
+                        "range": [
+                          1299,
+                          1426
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 42,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 45,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1431,
+                            1435
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 46,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 46,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "peerConnection",
+                          "range": [
+                            1436,
+                            1450
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 46,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 46,
+                              "column": 23
+                            }
+                          }
+                        },
+                        "range": [
+                          1431,
+                          1450
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 46,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 46,
+                            "column": 23
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Literal",
+                        "value": null,
+                        "raw": "null",
+                        "range": [
+                          1453,
+                          1457
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 46,
+                            "column": 26
+                          },
+                          "end": {
+                            "line": 46,
+                            "column": 30
+                          }
+                        }
+                      },
+                      "range": [
+                        1431,
+                        1457
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 46,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 46,
+                          "column": 30
+                        }
+                      }
+                    },
+                    "range": [
+                      1431,
+                      1458
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 46,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 46,
+                        "column": 31
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {RTCPeerConnection} peerConnection\n     * @desc Used to hold the RTCPeerConnection to this participant\n     ",
+                        "range": [
+                          1299,
+                          1426
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 42,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 45,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "range": [
+                  867,
+                  1462
+                ],
+                "loc": {
+                  "start": {
+                    "line": 23,
+                    "column": 48
+                  },
+                  "end": {
+                    "line": 47,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                832,
+                1462
+              ],
+              "loc": {
+                "start": {
+                  "line": 23,
+                  "column": 13
+                },
+                "end": {
+                  "line": 47,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "constructor",
+            "computed": false,
+            "range": [
+              821,
+              1462
+            ],
+            "loc": {
+              "start": {
+                "line": 23,
+                "column": 2
+              },
+              "end": {
+                "line": 47,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @constructor\n   * @param {WONDER} wonderInstance - The instance of the WONDER class used as a backreference\n   * @param {Identity} identity - The identity of the participant\n   * @param {Demand} demand - The resources a participant demands for the communication\n   ",
+                "range": [
+                  542,
+                  818
+                ],
+                "loc": {
+                  "start": {
+                    "line": 17,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 22,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "trailingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @desc Returns the RtcPeerConnection of this participant\n   * @return {RTCPeerConnection}\n   ",
+                "range": [
+                  1466,
+                  1569
+                ],
+                "loc": {
+                  "start": {
+                    "line": 49,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 52,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          },
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "getRtcPeerConnection",
+              "range": [
+                1572,
+                1592
+              ],
+              "loc": {
+                "start": {
+                  "line": 53,
+                  "column": 2
+                },
+                "end": {
+                  "line": 53,
+                  "column": 22
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ReturnStatement",
+                    "argument": {
+                      "type": "MemberExpression",
+                      "computed": false,
+                      "object": {
+                        "type": "ThisExpression",
+                        "range": [
+                          1608,
+                          1612
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 54,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 54,
+                            "column": 15
+                          }
+                        }
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "peerConnection",
+                        "range": [
+                          1613,
+                          1627
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 54,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 54,
+                            "column": 30
+                          }
+                        }
+                      },
+                      "range": [
+                        1608,
+                        1627
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 54,
+                          "column": 11
+                        },
+                        "end": {
+                          "line": 54,
+                          "column": 30
+                        }
+                      }
+                    },
+                    "range": [
+                      1601,
+                      1628
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 54,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 54,
+                        "column": 31
+                      }
+                    }
+                  }
+                ],
+                "range": [
+                  1595,
+                  1632
+                ],
+                "loc": {
+                  "start": {
+                    "line": 53,
+                    "column": 25
+                  },
+                  "end": {
+                    "line": 55,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                1592,
+                1632
+              ],
+              "loc": {
+                "start": {
+                  "line": 53,
+                  "column": 22
+                },
+                "end": {
+                  "line": 55,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "method",
+            "computed": false,
+            "range": [
+              1572,
+              1632
+            ],
+            "loc": {
+              "start": {
+                "line": 53,
+                "column": 2
+              },
+              "end": {
+                "line": 55,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @desc Returns the RtcPeerConnection of this participant\n   * @return {RTCPeerConnection}\n   ",
+                "range": [
+                  1466,
+                  1569
+                ],
+                "loc": {
+                  "start": {
+                    "line": 49,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 52,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "trailingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @desc Sets the RtcPeerConnection of this participant\n   * @param {RTCPeerConnection} rtcPeerConnection - The rtcPeerConnection to be set for this participant\n   ",
+                "range": [
+                  1636,
+                  1808
+                ],
+                "loc": {
+                  "start": {
+                    "line": 57,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 60,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          },
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "setRtcPeerConnection",
+              "range": [
+                1811,
+                1831
+              ],
+              "loc": {
+                "start": {
+                  "line": 61,
+                  "column": 2
+                },
+                "end": {
+                  "line": 61,
+                  "column": 22
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "rtcPeerConnection",
+                  "range": [
+                    1832,
+                    1849
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 61,
+                      "column": 23
+                    },
+                    "end": {
+                      "line": 61,
+                      "column": 40
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1857,
+                            1861
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 62,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 62,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "peerConnection",
+                          "range": [
+                            1862,
+                            1876
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 62,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 62,
+                              "column": 23
+                            }
+                          }
+                        },
+                        "range": [
+                          1857,
+                          1876
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 62,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 62,
+                            "column": 23
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "rtcPeerConnection",
+                        "range": [
+                          1879,
+                          1896
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 62,
+                            "column": 26
+                          },
+                          "end": {
+                            "line": 62,
+                            "column": 43
+                          }
+                        }
+                      },
+                      "range": [
+                        1857,
+                        1896
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 62,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 62,
+                          "column": 43
+                        }
+                      }
+                    },
+                    "range": [
+                      1857,
+                      1897
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 62,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 62,
+                        "column": 44
+                      }
+                    }
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              1902,
+                              1906
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 63,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 63,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "peerConnection",
+                            "range": [
+                              1907,
+                              1921
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 63,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 63,
+                                "column": 23
+                              }
+                            }
+                          },
+                          "range": [
+                            1902,
+                            1921
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 63,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 63,
+                              "column": 23
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "onaddstream",
+                          "range": [
+                            1922,
+                            1933
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 63,
+                              "column": 24
+                            },
+                            "end": {
+                              "line": 63,
+                              "column": 35
+                            }
+                          }
+                        },
+                        "range": [
+                          1902,
+                          1933
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 63,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 63,
+                            "column": 35
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "MemberExpression",
+                                "computed": true,
+                                "object": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "MemberExpression",
+                                    "computed": false,
+                                    "object": {
+                                      "type": "ThisExpression",
+                                      "range": [
+                                        1936,
+                                        1940
+                                      ],
+                                      "loc": {
+                                        "start": {
+                                          "line": 63,
+                                          "column": 38
+                                        },
+                                        "end": {
+                                          "line": 63,
+                                          "column": 42
+                                        }
+                                      }
+                                    },
+                                    "property": {
+                                      "type": "Identifier",
+                                      "name": "wonderInstance",
+                                      "range": [
+                                        1941,
+                                        1955
+                                      ],
+                                      "loc": {
+                                        "start": {
+                                          "line": 63,
+                                          "column": 43
+                                        },
+                                        "end": {
+                                          "line": 63,
+                                          "column": 57
+                                        }
+                                      }
+                                    },
+                                    "range": [
+                                      1936,
+                                      1955
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 63,
+                                        "column": 38
+                                      },
+                                      "end": {
+                                        "line": 63,
+                                        "column": 57
+                                      }
+                                    }
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "conversations",
+                                    "range": [
+                                      1956,
+                                      1969
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 63,
+                                        "column": 58
+                                      },
+                                      "end": {
+                                        "line": 63,
+                                        "column": 71
+                                      }
+                                    }
+                                  },
+                                  "range": [
+                                    1936,
+                                    1969
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 63,
+                                      "column": 38
+                                    },
+                                    "end": {
+                                      "line": 63,
+                                      "column": 71
+                                    }
+                                  }
+                                },
+                                "property": {
+                                  "type": "Literal",
+                                  "value": 0,
+                                  "raw": "0",
+                                  "range": [
+                                    1970,
+                                    1971
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 63,
+                                      "column": 72
+                                    },
+                                    "end": {
+                                      "line": 63,
+                                      "column": 73
+                                    }
+                                  }
+                                },
+                                "range": [
+                                  1936,
+                                  1972
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 63,
+                                    "column": 38
+                                  },
+                                  "end": {
+                                    "line": 63,
+                                    "column": 74
+                                  }
+                                }
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "rtcEvtHandler",
+                                "range": [
+                                  1973,
+                                  1986
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 63,
+                                    "column": 75
+                                  },
+                                  "end": {
+                                    "line": 63,
+                                    "column": 88
+                                  }
+                                }
+                              },
+                              "range": [
+                                1936,
+                                1986
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 63,
+                                  "column": 38
+                                },
+                                "end": {
+                                  "line": 63,
+                                  "column": 88
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "onEvt",
+                              "range": [
+                                1987,
+                                1992
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 63,
+                                  "column": 89
+                                },
+                                "end": {
+                                  "line": 63,
+                                  "column": 94
+                                }
+                              }
+                            },
+                            "range": [
+                              1936,
+                              1992
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 63,
+                                "column": 38
+                              },
+                              "end": {
+                                "line": 63,
+                                "column": 94
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "bind",
+                            "range": [
+                              1993,
+                              1997
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 63,
+                                "column": 95
+                              },
+                              "end": {
+                                "line": 63,
+                                "column": 99
+                              }
+                            }
+                          },
+                          "range": [
+                            1936,
+                            1997
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 63,
+                              "column": 38
+                            },
+                            "end": {
+                              "line": 63,
+                              "column": 99
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "MemberExpression",
+                              "computed": true,
+                              "object": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "ThisExpression",
+                                    "range": [
+                                      1998,
+                                      2002
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 63,
+                                        "column": 100
+                                      },
+                                      "end": {
+                                        "line": 63,
+                                        "column": 104
+                                      }
+                                    }
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "wonderInstance",
+                                    "range": [
+                                      2003,
+                                      2017
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 63,
+                                        "column": 105
+                                      },
+                                      "end": {
+                                        "line": 63,
+                                        "column": 119
+                                      }
+                                    }
+                                  },
+                                  "range": [
+                                    1998,
+                                    2017
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 63,
+                                      "column": 100
+                                    },
+                                    "end": {
+                                      "line": 63,
+                                      "column": 119
+                                    }
+                                  }
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "conversations",
+                                  "range": [
+                                    2018,
+                                    2031
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 63,
+                                      "column": 120
+                                    },
+                                    "end": {
+                                      "line": 63,
+                                      "column": 133
+                                    }
+                                  }
+                                },
+                                "range": [
+                                  1998,
+                                  2031
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 63,
+                                    "column": 100
+                                  },
+                                  "end": {
+                                    "line": 63,
+                                    "column": 133
+                                  }
+                                }
+                              },
+                              "property": {
+                                "type": "Literal",
+                                "value": 0,
+                                "raw": "0",
+                                "range": [
+                                  2032,
+                                  2033
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 63,
+                                    "column": 134
+                                  },
+                                  "end": {
+                                    "line": 63,
+                                    "column": 135
+                                  }
+                                }
+                              },
+                              "range": [
+                                1998,
+                                2034
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 63,
+                                  "column": 100
+                                },
+                                "end": {
+                                  "line": 63,
+                                  "column": 136
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "rtcEvtHandler",
+                              "range": [
+                                2035,
+                                2048
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 63,
+                                  "column": 137
+                                },
+                                "end": {
+                                  "line": 63,
+                                  "column": 150
+                                }
+                              }
+                            },
+                            "range": [
+                              1998,
+                              2048
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 63,
+                                "column": 100
+                              },
+                              "end": {
+                                "line": 63,
+                                "column": 150
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          1936,
+                          2049
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 63,
+                            "column": 38
+                          },
+                          "end": {
+                            "line": 63,
+                            "column": 151
+                          }
+                        }
+                      },
+                      "range": [
+                        1902,
+                        2049
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 63,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 63,
+                          "column": 151
+                        }
+                      }
+                    },
+                    "range": [
+                      1902,
+                      2050
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 63,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 63,
+                        "column": 152
+                      }
+                    }
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              2055,
+                              2059
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 64,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 64,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "peerConnection",
+                            "range": [
+                              2060,
+                              2074
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 64,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 64,
+                                "column": 23
+                              }
+                            }
+                          },
+                          "range": [
+                            2055,
+                            2074
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 64,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 64,
+                              "column": 23
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "onicecandidate",
+                          "range": [
+                            2075,
+                            2089
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 64,
+                              "column": 24
+                            },
+                            "end": {
+                              "line": 64,
+                              "column": 38
+                            }
+                          }
+                        },
+                        "range": [
+                          2055,
+                          2089
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 64,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 64,
+                            "column": 38
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "MemberExpression",
+                                "computed": true,
+                                "object": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "MemberExpression",
+                                    "computed": false,
+                                    "object": {
+                                      "type": "ThisExpression",
+                                      "range": [
+                                        2092,
+                                        2096
+                                      ],
+                                      "loc": {
+                                        "start": {
+                                          "line": 64,
+                                          "column": 41
+                                        },
+                                        "end": {
+                                          "line": 64,
+                                          "column": 45
+                                        }
+                                      }
+                                    },
+                                    "property": {
+                                      "type": "Identifier",
+                                      "name": "wonderInstance",
+                                      "range": [
+                                        2097,
+                                        2111
+                                      ],
+                                      "loc": {
+                                        "start": {
+                                          "line": 64,
+                                          "column": 46
+                                        },
+                                        "end": {
+                                          "line": 64,
+                                          "column": 60
+                                        }
+                                      }
+                                    },
+                                    "range": [
+                                      2092,
+                                      2111
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 64,
+                                        "column": 41
+                                      },
+                                      "end": {
+                                        "line": 64,
+                                        "column": 60
+                                      }
+                                    }
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "conversations",
+                                    "range": [
+                                      2112,
+                                      2125
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 64,
+                                        "column": 61
+                                      },
+                                      "end": {
+                                        "line": 64,
+                                        "column": 74
+                                      }
+                                    }
+                                  },
+                                  "range": [
+                                    2092,
+                                    2125
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 64,
+                                      "column": 41
+                                    },
+                                    "end": {
+                                      "line": 64,
+                                      "column": 74
+                                    }
+                                  }
+                                },
+                                "property": {
+                                  "type": "Literal",
+                                  "value": 0,
+                                  "raw": "0",
+                                  "range": [
+                                    2126,
+                                    2127
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 64,
+                                      "column": 75
+                                    },
+                                    "end": {
+                                      "line": 64,
+                                      "column": 76
+                                    }
+                                  }
+                                },
+                                "range": [
+                                  2092,
+                                  2128
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 64,
+                                    "column": 41
+                                  },
+                                  "end": {
+                                    "line": 64,
+                                    "column": 77
+                                  }
+                                }
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "rtcEvtHandler",
+                                "range": [
+                                  2129,
+                                  2142
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 64,
+                                    "column": 78
+                                  },
+                                  "end": {
+                                    "line": 64,
+                                    "column": 91
+                                  }
+                                }
+                              },
+                              "range": [
+                                2092,
+                                2142
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 64,
+                                  "column": 41
+                                },
+                                "end": {
+                                  "line": 64,
+                                  "column": 91
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "onEvt",
+                              "range": [
+                                2143,
+                                2148
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 64,
+                                  "column": 92
+                                },
+                                "end": {
+                                  "line": 64,
+                                  "column": 97
+                                }
+                              }
+                            },
+                            "range": [
+                              2092,
+                              2148
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 64,
+                                "column": 41
+                              },
+                              "end": {
+                                "line": 64,
+                                "column": 97
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "bind",
+                            "range": [
+                              2149,
+                              2153
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 64,
+                                "column": 98
+                              },
+                              "end": {
+                                "line": 64,
+                                "column": 102
+                              }
+                            }
+                          },
+                          "range": [
+                            2092,
+                            2153
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 64,
+                              "column": 41
+                            },
+                            "end": {
+                              "line": 64,
+                              "column": 102
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "MemberExpression",
+                              "computed": true,
+                              "object": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "ThisExpression",
+                                    "range": [
+                                      2154,
+                                      2158
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 64,
+                                        "column": 103
+                                      },
+                                      "end": {
+                                        "line": 64,
+                                        "column": 107
+                                      }
+                                    }
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "wonderInstance",
+                                    "range": [
+                                      2159,
+                                      2173
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 64,
+                                        "column": 108
+                                      },
+                                      "end": {
+                                        "line": 64,
+                                        "column": 122
+                                      }
+                                    }
+                                  },
+                                  "range": [
+                                    2154,
+                                    2173
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 64,
+                                      "column": 103
+                                    },
+                                    "end": {
+                                      "line": 64,
+                                      "column": 122
+                                    }
+                                  }
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "conversations",
+                                  "range": [
+                                    2174,
+                                    2187
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 64,
+                                      "column": 123
+                                    },
+                                    "end": {
+                                      "line": 64,
+                                      "column": 136
+                                    }
+                                  }
+                                },
+                                "range": [
+                                  2154,
+                                  2187
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 64,
+                                    "column": 103
+                                  },
+                                  "end": {
+                                    "line": 64,
+                                    "column": 136
+                                  }
+                                }
+                              },
+                              "property": {
+                                "type": "Literal",
+                                "value": 0,
+                                "raw": "0",
+                                "range": [
+                                  2188,
+                                  2189
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 64,
+                                    "column": 137
+                                  },
+                                  "end": {
+                                    "line": 64,
+                                    "column": 138
+                                  }
+                                }
+                              },
+                              "range": [
+                                2154,
+                                2190
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 64,
+                                  "column": 103
+                                },
+                                "end": {
+                                  "line": 64,
+                                  "column": 139
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "rtcEvtHandler",
+                              "range": [
+                                2191,
+                                2204
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 64,
+                                  "column": 140
+                                },
+                                "end": {
+                                  "line": 64,
+                                  "column": 153
+                                }
+                              }
+                            },
+                            "range": [
+                              2154,
+                              2204
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 64,
+                                "column": 103
+                              },
+                              "end": {
+                                "line": 64,
+                                "column": 153
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          2092,
+                          2205
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 64,
+                            "column": 41
+                          },
+                          "end": {
+                            "line": 64,
+                            "column": 154
+                          }
+                        }
+                      },
+                      "range": [
+                        2055,
+                        2205
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 64,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 64,
+                          "column": 154
+                        }
+                      }
+                    },
+                    "range": [
+                      2055,
+                      2206
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 64,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 64,
+                        "column": 155
+                      }
+                    }
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "ThisExpression",
+                            "range": [
+                              2211,
+                              2215
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 65,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 65,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "peerConnection",
+                            "range": [
+                              2216,
+                              2230
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 65,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 65,
+                                "column": 23
+                              }
+                            }
+                          },
+                          "range": [
+                            2211,
+                            2230
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 65,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 65,
+                              "column": 23
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "onIceStateChange",
+                          "range": [
+                            2231,
+                            2247
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 65,
+                              "column": 24
+                            },
+                            "end": {
+                              "line": 65,
+                              "column": 40
+                            }
+                          }
+                        },
+                        "range": [
+                          2211,
+                          2247
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 65,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 65,
+                            "column": 40
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "MemberExpression",
+                                "computed": true,
+                                "object": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "MemberExpression",
+                                    "computed": false,
+                                    "object": {
+                                      "type": "ThisExpression",
+                                      "range": [
+                                        2250,
+                                        2254
+                                      ],
+                                      "loc": {
+                                        "start": {
+                                          "line": 65,
+                                          "column": 43
+                                        },
+                                        "end": {
+                                          "line": 65,
+                                          "column": 47
+                                        }
+                                      }
+                                    },
+                                    "property": {
+                                      "type": "Identifier",
+                                      "name": "wonderInstance",
+                                      "range": [
+                                        2255,
+                                        2269
+                                      ],
+                                      "loc": {
+                                        "start": {
+                                          "line": 65,
+                                          "column": 48
+                                        },
+                                        "end": {
+                                          "line": 65,
+                                          "column": 62
+                                        }
+                                      }
+                                    },
+                                    "range": [
+                                      2250,
+                                      2269
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 65,
+                                        "column": 43
+                                      },
+                                      "end": {
+                                        "line": 65,
+                                        "column": 62
+                                      }
+                                    }
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "conversations",
+                                    "range": [
+                                      2270,
+                                      2283
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 65,
+                                        "column": 63
+                                      },
+                                      "end": {
+                                        "line": 65,
+                                        "column": 76
+                                      }
+                                    }
+                                  },
+                                  "range": [
+                                    2250,
+                                    2283
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 65,
+                                      "column": 43
+                                    },
+                                    "end": {
+                                      "line": 65,
+                                      "column": 76
+                                    }
+                                  }
+                                },
+                                "property": {
+                                  "type": "Literal",
+                                  "value": 0,
+                                  "raw": "0",
+                                  "range": [
+                                    2284,
+                                    2285
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 65,
+                                      "column": 77
+                                    },
+                                    "end": {
+                                      "line": 65,
+                                      "column": 78
+                                    }
+                                  }
+                                },
+                                "range": [
+                                  2250,
+                                  2286
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 65,
+                                    "column": 43
+                                  },
+                                  "end": {
+                                    "line": 65,
+                                    "column": 79
+                                  }
+                                }
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "rtcEvtHandler",
+                                "range": [
+                                  2287,
+                                  2300
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 65,
+                                    "column": 80
+                                  },
+                                  "end": {
+                                    "line": 65,
+                                    "column": 93
+                                  }
+                                }
+                              },
+                              "range": [
+                                2250,
+                                2300
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 65,
+                                  "column": 43
+                                },
+                                "end": {
+                                  "line": 65,
+                                  "column": 93
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "onEvt",
+                              "range": [
+                                2301,
+                                2306
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 65,
+                                  "column": 94
+                                },
+                                "end": {
+                                  "line": 65,
+                                  "column": 99
+                                }
+                              }
+                            },
+                            "range": [
+                              2250,
+                              2306
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 65,
+                                "column": 43
+                              },
+                              "end": {
+                                "line": 65,
+                                "column": 99
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "bind",
+                            "range": [
+                              2307,
+                              2311
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 65,
+                                "column": 100
+                              },
+                              "end": {
+                                "line": 65,
+                                "column": 104
+                              }
+                            }
+                          },
+                          "range": [
+                            2250,
+                            2311
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 65,
+                              "column": 43
+                            },
+                            "end": {
+                              "line": 65,
+                              "column": 104
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "MemberExpression",
+                              "computed": true,
+                              "object": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "ThisExpression",
+                                    "range": [
+                                      2312,
+                                      2316
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 65,
+                                        "column": 105
+                                      },
+                                      "end": {
+                                        "line": 65,
+                                        "column": 109
+                                      }
+                                    }
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "wonderInstance",
+                                    "range": [
+                                      2317,
+                                      2331
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 65,
+                                        "column": 110
+                                      },
+                                      "end": {
+                                        "line": 65,
+                                        "column": 124
+                                      }
+                                    }
+                                  },
+                                  "range": [
+                                    2312,
+                                    2331
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 65,
+                                      "column": 105
+                                    },
+                                    "end": {
+                                      "line": 65,
+                                      "column": 124
+                                    }
+                                  }
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "conversations",
+                                  "range": [
+                                    2332,
+                                    2345
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 65,
+                                      "column": 125
+                                    },
+                                    "end": {
+                                      "line": 65,
+                                      "column": 138
+                                    }
+                                  }
+                                },
+                                "range": [
+                                  2312,
+                                  2345
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 65,
+                                    "column": 105
+                                  },
+                                  "end": {
+                                    "line": 65,
+                                    "column": 138
+                                  }
+                                }
+                              },
+                              "property": {
+                                "type": "Literal",
+                                "value": 0,
+                                "raw": "0",
+                                "range": [
+                                  2346,
+                                  2347
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 65,
+                                    "column": 139
+                                  },
+                                  "end": {
+                                    "line": 65,
+                                    "column": 140
+                                  }
+                                }
+                              },
+                              "range": [
+                                2312,
+                                2348
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 65,
+                                  "column": 105
+                                },
+                                "end": {
+                                  "line": 65,
+                                  "column": 141
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "rtcEvtHandler",
+                              "range": [
+                                2349,
+                                2362
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 65,
+                                  "column": 142
+                                },
+                                "end": {
+                                  "line": 65,
+                                  "column": 155
+                                }
+                              }
+                            },
+                            "range": [
+                              2312,
+                              2362
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 65,
+                                "column": 105
+                              },
+                              "end": {
+                                "line": 65,
+                                "column": 155
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          2250,
+                          2363
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 65,
+                            "column": 43
+                          },
+                          "end": {
+                            "line": 65,
+                            "column": 156
+                          }
+                        }
+                      },
+                      "range": [
+                        2211,
+                        2363
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 65,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 65,
+                          "column": 156
+                        }
+                      }
+                    },
+                    "range": [
+                      2211,
+                      2364
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 65,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 157
+                      }
+                    }
+                  }
+                ],
+                "range": [
+                  1851,
+                  2368
+                ],
+                "loc": {
+                  "start": {
+                    "line": 61,
+                    "column": 42
+                  },
+                  "end": {
+                    "line": 66,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                1831,
+                2368
+              ],
+              "loc": {
+                "start": {
+                  "line": 61,
+                  "column": 22
+                },
+                "end": {
+                  "line": 66,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "method",
+            "computed": false,
+            "range": [
+              1811,
+              2368
+            ],
+            "loc": {
+              "start": {
+                "line": 61,
+                "column": 2
+              },
+              "end": {
+                "line": 66,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @desc Sets the RtcPeerConnection of this participant\n   * @param {RTCPeerConnection} rtcPeerConnection - The rtcPeerConnection to be set for this participant\n   ",
+                "range": [
+                  1636,
+                  1808
+                ],
+                "loc": {
+                  "start": {
+                    "line": 57,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 60,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "trailingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @desc This function updates the demand by adding the new demand to the existing demand\n   * @param {Demand} demand - The demand to be included in the currently stored demand\n   * @TODO rename the function to addDemand\n   ",
+                "range": [
+                  2372,
+                  2604
+                ],
+                "loc": {
+                  "start": {
+                    "line": 68,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 72,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          },
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "updateDemand",
+              "range": [
+                2607,
+                2619
+              ],
+              "loc": {
+                "start": {
+                  "line": 73,
+                  "column": 2
+                },
+                "end": {
+                  "line": 73,
+                  "column": 14
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "demand",
+                  "range": [
+                    2620,
+                    2626
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 73,
+                      "column": 15
+                    },
+                    "end": {
+                      "line": 73,
+                      "column": 21
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            2634,
+                            2638
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 74,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 74,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "demand",
+                          "range": [
+                            2639,
+                            2645
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 74,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 74,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "range": [
+                          2634,
+                          2645
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 74,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 74,
+                            "column": 15
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "Identifier",
+                            "name": "Demand",
+                            "range": [
+                              2648,
+                              2654
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 74,
+                                "column": 18
+                              },
+                              "end": {
+                                "line": 74,
+                                "column": 24
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "updateDemandAllow",
+                            "range": [
+                              2655,
+                              2672
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 74,
+                                "column": 25
+                              },
+                              "end": {
+                                "line": 74,
+                                "column": 42
+                              }
+                            }
+                          },
+                          "range": [
+                            2648,
+                            2672
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 74,
+                              "column": 18
+                            },
+                            "end": {
+                              "line": 74,
+                              "column": 42
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "ThisExpression",
+                              "range": [
+                                2673,
+                                2677
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 74,
+                                  "column": 43
+                                },
+                                "end": {
+                                  "line": 74,
+                                  "column": 47
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "demand",
+                              "range": [
+                                2678,
+                                2684
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 74,
+                                  "column": 48
+                                },
+                                "end": {
+                                  "line": 74,
+                                  "column": 54
+                                }
+                              }
+                            },
+                            "range": [
+                              2673,
+                              2684
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 74,
+                                "column": 43
+                              },
+                              "end": {
+                                "line": 74,
+                                "column": 54
+                              }
+                            }
+                          },
+                          {
+                            "type": "Identifier",
+                            "name": "demand",
+                            "range": [
+                              2686,
+                              2692
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 74,
+                                "column": 56
+                              },
+                              "end": {
+                                "line": 74,
+                                "column": 62
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          2648,
+                          2693
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 74,
+                            "column": 18
+                          },
+                          "end": {
+                            "line": 74,
+                            "column": 63
+                          }
+                        }
+                      },
+                      "range": [
+                        2634,
+                        2693
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 74,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 74,
+                          "column": 63
+                        }
+                      }
+                    },
+                    "range": [
+                      2634,
+                      2694
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 74,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 74,
+                        "column": 64
+                      }
+                    }
+                  }
+                ],
+                "range": [
+                  2628,
+                  2698
+                ],
+                "loc": {
+                  "start": {
+                    "line": 73,
+                    "column": 23
+                  },
+                  "end": {
+                    "line": 75,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                2619,
+                2698
+              ],
+              "loc": {
+                "start": {
+                  "line": 73,
+                  "column": 14
+                },
+                "end": {
+                  "line": 75,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "method",
+            "computed": false,
+            "range": [
+              2607,
+              2698
+            ],
+            "loc": {
+              "start": {
+                "line": 73,
+                "column": 2
+              },
+              "end": {
+                "line": 75,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @desc This function updates the demand by adding the new demand to the existing demand\n   * @param {Demand} demand - The demand to be included in the currently stored demand\n   * @TODO rename the function to addDemand\n   ",
+                "range": [
+                  2372,
+                  2604
+                ],
+                "loc": {
+                  "start": {
+                    "line": 68,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 72,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          }
+        ],
+        "range": [
+          538,
+          2700
+        ],
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 18
+          },
+          "end": {
+            "line": 76,
+            "column": 1
+          }
+        }
+      },
+      "range": [
+        520,
+        2700
+      ],
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 0
+        },
+        "end": {
+          "line": 76,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @class\n * @desc This class represents a participant of a conversation.\n * Identities can be stored in multiple participants but participants\n * with the same identity cannot be in the same conversation.\n ",
+          "range": [
+            306,
+            519
+          ],
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 0
+            },
+            "end": {
+              "line": 15,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    291,
+    2700
+  ],
+  "loc": {
+    "start": {
+      "line": 8,
+      "column": 0
+    },
+    "end": {
+      "line": 76,
+      "column": 1
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other\n * This framework is based on @see https://github.com/hypercomm/wonder\n * @author Danny Koppenhagen <mail@d-koppenhagen.de>\n * @author Johannes Hamfler <jh@z7k.de>\n ",
+      "range": [
+        0,
+        289
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * @class\n * @desc This class represents a participant of a conversation.\n * Identities can be stored in multiple participants but participants\n * with the same identity cannot be in the same conversation.\n ",
+      "range": [
+        306,
+        519
+      ],
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 0
+        },
+        "end": {
+          "line": 15,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * @constructor\n   * @param {WONDER} wonderInstance - The instance of the WONDER class used as a backreference\n   * @param {Identity} identity - The identity of the participant\n   * @param {Demand} demand - The resources a participant demands for the communication\n   ",
+      "range": [
+        542,
+        818
+      ],
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 2
+        },
+        "end": {
+          "line": 22,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {WONDER} wonderInstance\n     * @desc Backreference to the WONDER instance\n     ",
+      "range": [
+        873,
+        971
+      ],
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 4
+        },
+        "end": {
+          "line": 27,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {Identity} identity\n     * @desc The identity of the participant\n     ",
+      "range": [
+        1019,
+        1108
+      ],
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 4
+        },
+        "end": {
+          "line": 33,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {Demand} demand\n     * @desc The resources a participant demands for the communication\n     ",
+      "range": [
+        1144,
+        1255
+      ],
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 4
+        },
+        "end": {
+          "line": 39,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {RTCPeerConnection} peerConnection\n     * @desc Used to hold the RTCPeerConnection to this participant\n     ",
+      "range": [
+        1299,
+        1426
+      ],
+      "loc": {
+        "start": {
+          "line": 42,
+          "column": 4
+        },
+        "end": {
+          "line": 45,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * @desc Returns the RtcPeerConnection of this participant\n   * @return {RTCPeerConnection}\n   ",
+      "range": [
+        1466,
+        1569
+      ],
+      "loc": {
+        "start": {
+          "line": 49,
+          "column": 2
+        },
+        "end": {
+          "line": 52,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * @desc Sets the RtcPeerConnection of this participant\n   * @param {RTCPeerConnection} rtcPeerConnection - The rtcPeerConnection to be set for this participant\n   ",
+      "range": [
+        1636,
+        1808
+      ],
+      "loc": {
+        "start": {
+          "line": 57,
+          "column": 2
+        },
+        "end": {
+          "line": 60,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * @desc This function updates the demand by adding the new demand to the existing demand\n   * @param {Demand} demand - The demand to be included in the currently stored demand\n   * @TODO rename the function to addDemand\n   ",
+      "range": [
+        2372,
+        2604
+      ],
+      "loc": {
+        "start": {
+          "line": 68,
+          "column": 2
+        },
+        "end": {
+          "line": 72,
+          "column": 5
+        }
+      }
+    }
+  ]
+}

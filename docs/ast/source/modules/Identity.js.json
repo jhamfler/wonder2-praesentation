@@ -1,0 +1,1580 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "Literal",
+        "value": "use strict",
+        "raw": "'use strict'",
+        "range": [
+          291,
+          303
+        ],
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 0
+          },
+          "end": {
+            "line": 8,
+            "column": 12
+          }
+        }
+      },
+      "range": [
+        291,
+        304
+      ],
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 13
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other\n * This framework is based on @see https://github.com/hypercomm/wonder\n * @author Danny Koppenhagen <mail@d-koppenhagen.de>\n * @author Johannes Hamfler <jh@z7k.de>\n ",
+          "range": [
+            0,
+            289
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 6,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @class\n * @desc This class represents an identity.\n * The identity is the view of the WONDER framework of a user's representation\n * and will be filled with information coming from the identity provider.\n ",
+          "range": [
+            307,
+            521
+          ],
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 0
+            },
+            "end": {
+              "line": 16,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "Identity",
+        "range": [
+          528,
+          536
+        ],
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 6
+          },
+          "end": {
+            "line": 17,
+            "column": 14
+          }
+        }
+      },
+      "superClass": null,
+      "body": {
+        "type": "ClassBody",
+        "body": [
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "constructor",
+              "range": [
+                1294,
+                1305
+              ],
+              "loc": {
+                "start": {
+                  "line": 28,
+                  "column": 2
+                },
+                "end": {
+                  "line": 28,
+                  "column": 13
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "rtcIdentity",
+                  "range": [
+                    1306,
+                    1317
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 14
+                    },
+                    "end": {
+                      "line": 28,
+                      "column": 25
+                    }
+                  }
+                },
+                {
+                  "type": "Identifier",
+                  "name": "remoteIdp",
+                  "range": [
+                    1319,
+                    1328
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 27
+                    },
+                    "end": {
+                      "line": 28,
+                      "column": 36
+                    }
+                  }
+                },
+                {
+                  "type": "Identifier",
+                  "name": "msgStub",
+                  "range": [
+                    1330,
+                    1337
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 38
+                    },
+                    "end": {
+                      "line": 28,
+                      "column": 45
+                    }
+                  }
+                },
+                {
+                  "type": "Identifier",
+                  "name": "msgStubUrl",
+                  "range": [
+                    1339,
+                    1349
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 47
+                    },
+                    "end": {
+                      "line": 28,
+                      "column": 57
+                    }
+                  }
+                },
+                {
+                  "type": "Identifier",
+                  "name": "msgSrv",
+                  "range": [
+                    1351,
+                    1357
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 59
+                    },
+                    "end": {
+                      "line": 28,
+                      "column": 65
+                    }
+                  }
+                },
+                {
+                  "type": "Identifier",
+                  "name": "codecs",
+                  "range": [
+                    1359,
+                    1365
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 67
+                    },
+                    "end": {
+                      "line": 28,
+                      "column": 73
+                    }
+                  }
+                },
+                {
+                  "type": "Identifier",
+                  "name": "credentials",
+                  "range": [
+                    1367,
+                    1378
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 28,
+                      "column": 75
+                    },
+                    "end": {
+                      "line": 28,
+                      "column": 86
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1533,
+                            1537
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 34,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 34,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "rtcIdentity",
+                          "range": [
+                            1538,
+                            1549
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 34,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 34,
+                              "column": 20
+                            }
+                          }
+                        },
+                        "range": [
+                          1533,
+                          1549
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 34,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 34,
+                            "column": 20
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "rtcIdentity",
+                        "range": [
+                          1552,
+                          1563
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 34,
+                            "column": 23
+                          },
+                          "end": {
+                            "line": 34,
+                            "column": 34
+                          }
+                        }
+                      },
+                      "range": [
+                        1533,
+                        1563
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 34,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 34,
+                          "column": 34
+                        }
+                      }
+                    },
+                    "range": [
+                      1533,
+                      1564
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 34,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 35
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {String} rtcIdentity\n     * @desc The username including the domain of the Identity\n     * @example alice@example.com\n     ",
+                        "range": [
+                          1386,
+                          1528
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 29,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 33,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {String} remoteIdp\n     * @desc The URL to the remote Idp\n     * @example 'webfinger' // recommended\n     * 'http://example.net/idp.php?user='\n     ",
+                        "range": [
+                          1570,
+                          1737
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 36,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 41,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1742,
+                            1746
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 42,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 42,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "remoteIdp",
+                          "range": [
+                            1747,
+                            1756
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 42,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 42,
+                              "column": 18
+                            }
+                          }
+                        },
+                        "range": [
+                          1742,
+                          1756
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 42,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 42,
+                            "column": 18
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "remoteIdp",
+                        "range": [
+                          1759,
+                          1768
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 42,
+                            "column": 21
+                          },
+                          "end": {
+                            "line": 42,
+                            "column": 30
+                          }
+                        }
+                      },
+                      "range": [
+                        1742,
+                        1768
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 42,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 42,
+                          "column": 30
+                        }
+                      }
+                    },
+                    "range": [
+                      1742,
+                      1769
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 42,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 42,
+                        "column": 31
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {String} remoteIdp\n     * @desc The URL to the remote Idp\n     * @example 'webfinger' // recommended\n     * 'http://example.net/idp.php?user='\n     ",
+                        "range": [
+                          1570,
+                          1737
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 36,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 41,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {MessagingStub} msgStub\n     * @desc The instance of the messaging stub of the identity's domain\n     * which will be used to connect the identity to it's messaging server;\n     * it will also be used to communicate with the messaging server\n     * @example\n     * define(function(require, exports, module) {\n     *   class MessagingStubOfExampleDomain {\n     *     constructor() {\n     *       this.onMessage = null; // message event handler will use this to register itself on the stub\n     *     }\n     *     connect(rtcIdentity, credentials, msgSrv, callback) {\n     *       // ...\n     *       this.websocket.onmessage = function(msg) {\n     *         // ...\n     *         that.onMessage(msg); // give the message as a JSON-object to the registered function to process it in wonder\n     *       };\n     *       // ...\n     *     }\n     *     sendMessage(message) { ... }\n     *     disconnect() { ... }\n     *   }\n     *   return new MessagingStubOfExampleDomain();\n     * });\n     ",
+                        "range": [
+                          1775,
+                          2782
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 44,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 68,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            2787,
+                            2791
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 69,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 69,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "msgStub",
+                          "range": [
+                            2792,
+                            2799
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 69,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 69,
+                              "column": 16
+                            }
+                          }
+                        },
+                        "range": [
+                          2787,
+                          2799
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 69,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 69,
+                            "column": 16
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "msgStub",
+                        "range": [
+                          2802,
+                          2809
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 69,
+                            "column": 19
+                          },
+                          "end": {
+                            "line": 69,
+                            "column": 26
+                          }
+                        }
+                      },
+                      "range": [
+                        2787,
+                        2809
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 69,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 69,
+                          "column": 26
+                        }
+                      }
+                    },
+                    "range": [
+                      2787,
+                      2810
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 69,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 69,
+                        "column": 27
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {MessagingStub} msgStub\n     * @desc The instance of the messaging stub of the identity's domain\n     * which will be used to connect the identity to it's messaging server;\n     * it will also be used to communicate with the messaging server\n     * @example\n     * define(function(require, exports, module) {\n     *   class MessagingStubOfExampleDomain {\n     *     constructor() {\n     *       this.onMessage = null; // message event handler will use this to register itself on the stub\n     *     }\n     *     connect(rtcIdentity, credentials, msgSrv, callback) {\n     *       // ...\n     *       this.websocket.onmessage = function(msg) {\n     *         // ...\n     *         that.onMessage(msg); // give the message as a JSON-object to the registered function to process it in wonder\n     *       };\n     *       // ...\n     *     }\n     *     sendMessage(message) { ... }\n     *     disconnect() { ... }\n     *   }\n     *   return new MessagingStubOfExampleDomain();\n     * });\n     ",
+                        "range": [
+                          1775,
+                          2782
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 44,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 68,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {String} msgStubUrl\n     * @desc The URL to the location where the messagingStub was downloaded from\n     * @example 'http://example.net:8082/stubsDirectory/MessagingStubOfExampleDomain.js'\n     ",
+                        "range": [
+                          2816,
+                          3030
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 71,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 75,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            3035,
+                            3039
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 76,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 76,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "msgStubUrl",
+                          "range": [
+                            3040,
+                            3050
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 76,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 76,
+                              "column": 19
+                            }
+                          }
+                        },
+                        "range": [
+                          3035,
+                          3050
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 76,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 76,
+                            "column": 19
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "msgStubUrl",
+                        "range": [
+                          3053,
+                          3063
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 76,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 76,
+                            "column": 32
+                          }
+                        }
+                      },
+                      "range": [
+                        3035,
+                        3063
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 76,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 76,
+                          "column": 32
+                        }
+                      }
+                    },
+                    "range": [
+                      3035,
+                      3064
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 76,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 76,
+                        "column": 33
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {String} msgStubUrl\n     * @desc The URL to the location where the messagingStub was downloaded from\n     * @example 'http://example.net:8082/stubsDirectory/MessagingStubOfExampleDomain.js'\n     ",
+                        "range": [
+                          2816,
+                          3030
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 71,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 75,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {String} msgSrv\n     * @desc The URL to the messaging server of the identity's domain\n     * @example 'ws://example.org:12345'\n     ",
+                        "range": [
+                          3070,
+                          3221
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 78,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 82,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            3226,
+                            3230
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 83,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 83,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "msgSrv",
+                          "range": [
+                            3231,
+                            3237
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 83,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 83,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "range": [
+                          3226,
+                          3237
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 83,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 83,
+                            "column": 15
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "msgSrv",
+                        "range": [
+                          3240,
+                          3246
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 83,
+                            "column": 18
+                          },
+                          "end": {
+                            "line": 83,
+                            "column": 24
+                          }
+                        }
+                      },
+                      "range": [
+                        3226,
+                        3246
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 83,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 83,
+                          "column": 24
+                        }
+                      }
+                    },
+                    "range": [
+                      3226,
+                      3247
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 83,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 83,
+                        "column": 25
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {String} msgSrv\n     * @desc The URL to the messaging server of the identity's domain\n     * @example 'ws://example.org:12345'\n     ",
+                        "range": [
+                          3070,
+                          3221
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 78,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 82,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Object} codecs\n     * @desc An object containing payloadtypes as keys to the links of codec libraries\n     * @example\n     * { chat: \"http://example.net:8083/codecs/chat.js\"\n     *   file: \"http://example.net:8083/codecs/file.js\" }\n     ",
+                        "range": [
+                          3253,
+                          3510
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 85,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 91,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            3515,
+                            3519
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 92,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 92,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "codecs",
+                          "range": [
+                            3520,
+                            3526
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 92,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 92,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "range": [
+                          3515,
+                          3526
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 92,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 92,
+                            "column": 15
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "codecs",
+                        "range": [
+                          3529,
+                          3535
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 92,
+                            "column": 18
+                          },
+                          "end": {
+                            "line": 92,
+                            "column": 24
+                          }
+                        }
+                      },
+                      "range": [
+                        3515,
+                        3535
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 92,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 92,
+                          "column": 24
+                        }
+                      }
+                    },
+                    "range": [
+                      3515,
+                      3536
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 92,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 92,
+                        "column": 25
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Object} codecs\n     * @desc An object containing payloadtypes as keys to the links of codec libraries\n     * @example\n     * { chat: \"http://example.net:8083/codecs/chat.js\"\n     *   file: \"http://example.net:8083/codecs/file.js\" }\n     ",
+                        "range": [
+                          3253,
+                          3510
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 85,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 91,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Object} [credentials]\n     * @desc An object containing credentials for the identity;\n     * can be used to be able to login to the identity's messaging server\n     * @example // ims login example\n     * { \"privid\" : \"identifier@subdomain.example.org:1234\",\n     *   \"pubid\" : \"pudIdentifier\",\n     *   \"proxy\" : \"10.11.12.13:12333\",\n     *   \"pwd\" : \"userPassword\"                              }\n     ",
+                        "range": [
+                          3542,
+                          3964
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 94,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 103,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            3969,
+                            3973
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 104,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 104,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "credentials",
+                          "range": [
+                            3974,
+                            3985
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 104,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 104,
+                              "column": 20
+                            }
+                          }
+                        },
+                        "range": [
+                          3969,
+                          3985
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 104,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 104,
+                            "column": 20
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "credentials",
+                        "range": [
+                          3988,
+                          3999
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 104,
+                            "column": 23
+                          },
+                          "end": {
+                            "line": 104,
+                            "column": 34
+                          }
+                        }
+                      },
+                      "range": [
+                        3969,
+                        3999
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 104,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 104,
+                          "column": 34
+                        }
+                      }
+                    },
+                    "range": [
+                      3969,
+                      4000
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 104,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 104,
+                        "column": 35
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Object} [credentials]\n     * @desc An object containing credentials for the identity;\n     * can be used to be able to login to the identity's messaging server\n     * @example // ims login example\n     * { \"privid\" : \"identifier@subdomain.example.org:1234\",\n     *   \"pubid\" : \"pudIdentifier\",\n     *   \"proxy\" : \"10.11.12.13:12333\",\n     *   \"pwd\" : \"userPassword\"                              }\n     ",
+                        "range": [
+                          3542,
+                          3964
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 94,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 103,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "range": [
+                  1380,
+                  4004
+                ],
+                "loc": {
+                  "start": {
+                    "line": 28,
+                    "column": 88
+                  },
+                  "end": {
+                    "line": 105,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                1305,
+                4004
+              ],
+              "loc": {
+                "start": {
+                  "line": 28,
+                  "column": 13
+                },
+                "end": {
+                  "line": 105,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "constructor",
+            "computed": false,
+            "range": [
+              1294,
+              4004
+            ],
+            "loc": {
+              "start": {
+                "line": 28,
+                "column": 2
+              },
+              "end": {
+                "line": 105,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @constructor\n   * @param {String} rtcIdentity - The username including the domain part of the identity which must be unique\n   * @param {String} remoteIdp - The URL of the remote identity provider\n   * @param {MessagingStub} msgStub - The messaging stub instance which will be used to connect the identity to its domain\n   * @param {String} msgStubUrl - The URL to the origin of the messaging stub\n   * @param {String} msgSrv - The URL to the messaging server which will be used for the identity's domain\n   * @param {Object} [codecs] - An array containing the codec URLs for the data channel\n   * @param {Object} [credentials] - An object containing credentials for the identity; can contain login information for the messaging server\n   ",
+                "range": [
+                  541,
+                  1291
+                ],
+                "loc": {
+                  "start": {
+                    "line": 18,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 27,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          }
+        ],
+        "range": [
+          537,
+          4006
+        ],
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 15
+          },
+          "end": {
+            "line": 106,
+            "column": 1
+          }
+        }
+      },
+      "range": [
+        522,
+        4006
+      ],
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 0
+        },
+        "end": {
+          "line": 106,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @class\n * @desc This class represents an identity.\n * The identity is the view of the WONDER framework of a user's representation\n * and will be filled with information coming from the identity provider.\n ",
+          "range": [
+            307,
+            521
+          ],
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 0
+            },
+            "end": {
+              "line": 16,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    291,
+    4006
+  ],
+  "loc": {
+    "start": {
+      "line": 8,
+      "column": 0
+    },
+    "end": {
+      "line": 106,
+      "column": 1
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other\n * This framework is based on @see https://github.com/hypercomm/wonder\n * @author Danny Koppenhagen <mail@d-koppenhagen.de>\n * @author Johannes Hamfler <jh@z7k.de>\n ",
+      "range": [
+        0,
+        289
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * @class\n * @desc This class represents an identity.\n * The identity is the view of the WONDER framework of a user's representation\n * and will be filled with information coming from the identity provider.\n ",
+      "range": [
+        307,
+        521
+      ],
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 0
+        },
+        "end": {
+          "line": 16,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * @constructor\n   * @param {String} rtcIdentity - The username including the domain part of the identity which must be unique\n   * @param {String} remoteIdp - The URL of the remote identity provider\n   * @param {MessagingStub} msgStub - The messaging stub instance which will be used to connect the identity to its domain\n   * @param {String} msgStubUrl - The URL to the origin of the messaging stub\n   * @param {String} msgSrv - The URL to the messaging server which will be used for the identity's domain\n   * @param {Object} [codecs] - An array containing the codec URLs for the data channel\n   * @param {Object} [credentials] - An object containing credentials for the identity; can contain login information for the messaging server\n   ",
+      "range": [
+        541,
+        1291
+      ],
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 2
+        },
+        "end": {
+          "line": 27,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {String} rtcIdentity\n     * @desc The username including the domain of the Identity\n     * @example alice@example.com\n     ",
+      "range": [
+        1386,
+        1528
+      ],
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 4
+        },
+        "end": {
+          "line": 33,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {String} remoteIdp\n     * @desc The URL to the remote Idp\n     * @example 'webfinger' // recommended\n     * 'http://example.net/idp.php?user='\n     ",
+      "range": [
+        1570,
+        1737
+      ],
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 4
+        },
+        "end": {
+          "line": 41,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {MessagingStub} msgStub\n     * @desc The instance of the messaging stub of the identity's domain\n     * which will be used to connect the identity to it's messaging server;\n     * it will also be used to communicate with the messaging server\n     * @example\n     * define(function(require, exports, module) {\n     *   class MessagingStubOfExampleDomain {\n     *     constructor() {\n     *       this.onMessage = null; // message event handler will use this to register itself on the stub\n     *     }\n     *     connect(rtcIdentity, credentials, msgSrv, callback) {\n     *       // ...\n     *       this.websocket.onmessage = function(msg) {\n     *         // ...\n     *         that.onMessage(msg); // give the message as a JSON-object to the registered function to process it in wonder\n     *       };\n     *       // ...\n     *     }\n     *     sendMessage(message) { ... }\n     *     disconnect() { ... }\n     *   }\n     *   return new MessagingStubOfExampleDomain();\n     * });\n     ",
+      "range": [
+        1775,
+        2782
+      ],
+      "loc": {
+        "start": {
+          "line": 44,
+          "column": 4
+        },
+        "end": {
+          "line": 68,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {String} msgStubUrl\n     * @desc The URL to the location where the messagingStub was downloaded from\n     * @example 'http://example.net:8082/stubsDirectory/MessagingStubOfExampleDomain.js'\n     ",
+      "range": [
+        2816,
+        3030
+      ],
+      "loc": {
+        "start": {
+          "line": 71,
+          "column": 4
+        },
+        "end": {
+          "line": 75,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {String} msgSrv\n     * @desc The URL to the messaging server of the identity's domain\n     * @example 'ws://example.org:12345'\n     ",
+      "range": [
+        3070,
+        3221
+      ],
+      "loc": {
+        "start": {
+          "line": 78,
+          "column": 4
+        },
+        "end": {
+          "line": 82,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {Object} codecs\n     * @desc An object containing payloadtypes as keys to the links of codec libraries\n     * @example\n     * { chat: \"http://example.net:8083/codecs/chat.js\"\n     *   file: \"http://example.net:8083/codecs/file.js\" }\n     ",
+      "range": [
+        3253,
+        3510
+      ],
+      "loc": {
+        "start": {
+          "line": 85,
+          "column": 4
+        },
+        "end": {
+          "line": 91,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {Object} [credentials]\n     * @desc An object containing credentials for the identity;\n     * can be used to be able to login to the identity's messaging server\n     * @example // ims login example\n     * { \"privid\" : \"identifier@subdomain.example.org:1234\",\n     *   \"pubid\" : \"pudIdentifier\",\n     *   \"proxy\" : \"10.11.12.13:12333\",\n     *   \"pwd\" : \"userPassword\"                              }\n     ",
+      "range": [
+        3542,
+        3964
+      ],
+      "loc": {
+        "start": {
+          "line": 94,
+          "column": 4
+        },
+        "end": {
+          "line": 103,
+          "column": 7
+        }
+      }
+    }
+  ]
+}

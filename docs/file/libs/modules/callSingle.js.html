@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">libs/modules/callSingle.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  <a href="identifiers.html">Identifier</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="git+ssh://git@gitlab.com/hftl/wonder_2.0.git">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/wonder.js~WONDER.html">WONDER</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">modules</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Conversation.js~Conversation.html">Conversation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/DataChannelEvtHandler.js~DataChannelEvtHandler.html">DataChannelEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Demand.js~Demand.html">Demand</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Identity.js~Identity.html">Identity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Idp.js~Idp.html">Idp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Message.js~Message.html">Message</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MessageFactory.js~MessageFactory.html">MessageFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MsgEvtHandler.js~MsgEvtHandler.html">MsgEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Participant.js~Participant.html">Participant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/RtcEvtHandler.js~RtcEvtHandler.html">RtcEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-errorHandler">errorHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DataChannelEvtType">DataChannelEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MessageType">MessageType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PayloadType">PayloadType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-RtcEvtType">RtcEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-GUID">GUID</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">libs/modules/callSingle.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other
+ * This framework is based on @see https://github.com/hypercomm/wonder
+ * @author Danny Koppenhagen &lt;mail@d-koppenhagen.de&gt;
+ * @author Johannes Hamfler &lt;jh@z7k.de&gt;
+ */
+
+&apos;use strict&apos;;
+
+define(function() {
+
+  function callSingle(wonderInstance, recipient, conversation, demand) {
+    return new Promise(function(resolve, reject) {
+      console.log(conversation);
+      // error handling
+      if (typeof recipient !== &apos;string&apos;) return new Error(&apos;false type of recipient&apos;);
+
+      // create remote identity and participant
+      wonderInstance.localIdp.getIdentity(recipient)
+      .then(function(identity) {
+        var participant = new Participant(wonderInstance, identity);
+        conversation.remoteParticipants.push(participant); // set the conversation&apos;s participants
+        conversation.msgSrv = identity.msgSrv; // use the recipient&apos;s messaging server
+        if (conversation.msgSrv == conversation.myParticipant.identity.msgSrv) {
+          // remote identity exists on the same server as mine
+          conversation.msgStub = conversation.myParticipant.identity.msgStub;
+          console.log(&quot;[callSingle] already connected to the remote participants msgServer&quot;);
+        } else {
+          // if its another server create a new connection
+          conversation.msgStub = new identity.msgStub.constructor; // use the remote identity&apos;s msgStub
+          // connect the stub of the conversation to the remote server
+          conversation.msgStub.connect(
+            wonderInstance.myIdentity.rtcIdentity, // use my rtcIdentity to connect to the remote server
+            participant.identity.credentials, // use the remote participants credentials for that
+            participant.identity.msgSrv, // the destination messaging server
+            function() { // successfully connected
+              console.log(&apos;[callSingle] connected to REMOTE PARTICIPANTs msgServer&apos;);
+              resolve(conversation.id);
+              return conversation.id;
+            }
+          );
+        }
+
+        // set the conversation&apos;s messaging event handler for every message coming throuh the messaing server
+        conversation.msgStub.onMessage = conversation.msgEvtHandler.onMessage.bind(conversation.msgEvtHandler);
+      })
+      .catch(function(error) {
+        reject(error);
+      }) // Promise of getIdentity is over here
+
+      // take the promise from getIdentity
+      .then(function(conversationId) {
+        // needs to be here when data audio and video are requested all together
+        Demand.updateDemandDisallow(demand, {data:true})
+
+        navigator.mediaDevices.getUserMedia(demand.out) // local participant demands video or audio to send
+        .then(function(stream) {
+          var evt = {
+            type: RtcEvtType.onaddlocalstream,
+            stream: stream
+          }
+          conversation.rtcEvtHandler.onEvt(evt);
+          conversation.myParticipant.peerConnection.addStream(stream); // add the stream to the peer connection to send it later on
+          conversation.myParticipant.peerConnection.createOffer( // create the sdp offer now for both participants
+            function(offer) {
+              console.log(&quot;[callSingle] offer from alice: &quot;, offer.sdp);
+              conversation.myParticipant.peerConnection.setLocalDescription( // now set the peer connection description
+                offer, // with the local offer
+                function() {
+                  console.log(&quot;[callSingle] local description success&quot;);
+                  var msg = MessageFactory.invitation( // create the message for the remote participant
+                    conversation.myParticipant.identity,
+                    conversation.remoteParticipants[0].identity,
+                    conversation.id,
+                    conversation.myParticipant.demand, // also send the demand so bob knows what to expect from alice
+                    offer // include the sdp offer for bob
+                  );
+                  conversation.msgStub.sendMessage(msg); // and send the mesage
+                },
+                function(error) {
+                  console.log(error);
+                  reject(error);
+                }
+              );
+            },
+            function(error) {
+              console.log(error);
+              reject(error);
+            }, {
+              offerToReceiveAudio: 1,
+              offerToReceiveVideo: 1
+            }
+          ); // create offer ends here
+          resolve(conversation.id);
+        })
+        .catch(function(error) {
+          reject(error);
+          return error;
+        }); // getUserMedia promise ends here
+
+        resolve(conversation.id); // return the conversationId if everything went right
+      })
+      .catch(function(error) {
+        reject(new Error(&apos;[callSingle] error:&apos;, error));
+      }); // promise returned by getIdentity ends here
+
+    }); // callSingle promise will be returned here
+  }
+
+  return callSingle; // necessary due to requireJS
+});
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.3.1)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

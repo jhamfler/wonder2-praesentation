@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  <a href="identifiers.html">Identifier</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="git+ssh://git@gitlab.com/hftl/wonder_2.0.git">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/wonder.js~WONDER.html">WONDER</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">modules</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Conversation.js~Conversation.html">Conversation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/DataChannelEvtHandler.js~DataChannelEvtHandler.html">DataChannelEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Demand.js~Demand.html">Demand</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Identity.js~Identity.html">Identity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Idp.js~Idp.html">Idp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Message.js~Message.html">Message</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MessageFactory.js~MessageFactory.html">MessageFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MsgEvtHandler.js~MsgEvtHandler.html">MsgEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Participant.js~Participant.html">Participant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/RtcEvtHandler.js~RtcEvtHandler.html">RtcEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-errorHandler">errorHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DataChannelEvtType">DataChannelEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MessageType">MessageType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PayloadType">PayloadType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-RtcEvtType">RtcEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-GUID">GUID</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="wonder-2-0">WONDER 2.0</h1>
+<p>The WONDER javascript library is the Reference Implementation of <a href="https://github.com/hypercomm/wonder/wiki/Signalling-on-the-fly">Signaling On-the-Fly</a> concept enabling seamless interoperability between different WebRTC Service Provider domains.</p>
+<h1 id="setup">Setup</h1>
+<h2 id="dependencies-on-debian">Dependencies on Debian</h2>
+<ul>
+<li>copy these lines in the shell:<pre><code><code class="source-code prettyprint">sudo apt-get install nodejs curl                # nodejs and curl
+sudo apt-get install nodejs-legacy              # symlinks from nodejs to node for using nodejs on debian
+curl -L https://npmjs.org/install.sh | sudo sh  # npm packet manager</code>
+</code></pre></li>
+</ul>
+<h2 id="wonder-framework">Wonder Framework</h2>
+<ul>
+<li>copy the following commands in the shell before starting to work on or with wonder<pre><code><code class="source-code prettyprint">sudo npm install -g gulp    # install the nodejs task runner gulp
+npm install                 # install all dependencies</code>
+</code></pre></li>
+</ul>
+<h2 id="configuring-nodejs-domain">Configuring NodeJS-domain</h2>
+<ul>
+<li>two different idp&apos;s are available<ul>
+<li>webfinger - uses the webfinger protocol to find meta data about users on a domain</li>
+<li>.nodejs domain specific IdP - a very simple idp which just returns users meta data for the <code>*.nodejs</code>-domain</li>
+</ul>
+</li>
+<li>do not use localhost if you want to test it with different devices</li>
+</ul>
+<h3 id="webfinger-idp-server-prefered-">Webfinger IdP Server (prefered)</h3>
+<ul>
+<li>adjust the following files with the appropriate ip adress configuration for your environment.<pre><code><code class="source-code prettyprint">src/webfinger/config.js             # configuration for webfinger server
+src/webfinger/data/default.json     # default webfinger meta data if a user wasn&apos;t found
+src/webfinger/data/acct/*.json      # user specific webfinger meta data</code>
+</code></pre></li>
+</ul>
+<h3 id="-nodejs-domain-specific-idp">.nodejs domain specific IdP</h3>
+<ul>
+<li>adjust the following files with the appropriate ip adress configuration for your environment.<pre><code><code class="source-code prettyprint">src/idp/data/nodejs.wonder          # contains meta data for all users using the `*.nodejs`-domain</code>
+</code></pre></li>
+<li>create files like <code>alice_at_nodejs.wonder</code> for user specific data.</li>
+</ul>
+<h2 id="configuring-the-testing-website-apps-min-">Configuring the testing website apps/min/</h2>
+<ul>
+<li>do the following command</li>
+</ul>
+<pre><code><code class="source-code prettyprint">cp src/apps/min/config.example.js src/apps/min/config.js</code>
+</code></pre><ul>
+<li>adjust the following file with the appropriate <code>ip</code> for your environment.</li>
+</ul>
+<pre><code><code class="source-code prettyprint">src/apps/min/config.js</code>
+</code></pre><h2 id="configuring-the-stub-provider-src-stub-provider">Configuring the stub-provider src/stub-provider</h2>
+<ul>
+<li>do the following command</li>
+</ul>
+<pre><code><code class="source-code prettyprint">cp src/stub-provider/config.example.js src/stub-provider/config.js</code>
+</code></pre><ul>
+<li>adjust the following file with the appropriate <code>ip</code> for your environment.</li>
+</ul>
+<pre><code><code class="source-code prettyprint">src/stub-provider/config.js</code>
+</code></pre><h2 id="configuring-the-data-codec-provider-src-data-codec-provider">Configuring the data-codec-provider src/data-codec-provider</h2>
+<ul>
+<li>do the following command</li>
+</ul>
+<pre><code><code class="source-code prettyprint">cp src/data-codec-provider/config.example.js src/data-codec-provider/config.js</code>
+</code></pre><ul>
+<li>adjust the following file with the appropriate <code>ip</code> for your environment.</li>
+</ul>
+<pre><code><code class="source-code prettyprint">src/data-codec-provider/config.js</code>
+</code></pre><h2 id="structure">Structure</h2>
+<ul>
+<li><code>doc</code>-folder: contains the documentation of this project<ul>
+<li>run <code>gulp doc</code> to build the docs from source code and open it in browser</li>
+</ul>
+</li>
+<li><code>src</code>-folder: contains the source code of the WONDER 2.0 library</li>
+<li>use <code>gulp help</code> for an overview of all available gulp tasks</li>
+</ul>
+<h2 id="gulp-tasks">Gulp Tasks</h2>
+<ul>
+<li>use <code>gulp help</code> for an overview of all available gulp tasks</li>
+</ul>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.3.1)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

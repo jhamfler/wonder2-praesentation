@@ -1,0 +1,39 @@
+{
+  "name": "wonder_2.0",
+  "version": "1.0.0",
+  "description": "WONDER 2.0",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "gulp setup",
+    "preuninstall": "gulp clean",
+    "test": "gulp test",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/hftl/wonder_2.0.git"
+  },
+  "author": "Danny Koppenhagen, Johannes Hamfler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/hftl/wonder_2.0/issues"
+  },
+  "homepage": "https://gitlab.com/hftl/wonder_2.0#README",
+  "devDependencies": {
+    "colors": "^1.1.2",
+    "fs": "0.0.2",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-confirm": "^1.0.4",
+    "gulp-esdoc": "0.1.0",
+    "gulp-open": "^1.0.0",
+    "gulp-shell": "^0.4.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-watch": "^4.3.5",
+    "gulp-webdriver": "^1.0.0",
+    "gulp-webserver": "^0.9.1",
+    "gulp-wrap-amd": "^0.5.0",
+    "https": "^1.0.0",
+    "yargs": "^3.24.0"
+  }
+}

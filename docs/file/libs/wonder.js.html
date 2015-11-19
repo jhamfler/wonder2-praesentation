@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">libs/wonder.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  <a href="identifiers.html">Identifier</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="git+ssh://git@gitlab.com/hftl/wonder_2.0.git">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/wonder.js~WONDER.html">WONDER</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">modules</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Conversation.js~Conversation.html">Conversation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/DataChannelEvtHandler.js~DataChannelEvtHandler.html">DataChannelEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Demand.js~Demand.html">Demand</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Identity.js~Identity.html">Identity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Idp.js~Idp.html">Idp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Message.js~Message.html">Message</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MessageFactory.js~MessageFactory.html">MessageFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MsgEvtHandler.js~MsgEvtHandler.html">MsgEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Participant.js~Participant.html">Participant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/RtcEvtHandler.js~RtcEvtHandler.html">RtcEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-errorHandler">errorHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DataChannelEvtType">DataChannelEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MessageType">MessageType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PayloadType">PayloadType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-RtcEvtType">RtcEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-GUID">GUID</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">libs/wonder.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other
+ * This framework is based on @see https://github.com/hypercomm/wonder
+ * @author Danny Koppenhagen &lt;mail@d-koppenhagen.de&gt;
+ * @author Johannes Hamfler &lt;jh@z7k.de&gt;
+ * @version 0.1.0
+ */
+
+&apos;use strict&apos;;
+/*
+(function(undefined) {
+  if (typeof(define) === &apos;function&apos; &amp;&amp; define.amd) {
+    define([
+      &apos;adapter&apos;,
+      &apos;Conversation&apos;,
+      &apos;Demand&apos;,
+      &apos;helpfunctions&apos;,
+      &apos;Identity&apos;,
+      &apos;Idp&apos;,
+      &apos;Message&apos;,
+      &apos;MessageFactory&apos;,
+      &apos;MsgEvtHandler&apos;,
+      &apos;Participant&apos;,
+      &apos;RtcEvtHandler&apos;,
+      &apos;Types&apos;,
+      &apos;DataChannelEvtHandler&apos;
+    ], function() {
+    */
+      /**
+       * @class
+       * @desc The WONDER class is used for developers for interacting with all other WONDER related classes.
+       * The class uses simple interfaces for login, call, etc.
+       * All operations will start with wonder.&lt;function-name&gt; and will return a promise and a callback (either successCallback or errorCallback).
+       * @example wonder.&lt;funcion&gt;(&lt;params&gt;).then(function(successCallbackData){&lt;code&gt;}, function(errorCallbackData){&lt;code&gt;})
+       * @return {WONDER}
+       * @alias module:wonder
+       */
+      class WONDER {
+        /**
+         * @constructor
+         * @example
+         * // needs to be included in a html file
+         * &lt;script src=&quot;require.min.js&quot;&gt;&lt;/script&gt;
+         * &lt;script type=&quot;text/javascript&quot;&gt;
+         *   // require.config is optional and only necessary if the wonder framework is not in the same directory like require.js
+         *   // for additional information visit: http://requirejs.org/docs/api.html#config
+         *   require.config({
+         *     paths: { &apos;wonder&apos;: &apos;js/wonder&apos; } // includes js/wonder.js
+         *   });
+         *   require([&apos;wonder&apos;], function(wonderInstance){
+         *     wonderInstance.login(&quot;alice@example.org&quot;);
+         *     // do other things here like calling bob
+         *   });
+         * &lt;/script&gt;
+         */
+        constructor() {
+          /**
+           * @type {Object} config
+           * @desc An object with a configuration
+           * The standard values are set by default when the user doesn&apos;t want to do
+           * it on his own.
+           * @example
+           * {
+           *  idp: &apos;webfinger&apos;,
+           *  // alternatively an own idp with:
+           *  // idp:{ url:  &quot;http://example.com&quot;,
+           *  //       port: &apos;2222&apos;,
+           *  //       path: &apos;/u?jsonp=define&amp;identity&apos;   }
+           *  autoAccept: false, // accept invitations automatically
+           *  ice: [
+           *     {urls:&apos;stun:stun.example.com&apos;}, // stunserver
+           *     { // turnserver
+           *       urls: &apos;turn:turn.example.org:11111?transport=tcp&apos;,
+           *       credential: &apos;credeantialAccessString&apos;,
+           *       username: &apos;usernameToAccess&apos;
+           *     }
+           *   ]
+           * }
+           */
+          this.config = {
+            // automatic accept all invitations
+            autoAccept: true,
+
+            // location of the identity provider
+            idp: &apos;webfinger&apos;, // default value (search for identities with webfinger)
+
+            // default ice servers
+            ice: [{
+              urls: &apos;stun:stun.voiparound.com&apos;
+            }, {
+              urls: &apos;stun:stun.voipbuster.com&apos;
+            }, {
+              urls: &apos;stun:stun.voipstunt.com&apos;
+            }, {
+              urls: &apos;stun:stun.voxgratia.org&apos;
+            }, {
+              urls: &apos;stun:stun.ekiga.net&apos;
+            }, {
+              urls: &apos;stun:stun.schlund.de&apos;
+            }, {
+              urls: &apos;stun:stun.iptel.org&apos;
+            }, {
+              urls: &apos;stun:stun.l.google.com:19302&apos;
+            }, {
+              urls: &apos;stun:stun1.l.google.com:19302&apos;
+            }, {
+              urls: &apos;stun:stun.ideasip.com&apos;
+            }, {
+              urls: &apos;stun:stun4.l.google.com:19302&apos;
+            }, {
+              urls: &apos;stun:stun2.l.google.com:19302&apos;
+            }, {
+              urls: &apos;stun:stun3.l.google.com:19302&apos;
+            }, {
+              urls: &apos;turn:192.158.29.39:3478?transport=tcp&apos;,
+              credential: &apos;JZEOEt2V3Qb0y27GRntt2u2PAYA=&apos;,
+              username: &apos;28224511:1379330808&apos;
+            }, {
+              urls: &apos;turn:192.158.29.39:3478?transport=udp&apos;,
+              credential: &apos;JZEOEt2V3Qb0y27GRntt2u2PAYA=&apos;,
+              username: &apos;28224511:1379330808&apos;
+            }, {
+              urls: &apos;turn:numb.viagenie.ca&apos;,
+              credential: &apos;muazkh&apos;,
+              username: &apos;webrtc@live.com&apos;
+            }]
+          };
+
+          /**
+           * @type {Array&lt;Conversation&gt;} conversations
+           * @desc The conversations used in this WONDER instance
+           */
+          this.conversations = [];
+
+          /**
+           * @type {Identity} myIdentity
+           * @desc The identity of the local user
+           */
+          this.myIdentity = null;
+
+          /**
+           * @type {Idp} localIdp
+           * @desc The local identity provider residing in the local WONDER instance
+           * used to interact with the remote identity provider. It is there to be
+           * able to abstact the remote identity provider and define a common
+           * interface to WONDER functions.
+           * It resolves identities via WebFinger or JSONP.
+           */
+          this.localIdp = null;
+
+          /**
+           * @type {function(msg: Message, conversationId: GUID)} onMessage
+           * @desc The variable on which the framework user can register his own message event handler.
+           * It is called after the WONDER framework is finished processing each message.
+           * Is meant to deliver events which originate from the messaging server.
+           * @example wonder.onMessage = function(msg, conversationId) { ... }
+           */
+          this.onMessage = new Function();
+
+
+          /**
+           * @type {function(msg: Object, conversationId: GUID)} onRtcEvt
+           * @desc The variable on which the framework user can register an event handler for wonder rtc (peer connection) events.
+           * It is called after the WONDER framework is finished processing each
+           * Is meant to deliver events which originate from the peer connection to another user.
+           * @example wonder.onRtcEvt = function(msg, conversationId) { ... }
+           */
+          this.onRtcEvt = new Function();
+
+          /**
+           * @type {function(msg: Object, conversationId: GUID)} onDataChannelEvt
+           * @desc The variable on which the framework user can register an event handler for wonder data channel events.
+           * It is called after the WONDER framework is finished processing each
+           * Is meant to deliver events which originate from the peer connection&apos;s datachannels to another user.
+           * @example wonder.onDataChannelEvt = function(msg, conversationId){ ... }
+           */
+          this.onDataChannelEvt = new Function();
+        }
+
+        /**
+         * @desc The function starts a user login at the identity provider.
+         * @param {String} myRtcIdentity - The username (login name) of the local identity
+         * @param {Object} credentials - An object with additional login credentials (password, sip-credentials, etc.); may be undefined or null or an empty string
+         * @param {function} [successCallback] - A success callback
+         * @param {function} [errorCallback] - An error callback
+         * @return {Promise&lt;Identity&gt;|function(identity: Identity)}
+         * @example
+         * wonder.login(&quot;alice@example.net&quot;, &quot;&quot;)
+         * .then(function(identity){
+         *   // use the identity to extract the user&apos;s aliases, avatar or other information
+         * });
+         */
+        login(myRtcIdentity, credentials, successCallback, errorCallback) {
+          var that = this;
+          var errMsg = null;
+
+          console.log(&apos;[WONDER login] login with:&apos;, myRtcIdentity);
+
+          return new Promise(function(resolve, reject) {
+
+            // errorCallback handling
+            if (!myRtcIdentity) {
+              errMsg = new Error(&apos;[WONDER login] errorCallback: no login name received&apos;);
+              reject(errMsg);
+              if (errorCallback) errorCallback(errMsg);
+              return;
+            }
+            if (credentials === undefined || credentials === null) credentials = &apos;&apos;;
+            if (!that.localIdp) {
+              if (typeof that.config.idp === &apos;string&apos; &amp;&amp; that.config.idp === &apos;webfinger&apos;) {
+                console.log(&apos;[WONDER login] looking for identities using Webfinger...&apos;);
+                that.localIdp = new Idp(&apos;webfinger&apos;, myRtcIdentity);
+              } else if (typeof that.config.idp === &apos;object&apos;) {
+                that.localIdp = new Idp(that.config.idp.url + &apos;:&apos; + that.config.idp.port + that.config.idp.path, myRtcIdentity);
+              } else {
+                errMsg = new Error(&apos;[WONDER login] errorCallback: Wrong idp format in configuration&apos;);
+                reject(errMsg);
+                if (errorCallback) errorCallback(errMsg);
+                return;
+              }
+            }
+
+            that.localIdp.getIdentity(myRtcIdentity, credentials)
+              .then(function(identity) {
+                console.log(&apos;[WONDER login]: got identity: &apos;, identity);
+                that.myIdentity = identity;
+                var invitationHandler = new MsgEvtHandler(that); // we need to receive invitations
+                // as we are registering the handler on the messaging stub we need to replace the reference to
+                // this == msgStub with this == invitationHandler
+                identity.msgStub.onMessage = invitationHandler.onMessage.bind(invitationHandler);
+                // SD 06.10.15: add credentials to the identity
+                identity.credentials = credentials;
+
+                identity.msgStub.connect( // and connect to the own mesaging server
+                  identity.rtcIdentity,
+                  identity.credentials,
+                  identity.msgSrv,
+                  function() { // successCallback connecting
+                    console.log(&apos;[WONDER login] connected to msgServer of identity: &apos;, identity);
+                    resolve(identity);
+                    if (successCallback) successCallback(identity);
+                  }
+                );
+
+              })
+              .catch(function(err) { // possibly a network errorCallback
+                errMsg = new Error(&apos;[WONDER login] &apos;, err);
+                reject(errMsg);
+                if (errorCallback) errorCallback(errMsg);
+                return;
+              });
+          });
+        }
+
+
+
+        /**
+         * @desc A function to start a new call.
+         *
+         * @param {Array&lt;String&gt;|String} recipients - The rtcIdentity as a string for the reciepients (e.g. alice@example.com)
+         * @param {String|Array&lt;String&gt;|Object} demand - An object with the own media constraints for the offer
+         * @param {GUID} [conversationId] - To assign a call to an exiting conversation
+         * @param {function} [successCallback] - A success callback
+         * @param {function} [errorCallback] - An error callback
+         * @return {Promise&lt;GUID&gt;|function(conversationId: GUID)}
+         * @example
+         * wonder.call(&quot;bob@example.com&quot;, {video: true, data: PayloadType.chat})
+         * .then(function(conversationId){
+         *   // show video and send chat messages
+         * });
+         */
+        call(recipients, demand, conversationId, successCallback, errorCallback) {
+          var that = this;
+          var errMsg = null;
+
+          return new Promise(function(resolve, reject) {
+            // errorCallback handling
+            if (!recipients) {
+              errMsg = new Error(&apos;[WONDER call] no recipients&apos;);
+              reject(errMsg);
+              if (errorCallback) errorCallback(errMsg);
+              return;
+            }
+            if (!demand) {
+              errMsg = new Error(&apos;[WONDER call] no demand&apos;);
+              reject(errMsg);
+              if (errorCallback) errorCallback(errMsg);
+              return;
+            }
+            demand = new Demand(demand); // convert the demand to the standard format
+
+            // TODO: only do that if no conversationId is given
+            var existingConversation = null;
+            if (typeof recipients === &apos;string&apos; || recipients instanceof String) {
+              // check if te remote rtcIdentity is already in a conversation
+              existingConversation = that.conversations.find(
+                function(conversation) {
+                  return conversation.remoteParticipants.find(
+                    function(participant) {
+                      return participant.identity.rtcIdentity == recipients;
+                    }
+                  )
+                }
+              );
+            }
+            if (typeof recipients === &apos;array&apos; || recipients instanceof Array) return new Error(&quot;[wonder call] multiparty no yet implemented&quot;);
+
+            if (!existingConversation) {
+              // create a new conversation
+              var conversation = new Conversation(that, new Participant(that, that.myIdentity, demand)); // create me and set me as the owner
+              conversation.myParticipant = conversation.owner; // copy the reference to me
+              that.conversations.push(conversation); // add the conversation to wonder
+              conversation.myParticipant.setRtcPeerConnection(
+                new RTCPeerConnection({
+                  &apos;iceServers&apos;: that.config.ice // name of key needs to be iceServers in RTCPeerConnection
+                    //,dataChannelOptions
+                })
+              );
+            } else {
+              var conversation = existingConversation;
+              conversation.myParticipant.updateDemand(demand);
+            }
+
+            // set ice handling to false before receiving all sdp messages to avoid ICE errors
+            conversation.msgEvtHandler.ice = false;
+
+            // dynamically load a file for a specific use case
+            // require file for a multiparty call
+            if (typeof recipients === &apos;array&apos; || recipients instanceof Array) {
+              // TODO: implement multiparty support
+              if (demand.out.video || demand.out.audio) {
+                require([&apos;callMultiple&apos;], function(callMultiple) {
+                  callMultiple(wonderInstance, recipients, conversation)
+                    .then(function(conversationId) {
+                      resolve(conversationId);
+                      if (successCallback) successCallback(conversationId);
+                    })
+                    .catch(function(error) {
+                      errMsg = new Error(&quot;[WONDER call] Error in callMultiple occured: &quot;, error);
+                      reject(errMsg);
+                      if (errorCallback) errorCallback(errMsg);
+                      return;
+                    });
+                });
+              }
+            }
+            // require file for a single call
+            else if (typeof recipients === &apos;string&apos; || recipients instanceof String) {
+              // start a video / audio call
+              if (demand.out.video || demand.out.audio) {
+                require([&apos;callSingle&apos;], function(callSingle) {
+                  callSingle(that, recipients, conversation, demand)
+                    .then(function(conversationId) {
+                      resolve(conversationId);
+                      if (successCallback) successCallback(conversationId);
+                    })
+                    .catch(function(error) {
+                      errMsg = new Error(&quot;[WONDER call] Error in callSingle occured: &quot;, error);
+                      reject(errMsg);
+                      if (errorCallback) errorCallback(errMsg);
+                      return;
+                    });
+                });
+              }
+              // start a data channel
+              if (demand.out.data) {
+                require([&apos;dataChannel&apos;], function(dataChannel) {
+                  dataChannel(that, recipients, conversation, demand.out.data) // also hand over the data object to tell what payload type is wanted
+                    .then(function(conversationId) {
+                      resolve(conversationId);
+                      if (successCallback) successCallback(conversationId);
+                    })
+                    .catch(function(error) {
+                      errMsg = new Error(&quot;[WONDER call] Error in dataChannel occured: &quot;, error);
+                      reject(errMsg);
+                      if (errorCallback) errorCallback(errMsg);
+                      return;
+                    });
+                });
+              }
+            } else {
+              errMsg = new Error(&quot;[WONDER call] cannot determine wether it is a multi or single party call&quot;);
+              reject(errMsg);
+              if (errorCallback) errorCallback(errMsg);
+              return;
+            }
+          });
+        }
+
+
+
+        /**
+         * @desc A function to remove a reciepient from an existing conversation
+         * only used for multiparty calls
+         *
+         * @param {Array.&lt;String&gt;|String} recipients - The username(s) for the reciepients
+         * @param {GUID} [conversationId] - To remove a call from an exiting conversation
+         * @param {function} [successCallback] - A success callback
+         * @param {function} [errorCallback] - An error callback
+         *
+         * @return {Promise&lt;GUID&gt;|function(conversationId: GUID)}
+         * !!! not implemented yet
+         * TODO: implement
+
+        removeRecipients(recipients, conversationId, successCallback, errorCallback) {
+          var that = this;
+          var errMsg = null;
+
+          return new Promise(function(resolve, reject) {
+            // errorCallback handling
+            if (!recipients) {
+              errMsg = new Error(&apos;[WONDER removeRecipients] errorCallback: no reciepients given&apos;)
+              reject(errMsg);
+              if (errorCallback) errorCallback(errMsg);
+              return;
+            }
+            // force an array construct
+            var rcpt = [];
+            if (typeof recipients === &apos;string&apos;) rcpt.push(recipients);
+            else rcpt = recipients;
+
+            // TODO : implement
+            // conversation.addParticipant(participant, invitationBody, constraints, function(){resolve()}, function(){reject()});
+
+          });
+        }
+        */
+
+        /**
+         * @desc Add demand to an existing conversation
+         *
+         * @param {Object} type - a media constraint object containing the new media constraints
+         * @param {GUID} [conversationId] - To add constraints to an exiting conversation
+         * @param {function} [successCallback] - A success callback.
+         * @param {function} [errorCallback] - An error callback.
+         *
+         * @return {Promise&lt;GUID&gt;|function(conversationId: GUID)}
+         * !!! not implemented yet
+         * TODO: implement
+
+        addDemand(type, conversationId, successCallback, errorCallback) {
+          var that = this;
+          var errMsg = null;
+
+          return new Promise(function(resolve, reject) {
+            // errorCallback handling
+            if (!type) {
+              errMsg = new Error(&apos;[WONDER addDemand] errorCallback: no type given&apos;);
+              reject(errMsg);
+              if (errorCallback) errorCallback(errMsg);
+              return;
+            }
+          });
+        }
+         */
+
+        /**
+         * @desc Remove demand from an existing conversation
+         *
+         * @param {Object} type - a media constraint object containing the media constraints wich should be removed
+         * @param {GUID} [conversationId] - To remove constraints from an exiting conversation
+         * @param {function} [successCallback] - A success callback.
+         * @param {function} [errorCallback] - An error callback.
+         *
+         * @return {Promise&lt;GUID&gt;|function(conversationId: GUID)}
+         * !!! not implemented yet
+         * TODO: implement
+
+        removeDemand(type, conversationId, successCallback, errorCallback) {
+          var that = this;
+          var errMsg = null;
+
+          return new Promise(function(resolve, reject) {
+            // errorCallback handling
+            if (!type) {
+              errMsg = new Error(&apos;[WONDER removeDemand] errorCallback: no type given&apos;);
+              reject(errMsg);
+              if (errorCallback) errorCallback(errMsg);
+              return;
+            }
+          });
+        }
+         */
+
+        /**
+         * @desc A function to logout a user from his and all other messaging servers.
+         * The hangup function will be called to close all conversations.
+         * @param {function} [successCallback] - A success callback
+         * @param {function} [errorCallback] - An error callback
+         * @return {Promise&lt;Boolean&gt;|function(success: Boolean)}
+         * @example wonder.logout().then( function(){ ... } );
+         */
+        logout(successCallback, errorCallback) {
+          var that = this;
+          var errMsg = null;
+
+          return new Promise(function(resolve, reject) {
+            // errorCallback handling
+            if (!that.myIdentity) {
+              errMsg = new Error(&apos;[WONDER logout] not logged in&apos;);
+              reject(errMsg);
+              if (errorCallback) errorCallback(errMsg);
+              return;
+            }
+
+            // hangup all conversations
+            if (that.conversations.length &gt; 0) that.hangup();
+
+            // disconnect from own messaging server
+            if (that.myIdentity.msgStub) that.myIdentity.msgStub.disconnect();
+            else {
+              errMsg = new Error(&quot;[WONDER logout] no messaging Stub present&quot;);
+              reject(errMsg);
+              if (errorCallback) errorCallback(errMsg);
+              return;
+            }
+
+            resolve(true);
+            if (successCallback) successCallback(true);
+          });
+        }
+
+
+        /**
+         * @desc A function to hangup a single conversation or all conversations.
+         * @param {GUID} [conversationId] - Id of the of the conversation to be closed
+         * @param {function} [successCallback] - A success callback
+         * @param {function} [errorCallback] - An error callback
+         * @return {Promise&lt;Boolean&gt;|function(success: Boolean)}
+         * @example wonder.hangup(conversationId).then( function(){ ... } );
+         */
+        hangup(conversationId, successCallback, errorCallback) {
+          var that = this;
+          var errMsg = null;
+
+          return new Promise(function(resolve, reject) {
+            // error handling
+            if (that.conversations.length == 0) {
+              errMsg = new Error(&quot;[WONDER hangup] no conversation present&quot;);
+              reject(errMsg);
+              if (errorCallback) errorCallback(errMsg);
+            }
+
+            if (!conversationId) { // hangup all conversations
+              for (var i = 0; i &lt; that.conversations.length; i++) {
+                that.conversations[i].leave();
+              }
+              that.conversations = [];
+            } else { // close a single conversation
+              var conversation = that.conversations.find(function(id) {
+                return id == conversationId;
+              });
+              conversation.leave();
+              conversation = null; // TODO: check if a conversation of null is still in the array
+            }
+
+            resolve(true);
+            if (successCallback) successCallback(true);
+          });
+        }
+
+
+        /**
+         * @desc Sends a new data channel message via the RTCDataChannel.
+         * @param {Object} msg - An object containing the message to be sent
+         * @param {PayloadType|String} type - The type of the payload (as a string or the well known PayloadType) of the data channel message
+         * @param {GUID} [conversationId] - The conversationId of the conversation&apos;s data channel the message will be sent to
+         * @param {function} [successCallback] - A success callback
+         * @param {function} [errorCallback] - An error callback
+         * @return {Promise&lt;Boolean&gt;|function(success: Boolean)}
+         * @example
+         * msg = &quot;Text or Message or Object or anything. Is handeled by the codec.&quot;;
+         * wonder.dataChannelMsg(msg, PayloadType.plain, conversationId)
+         * .then(function(booleanValue){
+         *   // success
+         * });
+         */
+        dataChannelMsg(msg, type, conversationId, to, successCallback, errorCallback) {
+          var that = this;
+          var errMsg = null;
+          console.log(&quot;[WONDER dataChannelMsg] &quot;, msg);
+          return new Promise(function(resolve, reject) {
+            if (that.conversations.length == 0) {
+              errMsg = new Error(&quot;[WONDER dataChannelMsg] no conversation present&quot;);
+              reject(errMsg);
+              if (errorCallback) errorCallback(errMsg);
+            }
+
+            // if no conversation use the dafault single party call method
+            if (!conversationId) {
+              var remoteIdentity = that.conversations[0].remoteParticipants[0].identity;
+              try {
+                that.conversations[0].dataChannelBroker.getDataChannelCodec(that.myIdentity, remoteIdentity, type).send(msg);
+                resolve(true);
+                if (successCallback) successCallback(true);
+              } catch (err) {
+                errMsg = new Error(&apos;[WONDER dataChannelMsg] There is no dataChannel for this Codec established&apos;);
+                reject(errMsg);
+                if (errorCallback) errorCallback(errMsg);
+              }
+            } else { // else find the conversation
+              var conversation = that.conversations.find(
+                function(conversation) {
+                  return conversation.id == conversationId;
+                }
+              );
+              if (conversation) { // and if it was found send the message
+                var remoteIdentity = conversation.remoteParticipants[0].identity;
+                conversation.dataChannelBroker.getDataChannelCodec(that.myIdentity, remoteIdentity, type).send(msg);
+                resolve(true);
+                if (successCallback) successCallback(true);
+              } else { // and if not throw an error
+                errMsg = new Error(&apos;[WONDER dataChannelMsg] no conversation found&apos;);
+                reject(errMsg);
+                if (errorCallback) errorCallback(errMsg);
+              }
+            }
+          });
+        }
+
+        /**
+         * @desc This function needs to be called if the autoAccept option in the WONDER instacne is false.
+         * It needs to be used after the invitation is received and an answer is necessary.
+         * @param {Message} msg - The invitation message to be accepted or declined
+         * @param {Boolean} action - A Boolean value (true = accepted, false = declined)
+         * @param {function} [successCallback] - A success callback
+         * @param {function} [errorCallback] - An error callback
+         * @return {Promise&lt;GUID&gt;|function(conversationId: GUID)}
+         * @example
+         *   wonder.onMessage = function(msg, conversationId){
+         *     switch (msg.type) {
+         *       case MessageType.invitation:
+         *         if(!wonder.config.autoAccept) {
+         *           var confirmDialog = confirm(&apos;Call from &apos;+msg.from+&apos;. Would you like to accept?&apos;);
+         *           if (confirmDialog == true) {
+         *               wonder.answerRequest(msg, true).then(function(){
+         *                 console.log(&apos;[main] Message invitation: user accepted invtitation&apos;);
+         *               });
+         *           } else {
+         *               wonder.answerRequest(msg, false).then(function(){
+         *                 console.log(&apos;[main] Message invitation: user declined invtitation&apos;);
+         *               });
+         *           }
+         *       }
+         *       break;
+         *     }
+         *   }
+         */
+        answerRequest(msg, action, successCallback, errorCallback) {
+          var that = this;
+          var errMsg = null;
+
+          return new Promise(function(resolve, reject) {
+            var conversation = that.conversations.find(
+              function(conversation) {
+                return conversation.id == msg.conversationId;
+              }
+            );
+            if (conversation) { // and if it was found send the message
+              conversation.msgEvthandler.answerRequest(msg, action);
+              resolve(conversation.id);
+              if (successCallback) successCallback(conversation.id);
+            } else { // and if not throw an error
+              errMsg = new Error(&apos;[WONDER answerRequest] no conversation found&apos;);
+              reject(errMsg);
+              if (errorCallback) errorCallback(errMsg);
+            }
+          });
+        }
+
+      }
+/*
+      return new WONDER();
+    });
+  } else if (typeof window === &apos;object&apos;) {
+    window.wonder = new WONDER();
+    // TODO implement other classes if framework isn&apos;t required as amd module
+  } else {
+    try {
+      module.exports = new WONDER();
+      // TODO import other classes if browser supports es6 import/export
+    } catch (e) {}
+  }
+})();
+*/
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.3.1)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

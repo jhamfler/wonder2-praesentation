@@ -1,0 +1,1398 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "Literal",
+        "value": "use strict",
+        "raw": "'use strict'",
+        "range": [
+          291,
+          303
+        ],
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 0
+          },
+          "end": {
+            "line": 8,
+            "column": 12
+          }
+        }
+      },
+      "range": [
+        291,
+        304
+      ],
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 13
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other\n * This framework is based on @see https://github.com/hypercomm/wonder\n * @author Danny Koppenhagen <mail@d-koppenhagen.de>\n * @author Johannes Hamfler <jh@z7k.de>\n ",
+          "range": [
+            0,
+            289
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 6,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @class\n * @desc This class is a data holder for all messages that are sent between two WONDER implementations.\n * @desc The messages must be in that format when they arrive at another WONDER instance\n * and therefore need to be preserved while being sent through a messaging server.\n * @example var message = new Message(from, to, MessageType.invitation, conversationId, misc);\n ",
+          "range": [
+            306,
+            694
+          ],
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 0
+            },
+            "end": {
+              "line": 16,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "Message",
+        "range": [
+          701,
+          708
+        ],
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 6
+          },
+          "end": {
+            "line": 17,
+            "column": 13
+          }
+        }
+      },
+      "superClass": null,
+      "body": {
+        "type": "ClassBody",
+        "body": [
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "constructor",
+              "range": [
+                1231,
+                1242
+              ],
+              "loc": {
+                "start": {
+                  "line": 26,
+                  "column": 2
+                },
+                "end": {
+                  "line": 26,
+                  "column": 13
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "from",
+                  "range": [
+                    1243,
+                    1247
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 26,
+                      "column": 14
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 18
+                    }
+                  }
+                },
+                {
+                  "type": "Identifier",
+                  "name": "to",
+                  "range": [
+                    1249,
+                    1251
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 26,
+                      "column": 20
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 22
+                    }
+                  }
+                },
+                {
+                  "type": "Identifier",
+                  "name": "type",
+                  "range": [
+                    1253,
+                    1257
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 26,
+                      "column": 24
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 28
+                    }
+                  }
+                },
+                {
+                  "type": "Identifier",
+                  "name": "conversationId",
+                  "range": [
+                    1259,
+                    1273
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 26,
+                      "column": 30
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 44
+                    }
+                  }
+                },
+                {
+                  "type": "Identifier",
+                  "name": "misc",
+                  "range": [
+                    1275,
+                    1279
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 26,
+                      "column": 46
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 50
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1402,
+                            1406
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 31,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 31,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "id",
+                          "range": [
+                            1407,
+                            1409
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 31,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 31,
+                              "column": 11
+                            }
+                          }
+                        },
+                        "range": [
+                          1402,
+                          1409
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 31,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 31,
+                            "column": 11
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "guid",
+                          "range": [
+                            1412,
+                            1416
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 31,
+                              "column": 14
+                            },
+                            "end": {
+                              "line": 31,
+                              "column": 18
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "range": [
+                          1412,
+                          1418
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 31,
+                            "column": 14
+                          },
+                          "end": {
+                            "line": 31,
+                            "column": 20
+                          }
+                        }
+                      },
+                      "range": [
+                        1402,
+                        1418
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 31,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 31,
+                          "column": 20
+                        }
+                      }
+                    },
+                    "range": [
+                      1402,
+                      1419
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 31,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 31,
+                        "column": 21
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {GUID} id\n     * @desc A unique ID for the message to be able to distinguish messages\n     ",
+                        "range": [
+                          1287,
+                          1397
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 27,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 30,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Identity} from\n     * @desc The identity from which the message will be or was sent\n     ",
+                        "range": [
+                          1425,
+                          1534
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 33,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 36,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1539,
+                            1543
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 37,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 37,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "from",
+                          "range": [
+                            1544,
+                            1548
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 37,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 37,
+                              "column": 13
+                            }
+                          }
+                        },
+                        "range": [
+                          1539,
+                          1548
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 37,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 37,
+                            "column": 13
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "from",
+                        "range": [
+                          1551,
+                          1555
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 37,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 37,
+                            "column": 20
+                          }
+                        }
+                      },
+                      "range": [
+                        1539,
+                        1555
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 37,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 37,
+                          "column": 20
+                        }
+                      }
+                    },
+                    "range": [
+                      1539,
+                      1556
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 37,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 37,
+                        "column": 21
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Identity} from\n     * @desc The identity from which the message will be or was sent\n     ",
+                        "range": [
+                          1425,
+                          1534
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 33,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 36,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Identity|Array<Identity>} to\n     * @desc The target identity or identities to receive the message\n     ",
+                        "range": [
+                          1562,
+                          1686
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 39,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 42,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1691,
+                            1695
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 43,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 43,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "to",
+                          "range": [
+                            1696,
+                            1698
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 43,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 43,
+                              "column": 11
+                            }
+                          }
+                        },
+                        "range": [
+                          1691,
+                          1698
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 43,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 43,
+                            "column": 11
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "to",
+                        "range": [
+                          1701,
+                          1703
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 43,
+                            "column": 14
+                          },
+                          "end": {
+                            "line": 43,
+                            "column": 16
+                          }
+                        }
+                      },
+                      "range": [
+                        1691,
+                        1703
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 43,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 43,
+                          "column": 16
+                        }
+                      }
+                    },
+                    "range": [
+                      1691,
+                      1704
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 43,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 43,
+                        "column": 17
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Identity|Array<Identity>} to\n     * @desc The target identity or identities to receive the message\n     ",
+                        "range": [
+                          1562,
+                          1686
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 39,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 42,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {MessageType} type\n     * @desc Type of the message which must be one of the types defined in MessageType\n     * @example MessageType.invitation\n     ",
+                        "range": [
+                          1710,
+                          1879
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 45,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 49,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1884,
+                            1888
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 50,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 50,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "type",
+                          "range": [
+                            1889,
+                            1893
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 50,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 50,
+                              "column": 13
+                            }
+                          }
+                        },
+                        "range": [
+                          1884,
+                          1893
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 50,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 50,
+                            "column": 13
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "type",
+                        "range": [
+                          1896,
+                          1900
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 50,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 50,
+                            "column": 20
+                          }
+                        }
+                      },
+                      "range": [
+                        1884,
+                        1900
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 50,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 50,
+                          "column": 20
+                        }
+                      }
+                    },
+                    "range": [
+                      1884,
+                      1901
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 50,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 50,
+                        "column": 21
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {MessageType} type\n     * @desc Type of the message which must be one of the types defined in MessageType\n     * @example MessageType.invitation\n     ",
+                        "range": [
+                          1710,
+                          1879
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 45,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 49,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {GUID} conversationId\n     * @desc The unique id of the conversation, the message is related to\n     ",
+                        "range": [
+                          1907,
+                          2027
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 52,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 55,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            2032,
+                            2036
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 56,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 56,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "conversationId",
+                          "range": [
+                            2037,
+                            2051
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 56,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 56,
+                              "column": 23
+                            }
+                          }
+                        },
+                        "range": [
+                          2032,
+                          2051
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 56,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 56,
+                            "column": 23
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "conversationId",
+                        "range": [
+                          2054,
+                          2068
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 56,
+                            "column": 26
+                          },
+                          "end": {
+                            "line": 56,
+                            "column": 40
+                          }
+                        }
+                      },
+                      "range": [
+                        2032,
+                        2068
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 56,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 56,
+                          "column": 40
+                        }
+                      }
+                    },
+                    "range": [
+                      2032,
+                      2069
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 56,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 56,
+                        "column": 41
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {GUID} conversationId\n     * @desc The unique id of the conversation, the message is related to\n     ",
+                        "range": [
+                          1907,
+                          2027
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 52,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 55,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {object} misc\n     * @desc Additional information related to the type of the message\n     * @example { 'demand': demand,\n     *            'sessionDescription': sessionDescription }\n     ",
+                        "range": [
+                          2075,
+                          2281
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 58,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 63,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            2286,
+                            2290
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 64,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 64,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "misc",
+                          "range": [
+                            2291,
+                            2295
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 64,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 64,
+                              "column": 13
+                            }
+                          }
+                        },
+                        "range": [
+                          2286,
+                          2295
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 64,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 64,
+                            "column": 13
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "misc",
+                        "range": [
+                          2298,
+                          2302
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 64,
+                            "column": 16
+                          },
+                          "end": {
+                            "line": 64,
+                            "column": 20
+                          }
+                        }
+                      },
+                      "range": [
+                        2286,
+                        2302
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 64,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 64,
+                          "column": 20
+                        }
+                      }
+                    },
+                    "range": [
+                      2286,
+                      2303
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 64,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 64,
+                        "column": 21
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {object} misc\n     * @desc Additional information related to the type of the message\n     * @example { 'demand': demand,\n     *            'sessionDescription': sessionDescription }\n     ",
+                        "range": [
+                          2075,
+                          2281
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 58,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 63,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "range": [
+                  1281,
+                  2307
+                ],
+                "loc": {
+                  "start": {
+                    "line": 26,
+                    "column": 52
+                  },
+                  "end": {
+                    "line": 65,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                1242,
+                2307
+              ],
+              "loc": {
+                "start": {
+                  "line": 26,
+                  "column": 13
+                },
+                "end": {
+                  "line": 65,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "constructor",
+            "computed": false,
+            "range": [
+              1231,
+              2307
+            ],
+            "loc": {
+              "start": {
+                "line": 26,
+                "column": 2
+              },
+              "end": {
+                "line": 65,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @constructor\n   * @param {Identity} from - The identity from which the message will be or was sent\n   * @param {(Identity|Array<Identity>)} to - The identity or identities that will receive the message\n   * @param {String} type - The type of the message which is a shortform of the intention or action of the message\n   * @param {GUID} conversationId - A unique ID for the conversation the message is related to\n   * @param {Object} [misc] - Additional information related to the type of the message.\n   ",
+                "range": [
+                  713,
+                  1228
+                ],
+                "loc": {
+                  "start": {
+                    "line": 18,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 25,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          }
+        ],
+        "range": [
+          709,
+          2309
+        ],
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 14
+          },
+          "end": {
+            "line": 66,
+            "column": 1
+          }
+        }
+      },
+      "range": [
+        695,
+        2309
+      ],
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 0
+        },
+        "end": {
+          "line": 66,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @class\n * @desc This class is a data holder for all messages that are sent between two WONDER implementations.\n * @desc The messages must be in that format when they arrive at another WONDER instance\n * and therefore need to be preserved while being sent through a messaging server.\n * @example var message = new Message(from, to, MessageType.invitation, conversationId, misc);\n ",
+          "range": [
+            306,
+            694
+          ],
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 0
+            },
+            "end": {
+              "line": 16,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    291,
+    2309
+  ],
+  "loc": {
+    "start": {
+      "line": 8,
+      "column": 0
+    },
+    "end": {
+      "line": 66,
+      "column": 1
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other\n * This framework is based on @see https://github.com/hypercomm/wonder\n * @author Danny Koppenhagen <mail@d-koppenhagen.de>\n * @author Johannes Hamfler <jh@z7k.de>\n ",
+      "range": [
+        0,
+        289
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * @class\n * @desc This class is a data holder for all messages that are sent between two WONDER implementations.\n * @desc The messages must be in that format when they arrive at another WONDER instance\n * and therefore need to be preserved while being sent through a messaging server.\n * @example var message = new Message(from, to, MessageType.invitation, conversationId, misc);\n ",
+      "range": [
+        306,
+        694
+      ],
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 0
+        },
+        "end": {
+          "line": 16,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * @constructor\n   * @param {Identity} from - The identity from which the message will be or was sent\n   * @param {(Identity|Array<Identity>)} to - The identity or identities that will receive the message\n   * @param {String} type - The type of the message which is a shortform of the intention or action of the message\n   * @param {GUID} conversationId - A unique ID for the conversation the message is related to\n   * @param {Object} [misc] - Additional information related to the type of the message.\n   ",
+      "range": [
+        713,
+        1228
+      ],
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 2
+        },
+        "end": {
+          "line": 25,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {GUID} id\n     * @desc A unique ID for the message to be able to distinguish messages\n     ",
+      "range": [
+        1287,
+        1397
+      ],
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 4
+        },
+        "end": {
+          "line": 30,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {Identity} from\n     * @desc The identity from which the message will be or was sent\n     ",
+      "range": [
+        1425,
+        1534
+      ],
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 4
+        },
+        "end": {
+          "line": 36,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {Identity|Array<Identity>} to\n     * @desc The target identity or identities to receive the message\n     ",
+      "range": [
+        1562,
+        1686
+      ],
+      "loc": {
+        "start": {
+          "line": 39,
+          "column": 4
+        },
+        "end": {
+          "line": 42,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {MessageType} type\n     * @desc Type of the message which must be one of the types defined in MessageType\n     * @example MessageType.invitation\n     ",
+      "range": [
+        1710,
+        1879
+      ],
+      "loc": {
+        "start": {
+          "line": 45,
+          "column": 4
+        },
+        "end": {
+          "line": 49,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {GUID} conversationId\n     * @desc The unique id of the conversation, the message is related to\n     ",
+      "range": [
+        1907,
+        2027
+      ],
+      "loc": {
+        "start": {
+          "line": 52,
+          "column": 4
+        },
+        "end": {
+          "line": 55,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {object} misc\n     * @desc Additional information related to the type of the message\n     * @example { 'demand': demand,\n     *            'sessionDescription': sessionDescription }\n     ",
+      "range": [
+        2075,
+        2281
+      ],
+      "loc": {
+        "start": {
+          "line": 58,
+          "column": 4
+        },
+        "end": {
+          "line": 63,
+          "column": 7
+        }
+      }
+    }
+  ]
+}

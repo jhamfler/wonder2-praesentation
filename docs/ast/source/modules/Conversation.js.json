@@ -1,0 +1,5061 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "Literal",
+        "value": "use strict",
+        "raw": "'use strict'",
+        "range": [
+          291,
+          303
+        ],
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 0
+          },
+          "end": {
+            "line": 8,
+            "column": 12
+          }
+        }
+      },
+      "range": [
+        291,
+        304
+      ],
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 13
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other\n * This framework is based on @see https://github.com/hypercomm/wonder\n * @author Danny Koppenhagen <mail@d-koppenhagen.de>\n * @author Johannes Hamfler <jh@z7k.de>\n ",
+          "range": [
+            0,
+            289
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 6,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @class\n * @desc This class is the central class for controlling conversations\n ",
+          "range": [
+            306,
+            394
+          ],
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 0
+            },
+            "end": {
+              "line": 13,
+              "column": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "ClassDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "Conversation",
+        "range": [
+          401,
+          413
+        ],
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 6
+          },
+          "end": {
+            "line": 14,
+            "column": 18
+          }
+        }
+      },
+      "superClass": null,
+      "body": {
+        "type": "ClassBody",
+        "body": [
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "constructor",
+              "range": [
+                638,
+                649
+              ],
+              "loc": {
+                "start": {
+                  "line": 20,
+                  "column": 2
+                },
+                "end": {
+                  "line": 20,
+                  "column": 13
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "wonderInstance",
+                  "range": [
+                    650,
+                    664
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 20,
+                      "column": 14
+                    },
+                    "end": {
+                      "line": 20,
+                      "column": 28
+                    }
+                  }
+                },
+                {
+                  "type": "Identifier",
+                  "name": "owner",
+                  "range": [
+                    666,
+                    671
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 20,
+                      "column": 30
+                    },
+                    "end": {
+                      "line": 20,
+                      "column": 35
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            801,
+                            805
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 25,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 25,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "id",
+                          "range": [
+                            806,
+                            808
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 25,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 25,
+                              "column": 11
+                            }
+                          }
+                        },
+                        "range": [
+                          801,
+                          808
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 25,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 25,
+                            "column": 11
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "guid",
+                          "range": [
+                            811,
+                            815
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 25,
+                              "column": 14
+                            },
+                            "end": {
+                              "line": 25,
+                              "column": 18
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "range": [
+                          811,
+                          817
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 25,
+                            "column": 14
+                          },
+                          "end": {
+                            "line": 25,
+                            "column": 20
+                          }
+                        }
+                      },
+                      "range": [
+                        801,
+                        817
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 25,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 25,
+                          "column": 20
+                        }
+                      }
+                    },
+                    "range": [
+                      801,
+                      818
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 25,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 25,
+                        "column": 21
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {GUID} id\n     * @desc A unique identifier for a conversation which is created automatically\n     ",
+                        "range": [
+                          679,
+                          796
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 21,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 24,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Wonder} wonderInstance\n     * @desc The wonder instance on which the conversation is located on\n     * @desc Makes backreferences possible\n     ",
+                        "range": [
+                          824,
+                          988
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 27,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 31,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            993,
+                            997
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 32,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 32,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "wonderInstance",
+                          "range": [
+                            998,
+                            1012
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 32,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 32,
+                              "column": 23
+                            }
+                          }
+                        },
+                        "range": [
+                          993,
+                          1012
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 32,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 32,
+                            "column": 23
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "wonderInstance",
+                        "range": [
+                          1015,
+                          1029
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 32,
+                            "column": 26
+                          },
+                          "end": {
+                            "line": 32,
+                            "column": 40
+                          }
+                        }
+                      },
+                      "range": [
+                        993,
+                        1029
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 32,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 32,
+                          "column": 40
+                        }
+                      }
+                    },
+                    "range": [
+                      993,
+                      1030
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 32,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 32,
+                        "column": 41
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Wonder} wonderInstance\n     * @desc The wonder instance on which the conversation is located on\n     * @desc Makes backreferences possible\n     ",
+                        "range": [
+                          824,
+                          988
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 27,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 31,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Participant} myParticipant\n     * @desc The local participant of the conversation\n     ",
+                        "range": [
+                          1036,
+                          1143
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 34,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 37,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1148,
+                            1152
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 38,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 38,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "myParticipant",
+                          "range": [
+                            1153,
+                            1166
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 38,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 38,
+                              "column": 22
+                            }
+                          }
+                        },
+                        "range": [
+                          1148,
+                          1166
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 38,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 38,
+                            "column": 22
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Literal",
+                        "value": null,
+                        "raw": "null",
+                        "range": [
+                          1169,
+                          1173
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 38,
+                            "column": 25
+                          },
+                          "end": {
+                            "line": 38,
+                            "column": 29
+                          }
+                        }
+                      },
+                      "range": [
+                        1148,
+                        1173
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 38,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 38,
+                          "column": 29
+                        }
+                      }
+                    },
+                    "range": [
+                      1148,
+                      1174
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 38,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 38,
+                        "column": 30
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Participant} myParticipant\n     * @desc The local participant of the conversation\n     ",
+                        "range": [
+                          1036,
+                          1143
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 34,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 37,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Participant} owner\n     * @desc The participant who owns the conversation which is usually the caller\n     ",
+                        "range": [
+                          1180,
+                          1307
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 40,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 43,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1312,
+                            1316
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 44,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 44,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "owner",
+                          "range": [
+                            1317,
+                            1322
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 44,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 44,
+                              "column": 14
+                            }
+                          }
+                        },
+                        "range": [
+                          1312,
+                          1322
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 44,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 44,
+                            "column": 14
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "LogicalExpression",
+                        "operator": "||",
+                        "left": {
+                          "type": "Identifier",
+                          "name": "owner",
+                          "range": [
+                            1325,
+                            1330
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 44,
+                              "column": 17
+                            },
+                            "end": {
+                              "line": 44,
+                              "column": 22
+                            }
+                          }
+                        },
+                        "right": {
+                          "type": "Literal",
+                          "value": null,
+                          "raw": "null",
+                          "range": [
+                            1334,
+                            1338
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 44,
+                              "column": 26
+                            },
+                            "end": {
+                              "line": 44,
+                              "column": 30
+                            }
+                          }
+                        },
+                        "range": [
+                          1325,
+                          1338
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 44,
+                            "column": 17
+                          },
+                          "end": {
+                            "line": 44,
+                            "column": 30
+                          }
+                        }
+                      },
+                      "range": [
+                        1312,
+                        1338
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 44,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 44,
+                          "column": 30
+                        }
+                      }
+                    },
+                    "range": [
+                      1312,
+                      1339
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 44,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 44,
+                        "column": 31
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Participant} owner\n     * @desc The participant who owns the conversation which is usually the caller\n     ",
+                        "range": [
+                          1180,
+                          1307
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 40,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 43,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Array<Participant>} remoteParticipants\n     * @desc An array of all remote {@link Participant}s participating in that conversation\n     ",
+                        "range": [
+                          1345,
+                          1501
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 46,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 49,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1506,
+                            1510
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 50,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 50,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "remoteParticipants",
+                          "range": [
+                            1511,
+                            1529
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 50,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 50,
+                              "column": 27
+                            }
+                          }
+                        },
+                        "range": [
+                          1506,
+                          1529
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 50,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 50,
+                            "column": 27
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "ArrayExpression",
+                        "elements": [],
+                        "range": [
+                          1532,
+                          1534
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 50,
+                            "column": 30
+                          },
+                          "end": {
+                            "line": 50,
+                            "column": 32
+                          }
+                        }
+                      },
+                      "range": [
+                        1506,
+                        1534
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 50,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 50,
+                          "column": 32
+                        }
+                      }
+                    },
+                    "range": [
+                      1506,
+                      1535
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 50,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 50,
+                        "column": 33
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {Array<Participant>} remoteParticipants\n     * @desc An array of all remote {@link Participant}s participating in that conversation\n     ",
+                        "range": [
+                          1345,
+                          1501
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 46,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 49,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {MsgEvtHandler} msgEvtHandler\n     * @desc The message event handler instance of the conversation which handles all incoming messages from the conversation's messaging server\n     * @example conversation.msgEvtHandler = new MsgEvtHandler(wonderInstance, conversation);\n     ",
+                        "range": [
+                          1541,
+                          1834
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 52,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 56,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            1839,
+                            1843
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 57,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 57,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "msgEvtHandler",
+                          "range": [
+                            1844,
+                            1857
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 57,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 57,
+                              "column": 22
+                            }
+                          }
+                        },
+                        "range": [
+                          1839,
+                          1857
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 57,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 57,
+                            "column": 22
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "NewExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "MsgEvtHandler",
+                          "range": [
+                            1864,
+                            1877
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 57,
+                              "column": 29
+                            },
+                            "end": {
+                              "line": 57,
+                              "column": 42
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "ThisExpression",
+                              "range": [
+                                1878,
+                                1882
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 57,
+                                  "column": 43
+                                },
+                                "end": {
+                                  "line": 57,
+                                  "column": 47
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "wonderInstance",
+                              "range": [
+                                1883,
+                                1897
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 57,
+                                  "column": 48
+                                },
+                                "end": {
+                                  "line": 57,
+                                  "column": 62
+                                }
+                              }
+                            },
+                            "range": [
+                              1878,
+                              1897
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 57,
+                                "column": 43
+                              },
+                              "end": {
+                                "line": 57,
+                                "column": 62
+                              }
+                            }
+                          },
+                          {
+                            "type": "ThisExpression",
+                            "range": [
+                              1899,
+                              1903
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 57,
+                                "column": 64
+                              },
+                              "end": {
+                                "line": 57,
+                                "column": 68
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          1860,
+                          1904
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 57,
+                            "column": 25
+                          },
+                          "end": {
+                            "line": 57,
+                            "column": 69
+                          }
+                        }
+                      },
+                      "range": [
+                        1839,
+                        1904
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 57,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 57,
+                          "column": 69
+                        }
+                      }
+                    },
+                    "range": [
+                      1839,
+                      1905
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 57,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 57,
+                        "column": 70
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {MsgEvtHandler} msgEvtHandler\n     * @desc The message event handler instance of the conversation which handles all incoming messages from the conversation's messaging server\n     * @example conversation.msgEvtHandler = new MsgEvtHandler(wonderInstance, conversation);\n     ",
+                        "range": [
+                          1541,
+                          1834
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 52,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 56,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {RtcEvtHandler} rtcEvtHandler\n     * @desc The rtc event handler instance of the conversation which handles all events related to a rtc peer connection#\n     * @TODO: Move this to the Participant-class as a peer connection is established to another participant.\n     * This needs to be done and working before multiparty code is written.\n     * @example conversation.rtcEvtHandler = new RtcEvtHandler(wonderInstance, conversation);\n     ",
+                        "range": [
+                          1911,
+                          2367
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 59,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 65,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            2372,
+                            2376
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 66,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 66,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "rtcEvtHandler",
+                          "range": [
+                            2377,
+                            2390
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 66,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 66,
+                              "column": 22
+                            }
+                          }
+                        },
+                        "range": [
+                          2372,
+                          2390
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 66,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 66,
+                            "column": 22
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "NewExpression",
+                        "callee": {
+                          "type": "Identifier",
+                          "name": "RtcEvtHandler",
+                          "range": [
+                            2397,
+                            2410
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 66,
+                              "column": 29
+                            },
+                            "end": {
+                              "line": 66,
+                              "column": 42
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "ThisExpression",
+                              "range": [
+                                2411,
+                                2415
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 66,
+                                  "column": 43
+                                },
+                                "end": {
+                                  "line": 66,
+                                  "column": 47
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "wonderInstance",
+                              "range": [
+                                2416,
+                                2430
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 66,
+                                  "column": 48
+                                },
+                                "end": {
+                                  "line": 66,
+                                  "column": 62
+                                }
+                              }
+                            },
+                            "range": [
+                              2411,
+                              2430
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 66,
+                                "column": 43
+                              },
+                              "end": {
+                                "line": 66,
+                                "column": 62
+                              }
+                            }
+                          },
+                          {
+                            "type": "ThisExpression",
+                            "range": [
+                              2432,
+                              2436
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 66,
+                                "column": 64
+                              },
+                              "end": {
+                                "line": 66,
+                                "column": 68
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          2393,
+                          2437
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 66,
+                            "column": 25
+                          },
+                          "end": {
+                            "line": 66,
+                            "column": 69
+                          }
+                        }
+                      },
+                      "range": [
+                        2372,
+                        2437
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 66,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 66,
+                          "column": 69
+                        }
+                      }
+                    },
+                    "range": [
+                      2372,
+                      2438
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 66,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 66,
+                        "column": 70
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {RtcEvtHandler} rtcEvtHandler\n     * @desc The rtc event handler instance of the conversation which handles all events related to a rtc peer connection#\n     * @TODO: Move this to the Participant-class as a peer connection is established to another participant.\n     * This needs to be done and working before multiparty code is written.\n     * @example conversation.rtcEvtHandler = new RtcEvtHandler(wonderInstance, conversation);\n     ",
+                        "range": [
+                          1911,
+                          2367
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 59,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 65,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {DataChannelEvtHandler} dataChannelEvtHandler\n     * @desc The data cannel event handler for data channel events of a specific channel.\n     * The event handler is registered only if a data channel is required.\n     * @TODO: check if this isn't needed anymore as the codec has the handler\n     * @example conversation.dataChannelEvtHandler = new dataChannelEvtHandler(wonderInstance, conversation);\n     ",
+                        "range": [
+                          2444,
+                          2867
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 68,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 74,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            2872,
+                            2876
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 75,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 75,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "dataChannelEvtHandler",
+                          "range": [
+                            2877,
+                            2898
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 75,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 75,
+                              "column": 30
+                            }
+                          }
+                        },
+                        "range": [
+                          2872,
+                          2898
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 75,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 75,
+                            "column": 30
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Literal",
+                        "value": null,
+                        "raw": "null",
+                        "range": [
+                          2901,
+                          2905
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 75,
+                            "column": 33
+                          },
+                          "end": {
+                            "line": 75,
+                            "column": 37
+                          }
+                        }
+                      },
+                      "range": [
+                        2872,
+                        2905
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 75,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 75,
+                          "column": 37
+                        }
+                      }
+                    },
+                    "range": [
+                      2872,
+                      2906
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 75,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 75,
+                        "column": 38
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {DataChannelEvtHandler} dataChannelEvtHandler\n     * @desc The data cannel event handler for data channel events of a specific channel.\n     * The event handler is registered only if a data channel is required.\n     * @TODO: check if this isn't needed anymore as the codec has the handler\n     * @example conversation.dataChannelEvtHandler = new dataChannelEvtHandler(wonderInstance, conversation);\n     ",
+                        "range": [
+                          2444,
+                          2867
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 68,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 74,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {MessagingStub} msgStub\n     * @desc The messaging stub implementation instance of the messaging server which is used in this conversation\n     ",
+                        "range": [
+                          2912,
+                          3075
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 77,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 80,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            3080,
+                            3084
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 81,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 81,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "msgStub",
+                          "range": [
+                            3085,
+                            3092
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 81,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 81,
+                              "column": 16
+                            }
+                          }
+                        },
+                        "range": [
+                          3080,
+                          3092
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 81,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 81,
+                            "column": 16
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Literal",
+                        "value": null,
+                        "raw": "null",
+                        "range": [
+                          3095,
+                          3099
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 81,
+                            "column": 19
+                          },
+                          "end": {
+                            "line": 81,
+                            "column": 23
+                          }
+                        }
+                      },
+                      "range": [
+                        3080,
+                        3099
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 81,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 81,
+                          "column": 23
+                        }
+                      }
+                    },
+                    "range": [
+                      3080,
+                      3100
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 81,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 81,
+                        "column": 24
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {MessagingStub} msgStub\n     * @desc The messaging stub implementation instance of the messaging server which is used in this conversation\n     ",
+                        "range": [
+                          2912,
+                          3075
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 77,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 80,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {String} msgSrv\n     * @desc A URL as a string to a messaging server which is used in this conversation\n     ",
+                        "range": [
+                          3106,
+                          3234
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 83,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 86,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            3239,
+                            3243
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 87,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 87,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "msgSrv",
+                          "range": [
+                            3244,
+                            3250
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 87,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 87,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "range": [
+                          3239,
+                          3250
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 87,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 87,
+                            "column": 15
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Literal",
+                        "value": null,
+                        "raw": "null",
+                        "range": [
+                          3253,
+                          3257
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 87,
+                            "column": 18
+                          },
+                          "end": {
+                            "line": 87,
+                            "column": 22
+                          }
+                        }
+                      },
+                      "range": [
+                        3239,
+                        3257
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 87,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 87,
+                          "column": 22
+                        }
+                      }
+                    },
+                    "range": [
+                      3239,
+                      3258
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 87,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 87,
+                        "column": 23
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {String} msgSrv\n     * @desc A URL as a string to a messaging server which is used in this conversation\n     ",
+                        "range": [
+                          3106,
+                          3234
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 83,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 86,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {DataChannelBroker} dataChannelBroker\n     * @desc The broker which stores and handles codecs and its data channels which are used in this conversation\n     ",
+                        "range": [
+                          3264,
+                          3440
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 89,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 92,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "AssignmentExpression",
+                      "operator": "=",
+                      "left": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "ThisExpression",
+                          "range": [
+                            3445,
+                            3449
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 93,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 93,
+                              "column": 8
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "dataChannelBroker",
+                          "range": [
+                            3450,
+                            3467
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 93,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 93,
+                              "column": 26
+                            }
+                          }
+                        },
+                        "range": [
+                          3445,
+                          3467
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 93,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 93,
+                            "column": 26
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "Literal",
+                        "value": null,
+                        "raw": "null",
+                        "range": [
+                          3470,
+                          3474
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 93,
+                            "column": 29
+                          },
+                          "end": {
+                            "line": 93,
+                            "column": 33
+                          }
+                        }
+                      },
+                      "range": [
+                        3445,
+                        3474
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 93,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 93,
+                          "column": 33
+                        }
+                      }
+                    },
+                    "range": [
+                      3445,
+                      3475
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 93,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 93,
+                        "column": 34
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Block",
+                        "value": "*\n     * @type {DataChannelBroker} dataChannelBroker\n     * @desc The broker which stores and handles codecs and its data channels which are used in this conversation\n     ",
+                        "range": [
+                          3264,
+                          3440
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 89,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 92,
+                            "column": 7
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "range": [
+                  673,
+                  3479
+                ],
+                "loc": {
+                  "start": {
+                    "line": 20,
+                    "column": 37
+                  },
+                  "end": {
+                    "line": 94,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                649,
+                3479
+              ],
+              "loc": {
+                "start": {
+                  "line": 20,
+                  "column": 13
+                },
+                "end": {
+                  "line": 94,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "constructor",
+            "computed": false,
+            "range": [
+              638,
+              3479
+            ],
+            "loc": {
+              "start": {
+                "line": 20,
+                "column": 2
+              },
+              "end": {
+                "line": 94,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @constructor\n   * @param {WONDER} wonderInstance - The instance of wonder to which the conversation is related to\n   * @param {String} [owner] - Defines the owner of the conversation, usually the caller\n   ",
+                "range": [
+                  418,
+                  635
+                ],
+                "loc": {
+                  "start": {
+                    "line": 15,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 19,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "trailingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @desc Leaves the conversation on which the function is executed on\n   * @example conversation.leave();\n   ",
+                "range": [
+                  3484,
+                  3601
+                ],
+                "loc": {
+                  "start": {
+                    "line": 97,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 100,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          },
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "leave",
+              "range": [
+                3604,
+                3609
+              ],
+              "loc": {
+                "start": {
+                  "line": 101,
+                  "column": 2
+                },
+                "end": {
+                  "line": 101,
+                  "column": 7
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "VariableDeclaration",
+                    "declarations": [
+                      {
+                        "type": "VariableDeclarator",
+                        "id": {
+                          "type": "Identifier",
+                          "name": "that",
+                          "range": [
+                            3622,
+                            3626
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 102,
+                              "column": 8
+                            },
+                            "end": {
+                              "line": 102,
+                              "column": 12
+                            }
+                          }
+                        },
+                        "init": {
+                          "type": "ThisExpression",
+                          "range": [
+                            3629,
+                            3633
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 102,
+                              "column": 15
+                            },
+                            "end": {
+                              "line": 102,
+                              "column": 19
+                            }
+                          }
+                        },
+                        "range": [
+                          3622,
+                          3633
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 102,
+                            "column": 8
+                          },
+                          "end": {
+                            "line": 102,
+                            "column": 19
+                          }
+                        }
+                      }
+                    ],
+                    "kind": "var",
+                    "range": [
+                      3618,
+                      3634
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 102,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 102,
+                        "column": 20
+                      }
+                    }
+                  },
+                  {
+                    "type": "ExpressionStatement",
+                    "expression": {
+                      "type": "CallExpression",
+                      "callee": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "Identifier",
+                              "name": "that",
+                              "range": [
+                                3639,
+                                3643
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 103,
+                                  "column": 4
+                                },
+                                "end": {
+                                  "line": 103,
+                                  "column": 8
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "myParticipant",
+                              "range": [
+                                3644,
+                                3657
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 103,
+                                  "column": 9
+                                },
+                                "end": {
+                                  "line": 103,
+                                  "column": 22
+                                }
+                              }
+                            },
+                            "range": [
+                              3639,
+                              3657
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 103,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 103,
+                                "column": 22
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "peerConnection",
+                            "range": [
+                              3658,
+                              3672
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 103,
+                                "column": 23
+                              },
+                              "end": {
+                                "line": 103,
+                                "column": 37
+                              }
+                            }
+                          },
+                          "range": [
+                            3639,
+                            3672
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 103,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 103,
+                              "column": 37
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "close",
+                          "range": [
+                            3673,
+                            3678
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 103,
+                              "column": 38
+                            },
+                            "end": {
+                              "line": 103,
+                              "column": 43
+                            }
+                          }
+                        },
+                        "range": [
+                          3639,
+                          3678
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 103,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 103,
+                            "column": 43
+                          }
+                        }
+                      },
+                      "arguments": [],
+                      "range": [
+                        3639,
+                        3680
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 103,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 103,
+                          "column": 45
+                        }
+                      }
+                    },
+                    "range": [
+                      3639,
+                      3681
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 103,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 103,
+                        "column": 46
+                      }
+                    }
+                  },
+                  {
+                    "type": "ForStatement",
+                    "init": {
+                      "type": "VariableDeclaration",
+                      "declarations": [
+                        {
+                          "type": "VariableDeclarator",
+                          "id": {
+                            "type": "Identifier",
+                            "name": "i",
+                            "range": [
+                              3695,
+                              3696
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 104,
+                                "column": 13
+                              },
+                              "end": {
+                                "line": 104,
+                                "column": 14
+                              }
+                            }
+                          },
+                          "init": {
+                            "type": "Literal",
+                            "value": 0,
+                            "raw": "0",
+                            "range": [
+                              3699,
+                              3700
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 104,
+                                "column": 17
+                              },
+                              "end": {
+                                "line": 104,
+                                "column": 18
+                              }
+                            }
+                          },
+                          "range": [
+                            3695,
+                            3700
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 104,
+                              "column": 13
+                            },
+                            "end": {
+                              "line": 104,
+                              "column": 18
+                            }
+                          }
+                        }
+                      ],
+                      "kind": "var",
+                      "range": [
+                        3691,
+                        3700
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 104,
+                          "column": 9
+                        },
+                        "end": {
+                          "line": 104,
+                          "column": 18
+                        }
+                      }
+                    },
+                    "test": {
+                      "type": "BinaryExpression",
+                      "operator": "<",
+                      "left": {
+                        "type": "Identifier",
+                        "name": "i",
+                        "range": [
+                          3702,
+                          3703
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 104,
+                            "column": 20
+                          },
+                          "end": {
+                            "line": 104,
+                            "column": 21
+                          }
+                        }
+                      },
+                      "right": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "Identifier",
+                            "name": "that",
+                            "range": [
+                              3706,
+                              3710
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 104,
+                                "column": 24
+                              },
+                              "end": {
+                                "line": 104,
+                                "column": 28
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "remoteParticipants",
+                            "range": [
+                              3711,
+                              3729
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 104,
+                                "column": 29
+                              },
+                              "end": {
+                                "line": 104,
+                                "column": 47
+                              }
+                            }
+                          },
+                          "range": [
+                            3706,
+                            3729
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 104,
+                              "column": 24
+                            },
+                            "end": {
+                              "line": 104,
+                              "column": 47
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "name": "length",
+                          "range": [
+                            3730,
+                            3736
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 104,
+                              "column": 48
+                            },
+                            "end": {
+                              "line": 104,
+                              "column": 54
+                            }
+                          }
+                        },
+                        "range": [
+                          3706,
+                          3736
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 104,
+                            "column": 24
+                          },
+                          "end": {
+                            "line": 104,
+                            "column": 54
+                          }
+                        }
+                      },
+                      "range": [
+                        3702,
+                        3736
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 104,
+                          "column": 20
+                        },
+                        "end": {
+                          "line": 104,
+                          "column": 54
+                        }
+                      }
+                    },
+                    "update": {
+                      "type": "UpdateExpression",
+                      "operator": "++",
+                      "argument": {
+                        "type": "Identifier",
+                        "name": "i",
+                        "range": [
+                          3738,
+                          3739
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 104,
+                            "column": 56
+                          },
+                          "end": {
+                            "line": 104,
+                            "column": 57
+                          }
+                        }
+                      },
+                      "prefix": false,
+                      "range": [
+                        3738,
+                        3741
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 104,
+                          "column": 56
+                        },
+                        "end": {
+                          "line": 104,
+                          "column": 59
+                        }
+                      }
+                    },
+                    "body": {
+                      "type": "BlockStatement",
+                      "body": [
+                        {
+                          "type": "IfStatement",
+                          "test": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "MemberExpression",
+                              "computed": true,
+                              "object": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "Identifier",
+                                  "name": "that",
+                                  "range": [
+                                    3908,
+                                    3912
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 107,
+                                      "column": 10
+                                    },
+                                    "end": {
+                                      "line": 107,
+                                      "column": 14
+                                    }
+                                  }
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "remoteParticipants",
+                                  "range": [
+                                    3913,
+                                    3931
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 107,
+                                      "column": 15
+                                    },
+                                    "end": {
+                                      "line": 107,
+                                      "column": 33
+                                    }
+                                  }
+                                },
+                                "range": [
+                                  3908,
+                                  3931
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 107,
+                                    "column": 10
+                                  },
+                                  "end": {
+                                    "line": 107,
+                                    "column": 33
+                                  }
+                                }
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "i",
+                                "range": [
+                                  3932,
+                                  3933
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 107,
+                                    "column": 34
+                                  },
+                                  "end": {
+                                    "line": 107,
+                                    "column": 35
+                                  }
+                                }
+                              },
+                              "range": [
+                                3908,
+                                3934
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 107,
+                                  "column": 10
+                                },
+                                "end": {
+                                  "line": 107,
+                                  "column": 36
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "peerConnection",
+                              "range": [
+                                3935,
+                                3949
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 107,
+                                  "column": 37
+                                },
+                                "end": {
+                                  "line": 107,
+                                  "column": 51
+                                }
+                              }
+                            },
+                            "range": [
+                              3908,
+                              3949
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 107,
+                                "column": 10
+                              },
+                              "end": {
+                                "line": 107,
+                                "column": 51
+                              }
+                            }
+                          },
+                          "consequent": {
+                            "type": "ExpressionStatement",
+                            "expression": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                  "type": "MemberExpression",
+                                  "computed": false,
+                                  "object": {
+                                    "type": "MemberExpression",
+                                    "computed": true,
+                                    "object": {
+                                      "type": "MemberExpression",
+                                      "computed": false,
+                                      "object": {
+                                        "type": "Identifier",
+                                        "name": "that",
+                                        "range": [
+                                          3951,
+                                          3955
+                                        ],
+                                        "loc": {
+                                          "start": {
+                                            "line": 107,
+                                            "column": 53
+                                          },
+                                          "end": {
+                                            "line": 107,
+                                            "column": 57
+                                          }
+                                        }
+                                      },
+                                      "property": {
+                                        "type": "Identifier",
+                                        "name": "remoteParticipants",
+                                        "range": [
+                                          3956,
+                                          3974
+                                        ],
+                                        "loc": {
+                                          "start": {
+                                            "line": 107,
+                                            "column": 58
+                                          },
+                                          "end": {
+                                            "line": 107,
+                                            "column": 76
+                                          }
+                                        }
+                                      },
+                                      "range": [
+                                        3951,
+                                        3974
+                                      ],
+                                      "loc": {
+                                        "start": {
+                                          "line": 107,
+                                          "column": 53
+                                        },
+                                        "end": {
+                                          "line": 107,
+                                          "column": 76
+                                        }
+                                      }
+                                    },
+                                    "property": {
+                                      "type": "Identifier",
+                                      "name": "i",
+                                      "range": [
+                                        3975,
+                                        3976
+                                      ],
+                                      "loc": {
+                                        "start": {
+                                          "line": 107,
+                                          "column": 77
+                                        },
+                                        "end": {
+                                          "line": 107,
+                                          "column": 78
+                                        }
+                                      }
+                                    },
+                                    "range": [
+                                      3951,
+                                      3977
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 107,
+                                        "column": 53
+                                      },
+                                      "end": {
+                                        "line": 107,
+                                        "column": 79
+                                      }
+                                    }
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "name": "peerConnection",
+                                    "range": [
+                                      3978,
+                                      3992
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 107,
+                                        "column": 80
+                                      },
+                                      "end": {
+                                        "line": 107,
+                                        "column": 94
+                                      }
+                                    }
+                                  },
+                                  "range": [
+                                    3951,
+                                    3992
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 107,
+                                      "column": 53
+                                    },
+                                    "end": {
+                                      "line": 107,
+                                      "column": 94
+                                    }
+                                  }
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "name": "close",
+                                  "range": [
+                                    3993,
+                                    3998
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 107,
+                                      "column": 95
+                                    },
+                                    "end": {
+                                      "line": 107,
+                                      "column": 100
+                                    }
+                                  }
+                                },
+                                "range": [
+                                  3951,
+                                  3998
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 107,
+                                    "column": 53
+                                  },
+                                  "end": {
+                                    "line": 107,
+                                    "column": 100
+                                  }
+                                }
+                              },
+                              "arguments": [],
+                              "range": [
+                                3951,
+                                4000
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 107,
+                                  "column": 53
+                                },
+                                "end": {
+                                  "line": 107,
+                                  "column": 102
+                                }
+                              }
+                            },
+                            "range": [
+                              3951,
+                              4001
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 107,
+                                "column": 53
+                              },
+                              "end": {
+                                "line": 107,
+                                "column": 103
+                              }
+                            }
+                          },
+                          "alternate": null,
+                          "range": [
+                            3904,
+                            4001
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 107,
+                              "column": 6
+                            },
+                            "end": {
+                              "line": 107,
+                              "column": 103
+                            }
+                          },
+                          "leadingComments": [
+                            {
+                              "type": "Line",
+                              "value": " this will trigger the iceconnectionstatechange event on the remote end",
+                              "range": [
+                                3751,
+                                3824
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 105,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 105,
+                                  "column": 79
+                                }
+                              }
+                            },
+                            {
+                              "type": "Line",
+                              "value": " remote end needs to check pc.iceConnectionState == disconnected",
+                              "range": [
+                                3831,
+                                3897
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 106,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 106,
+                                  "column": 72
+                                }
+                              }
+                            }
+                          ],
+                          "trailingComments": [
+                            {
+                              "type": "Line",
+                              "value": " as the message is delivered trough the pc event a separate message isn't mandatory here",
+                              "range": [
+                                4008,
+                                4098
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 108,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 108,
+                                  "column": 96
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "range": [
+                        3743,
+                        4104
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 104,
+                          "column": 61
+                        },
+                        "end": {
+                          "line": 109,
+                          "column": 5
+                        }
+                      }
+                    },
+                    "range": [
+                      3686,
+                      4104
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 104,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 109,
+                        "column": 5
+                      }
+                    }
+                  },
+                  {
+                    "type": "IfStatement",
+                    "test": {
+                      "type": "MemberExpression",
+                      "computed": false,
+                      "object": {
+                        "type": "Identifier",
+                        "name": "that",
+                        "range": [
+                          4113,
+                          4117
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 110,
+                            "column": 8
+                          },
+                          "end": {
+                            "line": 110,
+                            "column": 12
+                          }
+                        }
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "msgStub",
+                        "range": [
+                          4118,
+                          4125
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 110,
+                            "column": 13
+                          },
+                          "end": {
+                            "line": 110,
+                            "column": 20
+                          }
+                        }
+                      },
+                      "range": [
+                        4113,
+                        4125
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 110,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 110,
+                          "column": 20
+                        }
+                      }
+                    },
+                    "consequent": {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "Identifier",
+                              "name": "that",
+                              "range": [
+                                4127,
+                                4131
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 110,
+                                  "column": 22
+                                },
+                                "end": {
+                                  "line": 110,
+                                  "column": 26
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "msgStub",
+                              "range": [
+                                4132,
+                                4139
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 110,
+                                  "column": 27
+                                },
+                                "end": {
+                                  "line": 110,
+                                  "column": 34
+                                }
+                              }
+                            },
+                            "range": [
+                              4127,
+                              4139
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 110,
+                                "column": 22
+                              },
+                              "end": {
+                                "line": 110,
+                                "column": 34
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "disconnect",
+                            "range": [
+                              4140,
+                              4150
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 110,
+                                "column": 35
+                              },
+                              "end": {
+                                "line": 110,
+                                "column": 45
+                              }
+                            }
+                          },
+                          "range": [
+                            4127,
+                            4150
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 110,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 110,
+                              "column": 45
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "range": [
+                          4127,
+                          4152
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 110,
+                            "column": 22
+                          },
+                          "end": {
+                            "line": 110,
+                            "column": 47
+                          }
+                        }
+                      },
+                      "range": [
+                        4127,
+                        4153
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 110,
+                          "column": 22
+                        },
+                        "end": {
+                          "line": 110,
+                          "column": 48
+                        }
+                      }
+                    },
+                    "alternate": null,
+                    "range": [
+                      4109,
+                      4153
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 110,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 110,
+                        "column": 48
+                      }
+                    },
+                    "leadingComments": [
+                      {
+                        "type": "Line",
+                        "value": " as the message is delivered trough the pc event a separate message isn't mandatory here",
+                        "range": [
+                          4008,
+                          4098
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 108,
+                            "column": 6
+                          },
+                          "end": {
+                            "line": 108,
+                            "column": 96
+                          }
+                        }
+                      }
+                    ],
+                    "trailingComments": [
+                      {
+                        "type": "Line",
+                        "value": " now disconnect from the remote messaging server",
+                        "range": [
+                          4154,
+                          4204
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 110,
+                            "column": 49
+                          },
+                          "end": {
+                            "line": 110,
+                            "column": 99
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "range": [
+                  3612,
+                  4208
+                ],
+                "loc": {
+                  "start": {
+                    "line": 101,
+                    "column": 10
+                  },
+                  "end": {
+                    "line": 111,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                3609,
+                4208
+              ],
+              "loc": {
+                "start": {
+                  "line": 101,
+                  "column": 7
+                },
+                "end": {
+                  "line": 111,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "method",
+            "computed": false,
+            "range": [
+              3604,
+              4208
+            ],
+            "loc": {
+              "start": {
+                "line": 101,
+                "column": 2
+              },
+              "end": {
+                "line": 111,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @desc Leaves the conversation on which the function is executed on\n   * @example conversation.leave();\n   ",
+                "range": [
+                  3484,
+                  3601
+                ],
+                "loc": {
+                  "start": {
+                    "line": 97,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 100,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "trailingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @desc Adds a new remote participant to the conversation\n   * @param {Participant} participant - The remote participant which should be added to the conversation\n   ",
+                "range": [
+                  4213,
+                  4388
+                ],
+                "loc": {
+                  "start": {
+                    "line": 114,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 117,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          },
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "addRemoteParticipant",
+              "range": [
+                4391,
+                4411
+              ],
+              "loc": {
+                "start": {
+                  "line": 118,
+                  "column": 2
+                },
+                "end": {
+                  "line": 118,
+                  "column": 22
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "participant",
+                  "range": [
+                    4412,
+                    4423
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 118,
+                      "column": 23
+                    },
+                    "end": {
+                      "line": 118,
+                      "column": 34
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "VariableDeclaration",
+                    "declarations": [
+                      {
+                        "type": "VariableDeclarator",
+                        "id": {
+                          "type": "Identifier",
+                          "name": "existingParticipant",
+                          "range": [
+                            4435,
+                            4454
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 119,
+                              "column": 8
+                            },
+                            "end": {
+                              "line": 119,
+                              "column": 27
+                            }
+                          }
+                        },
+                        "init": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression",
+                                "range": [
+                                  4457,
+                                  4461
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 119,
+                                    "column": 30
+                                  },
+                                  "end": {
+                                    "line": 119,
+                                    "column": 34
+                                  }
+                                }
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "remoteParticipants",
+                                "range": [
+                                  4462,
+                                  4480
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 119,
+                                    "column": 35
+                                  },
+                                  "end": {
+                                    "line": 119,
+                                    "column": 53
+                                  }
+                                }
+                              },
+                              "range": [
+                                4457,
+                                4480
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 119,
+                                  "column": 30
+                                },
+                                "end": {
+                                  "line": 119,
+                                  "column": 53
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "find",
+                              "range": [
+                                4481,
+                                4485
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 119,
+                                  "column": 54
+                                },
+                                "end": {
+                                  "line": 119,
+                                  "column": 58
+                                }
+                              }
+                            },
+                            "range": [
+                              4457,
+                              4485
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 119,
+                                "column": 30
+                              },
+                              "end": {
+                                "line": 119,
+                                "column": 58
+                              }
+                            }
+                          },
+                          "arguments": [
+                            {
+                              "type": "FunctionExpression",
+                              "id": null,
+                              "params": [
+                                {
+                                  "type": "Identifier",
+                                  "name": "remoteParticipant",
+                                  "range": [
+                                    4502,
+                                    4519
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 120,
+                                      "column": 15
+                                    },
+                                    "end": {
+                                      "line": 120,
+                                      "column": 32
+                                    }
+                                  }
+                                }
+                              ],
+                              "body": {
+                                "type": "BlockStatement",
+                                "body": [
+                                  {
+                                    "type": "ReturnStatement",
+                                    "argument": {
+                                      "type": "BinaryExpression",
+                                      "operator": "==",
+                                      "left": {
+                                        "type": "MemberExpression",
+                                        "computed": false,
+                                        "object": {
+                                          "type": "Identifier",
+                                          "name": "remoteParticipant",
+                                          "range": [
+                                            4538,
+                                            4555
+                                          ],
+                                          "loc": {
+                                            "start": {
+                                              "line": 121,
+                                              "column": 15
+                                            },
+                                            "end": {
+                                              "line": 121,
+                                              "column": 32
+                                            }
+                                          }
+                                        },
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "identity",
+                                          "range": [
+                                            4556,
+                                            4564
+                                          ],
+                                          "loc": {
+                                            "start": {
+                                              "line": 121,
+                                              "column": 33
+                                            },
+                                            "end": {
+                                              "line": 121,
+                                              "column": 41
+                                            }
+                                          }
+                                        },
+                                        "range": [
+                                          4538,
+                                          4564
+                                        ],
+                                        "loc": {
+                                          "start": {
+                                            "line": 121,
+                                            "column": 15
+                                          },
+                                          "end": {
+                                            "line": 121,
+                                            "column": 41
+                                          }
+                                        }
+                                      },
+                                      "right": {
+                                        "type": "MemberExpression",
+                                        "computed": false,
+                                        "object": {
+                                          "type": "Identifier",
+                                          "name": "participant",
+                                          "range": [
+                                            4568,
+                                            4579
+                                          ],
+                                          "loc": {
+                                            "start": {
+                                              "line": 121,
+                                              "column": 45
+                                            },
+                                            "end": {
+                                              "line": 121,
+                                              "column": 56
+                                            }
+                                          }
+                                        },
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "identity",
+                                          "range": [
+                                            4580,
+                                            4588
+                                          ],
+                                          "loc": {
+                                            "start": {
+                                              "line": 121,
+                                              "column": 57
+                                            },
+                                            "end": {
+                                              "line": 121,
+                                              "column": 65
+                                            }
+                                          }
+                                        },
+                                        "range": [
+                                          4568,
+                                          4588
+                                        ],
+                                        "loc": {
+                                          "start": {
+                                            "line": 121,
+                                            "column": 45
+                                          },
+                                          "end": {
+                                            "line": 121,
+                                            "column": 65
+                                          }
+                                        }
+                                      },
+                                      "range": [
+                                        4538,
+                                        4588
+                                      ],
+                                      "loc": {
+                                        "start": {
+                                          "line": 121,
+                                          "column": 15
+                                        },
+                                        "end": {
+                                          "line": 121,
+                                          "column": 65
+                                        }
+                                      }
+                                    },
+                                    "range": [
+                                      4531,
+                                      4589
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 121,
+                                        "column": 8
+                                      },
+                                      "end": {
+                                        "line": 121,
+                                        "column": 66
+                                      }
+                                    }
+                                  }
+                                ],
+                                "range": [
+                                  4521,
+                                  4597
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 120,
+                                    "column": 34
+                                  },
+                                  "end": {
+                                    "line": 122,
+                                    "column": 7
+                                  }
+                                }
+                              },
+                              "generator": false,
+                              "expression": false,
+                              "range": [
+                                4493,
+                                4597
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 120,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 122,
+                                  "column": 7
+                                }
+                              }
+                            }
+                          ],
+                          "range": [
+                            4457,
+                            4603
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 119,
+                              "column": 30
+                            },
+                            "end": {
+                              "line": 123,
+                              "column": 5
+                            }
+                          }
+                        },
+                        "range": [
+                          4435,
+                          4603
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 119,
+                            "column": 8
+                          },
+                          "end": {
+                            "line": 123,
+                            "column": 5
+                          }
+                        }
+                      }
+                    ],
+                    "kind": "var",
+                    "range": [
+                      4431,
+                      4604
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 119,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 123,
+                        "column": 6
+                      }
+                    }
+                  },
+                  {
+                    "type": "IfStatement",
+                    "test": {
+                      "type": "UnaryExpression",
+                      "operator": "!",
+                      "argument": {
+                        "type": "Identifier",
+                        "name": "existingParticipant",
+                        "range": [
+                          4614,
+                          4633
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 124,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 124,
+                            "column": 28
+                          }
+                        }
+                      },
+                      "prefix": true,
+                      "range": [
+                        4613,
+                        4633
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 124,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 124,
+                          "column": 28
+                        }
+                      }
+                    },
+                    "consequent": {
+                      "type": "ExpressionStatement",
+                      "expression": {
+                        "type": "CallExpression",
+                        "callee": {
+                          "type": "MemberExpression",
+                          "computed": false,
+                          "object": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "ThisExpression",
+                              "range": [
+                                4635,
+                                4639
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 124,
+                                  "column": 30
+                                },
+                                "end": {
+                                  "line": 124,
+                                  "column": 34
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "remoteParticipants",
+                              "range": [
+                                4640,
+                                4658
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 124,
+                                  "column": 35
+                                },
+                                "end": {
+                                  "line": 124,
+                                  "column": 53
+                                }
+                              }
+                            },
+                            "range": [
+                              4635,
+                              4658
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 124,
+                                "column": 30
+                              },
+                              "end": {
+                                "line": 124,
+                                "column": 53
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "name": "push",
+                            "range": [
+                              4659,
+                              4663
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 124,
+                                "column": 54
+                              },
+                              "end": {
+                                "line": 124,
+                                "column": 58
+                              }
+                            }
+                          },
+                          "range": [
+                            4635,
+                            4663
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 124,
+                              "column": 30
+                            },
+                            "end": {
+                              "line": 124,
+                              "column": 58
+                            }
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "name": "participant",
+                            "range": [
+                              4664,
+                              4675
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 124,
+                                "column": 59
+                              },
+                              "end": {
+                                "line": 124,
+                                "column": 70
+                              }
+                            }
+                          }
+                        ],
+                        "range": [
+                          4635,
+                          4676
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 124,
+                            "column": 30
+                          },
+                          "end": {
+                            "line": 124,
+                            "column": 71
+                          }
+                        }
+                      },
+                      "range": [
+                        4635,
+                        4677
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 124,
+                          "column": 30
+                        },
+                        "end": {
+                          "line": 124,
+                          "column": 72
+                        }
+                      }
+                    },
+                    "alternate": null,
+                    "range": [
+                      4609,
+                      4677
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 124,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 124,
+                        "column": 72
+                      }
+                    }
+                  }
+                ],
+                "range": [
+                  4425,
+                  4681
+                ],
+                "loc": {
+                  "start": {
+                    "line": 118,
+                    "column": 36
+                  },
+                  "end": {
+                    "line": 125,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                4411,
+                4681
+              ],
+              "loc": {
+                "start": {
+                  "line": 118,
+                  "column": 22
+                },
+                "end": {
+                  "line": 125,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "method",
+            "computed": false,
+            "range": [
+              4391,
+              4681
+            ],
+            "loc": {
+              "start": {
+                "line": 118,
+                "column": 2
+              },
+              "end": {
+                "line": 125,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Line",
+                "value": " now disconnect from the remote messaging server",
+                "range": [
+                  4154,
+                  4204
+                ],
+                "loc": {
+                  "start": {
+                    "line": 110,
+                    "column": 49
+                  },
+                  "end": {
+                    "line": 110,
+                    "column": 99
+                  }
+                }
+              },
+              {
+                "type": "Block",
+                "value": "*\n   * @desc Adds a new remote participant to the conversation\n   * @param {Participant} participant - The remote participant which should be added to the conversation\n   ",
+                "range": [
+                  4213,
+                  4388
+                ],
+                "loc": {
+                  "start": {
+                    "line": 114,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 117,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "trailingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @desc Searches an existing participant in the conversation's remote participants\n   * and return it if it exists\n   * @param {Identity} identity - The identity of the remote participant to be returned\n   * @return {Participant}\n   ",
+                "range": [
+                  4686,
+                  4928
+                ],
+                "loc": {
+                  "start": {
+                    "line": 128,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 133,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          },
+          {
+            "type": "MethodDefinition",
+            "key": {
+              "type": "Identifier",
+              "name": "getRemoteParticipant",
+              "range": [
+                4931,
+                4951
+              ],
+              "loc": {
+                "start": {
+                  "line": 134,
+                  "column": 2
+                },
+                "end": {
+                  "line": 134,
+                  "column": 22
+                }
+              }
+            },
+            "value": {
+              "type": "FunctionExpression",
+              "id": null,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "name": "identity",
+                  "range": [
+                    4952,
+                    4960
+                  ],
+                  "loc": {
+                    "start": {
+                      "line": 134,
+                      "column": 23
+                    },
+                    "end": {
+                      "line": 134,
+                      "column": 31
+                    }
+                  }
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "body": [
+                  {
+                    "type": "VariableDeclaration",
+                    "declarations": [
+                      {
+                        "type": "VariableDeclarator",
+                        "id": {
+                          "type": "Identifier",
+                          "name": "existingParticipant",
+                          "range": [
+                            4972,
+                            4991
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 135,
+                              "column": 8
+                            },
+                            "end": {
+                              "line": 135,
+                              "column": 27
+                            }
+                          }
+                        },
+                        "init": {
+                          "type": "CallExpression",
+                          "callee": {
+                            "type": "MemberExpression",
+                            "computed": false,
+                            "object": {
+                              "type": "MemberExpression",
+                              "computed": false,
+                              "object": {
+                                "type": "ThisExpression",
+                                "range": [
+                                  4994,
+                                  4998
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 135,
+                                    "column": 30
+                                  },
+                                  "end": {
+                                    "line": 135,
+                                    "column": 34
+                                  }
+                                }
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "name": "remoteParticipants",
+                                "range": [
+                                  4999,
+                                  5017
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 135,
+                                    "column": 35
+                                  },
+                                  "end": {
+                                    "line": 135,
+                                    "column": 53
+                                  }
+                                }
+                              },
+                              "range": [
+                                4994,
+                                5017
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 135,
+                                  "column": 30
+                                },
+                                "end": {
+                                  "line": 135,
+                                  "column": 53
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "name": "find",
+                              "range": [
+                                5018,
+                                5022
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 135,
+                                  "column": 54
+                                },
+                                "end": {
+                                  "line": 135,
+                                  "column": 58
+                                }
+                              }
+                            },
+                            "range": [
+                              4994,
+                              5022
+                            ],
+                            "loc": {
+                              "start": {
+                                "line": 135,
+                                "column": 30
+                              },
+                              "end": {
+                                "line": 135,
+                                "column": 58
+                              }
+                            }
+                          },
+                          "arguments": [
+                            {
+                              "type": "FunctionExpression",
+                              "id": null,
+                              "params": [
+                                {
+                                  "type": "Identifier",
+                                  "name": "remoteParticipant",
+                                  "range": [
+                                    5039,
+                                    5056
+                                  ],
+                                  "loc": {
+                                    "start": {
+                                      "line": 136,
+                                      "column": 15
+                                    },
+                                    "end": {
+                                      "line": 136,
+                                      "column": 32
+                                    }
+                                  }
+                                }
+                              ],
+                              "body": {
+                                "type": "BlockStatement",
+                                "body": [
+                                  {
+                                    "type": "ReturnStatement",
+                                    "argument": {
+                                      "type": "BinaryExpression",
+                                      "operator": "==",
+                                      "left": {
+                                        "type": "MemberExpression",
+                                        "computed": false,
+                                        "object": {
+                                          "type": "Identifier",
+                                          "name": "remoteParticipant",
+                                          "range": [
+                                            5075,
+                                            5092
+                                          ],
+                                          "loc": {
+                                            "start": {
+                                              "line": 137,
+                                              "column": 15
+                                            },
+                                            "end": {
+                                              "line": 137,
+                                              "column": 32
+                                            }
+                                          }
+                                        },
+                                        "property": {
+                                          "type": "Identifier",
+                                          "name": "identity",
+                                          "range": [
+                                            5093,
+                                            5101
+                                          ],
+                                          "loc": {
+                                            "start": {
+                                              "line": 137,
+                                              "column": 33
+                                            },
+                                            "end": {
+                                              "line": 137,
+                                              "column": 41
+                                            }
+                                          }
+                                        },
+                                        "range": [
+                                          5075,
+                                          5101
+                                        ],
+                                        "loc": {
+                                          "start": {
+                                            "line": 137,
+                                            "column": 15
+                                          },
+                                          "end": {
+                                            "line": 137,
+                                            "column": 41
+                                          }
+                                        }
+                                      },
+                                      "right": {
+                                        "type": "Identifier",
+                                        "name": "identity",
+                                        "range": [
+                                          5105,
+                                          5113
+                                        ],
+                                        "loc": {
+                                          "start": {
+                                            "line": 137,
+                                            "column": 45
+                                          },
+                                          "end": {
+                                            "line": 137,
+                                            "column": 53
+                                          }
+                                        }
+                                      },
+                                      "range": [
+                                        5075,
+                                        5113
+                                      ],
+                                      "loc": {
+                                        "start": {
+                                          "line": 137,
+                                          "column": 15
+                                        },
+                                        "end": {
+                                          "line": 137,
+                                          "column": 53
+                                        }
+                                      }
+                                    },
+                                    "range": [
+                                      5068,
+                                      5114
+                                    ],
+                                    "loc": {
+                                      "start": {
+                                        "line": 137,
+                                        "column": 8
+                                      },
+                                      "end": {
+                                        "line": 137,
+                                        "column": 54
+                                      }
+                                    }
+                                  }
+                                ],
+                                "range": [
+                                  5058,
+                                  5122
+                                ],
+                                "loc": {
+                                  "start": {
+                                    "line": 136,
+                                    "column": 34
+                                  },
+                                  "end": {
+                                    "line": 138,
+                                    "column": 7
+                                  }
+                                }
+                              },
+                              "generator": false,
+                              "expression": false,
+                              "range": [
+                                5030,
+                                5122
+                              ],
+                              "loc": {
+                                "start": {
+                                  "line": 136,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 138,
+                                  "column": 7
+                                }
+                              }
+                            }
+                          ],
+                          "range": [
+                            4994,
+                            5128
+                          ],
+                          "loc": {
+                            "start": {
+                              "line": 135,
+                              "column": 30
+                            },
+                            "end": {
+                              "line": 139,
+                              "column": 5
+                            }
+                          }
+                        },
+                        "range": [
+                          4972,
+                          5128
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 135,
+                            "column": 8
+                          },
+                          "end": {
+                            "line": 139,
+                            "column": 5
+                          }
+                        }
+                      }
+                    ],
+                    "kind": "var",
+                    "range": [
+                      4968,
+                      5129
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 135,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 139,
+                        "column": 6
+                      }
+                    }
+                  },
+                  {
+                    "type": "IfStatement",
+                    "test": {
+                      "type": "Identifier",
+                      "name": "existingParticipant",
+                      "range": [
+                        5138,
+                        5157
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 140,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 140,
+                          "column": 27
+                        }
+                      }
+                    },
+                    "consequent": {
+                      "type": "ReturnStatement",
+                      "argument": {
+                        "type": "Identifier",
+                        "name": "existingParticipant",
+                        "range": [
+                          5166,
+                          5185
+                        ],
+                        "loc": {
+                          "start": {
+                            "line": 140,
+                            "column": 36
+                          },
+                          "end": {
+                            "line": 140,
+                            "column": 55
+                          }
+                        }
+                      },
+                      "range": [
+                        5159,
+                        5186
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 140,
+                          "column": 29
+                        },
+                        "end": {
+                          "line": 140,
+                          "column": 56
+                        }
+                      }
+                    },
+                    "alternate": null,
+                    "range": [
+                      5134,
+                      5186
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 140,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 140,
+                        "column": 56
+                      }
+                    }
+                  },
+                  {
+                    "type": "ReturnStatement",
+                    "argument": {
+                      "type": "Literal",
+                      "value": null,
+                      "raw": "null",
+                      "range": [
+                        5198,
+                        5202
+                      ],
+                      "loc": {
+                        "start": {
+                          "line": 141,
+                          "column": 11
+                        },
+                        "end": {
+                          "line": 141,
+                          "column": 15
+                        }
+                      }
+                    },
+                    "range": [
+                      5191,
+                      5203
+                    ],
+                    "loc": {
+                      "start": {
+                        "line": 141,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 141,
+                        "column": 16
+                      }
+                    }
+                  }
+                ],
+                "range": [
+                  4962,
+                  5207
+                ],
+                "loc": {
+                  "start": {
+                    "line": 134,
+                    "column": 33
+                  },
+                  "end": {
+                    "line": 142,
+                    "column": 3
+                  }
+                }
+              },
+              "generator": false,
+              "expression": false,
+              "range": [
+                4951,
+                5207
+              ],
+              "loc": {
+                "start": {
+                  "line": 134,
+                  "column": 22
+                },
+                "end": {
+                  "line": 142,
+                  "column": 3
+                }
+              }
+            },
+            "kind": "method",
+            "computed": false,
+            "range": [
+              4931,
+              5207
+            ],
+            "loc": {
+              "start": {
+                "line": 134,
+                "column": 2
+              },
+              "end": {
+                "line": 142,
+                "column": 3
+              }
+            },
+            "leadingComments": [
+              {
+                "type": "Block",
+                "value": "*\n   * @desc Searches an existing participant in the conversation's remote participants\n   * and return it if it exists\n   * @param {Identity} identity - The identity of the remote participant to be returned\n   * @return {Participant}\n   ",
+                "range": [
+                  4686,
+                  4928
+                ],
+                "loc": {
+                  "start": {
+                    "line": 128,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 133,
+                    "column": 5
+                  }
+                }
+              }
+            ],
+            "static": false
+          }
+        ],
+        "range": [
+          414,
+          5209
+        ],
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 19
+          },
+          "end": {
+            "line": 143,
+            "column": 1
+          }
+        }
+      },
+      "range": [
+        395,
+        5209
+      ],
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 0
+        },
+        "end": {
+          "line": 143,
+          "column": 1
+        }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * @class\n * @desc This class is the central class for controlling conversations\n ",
+          "range": [
+            306,
+            394
+          ],
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 0
+            },
+            "end": {
+              "line": 13,
+              "column": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    291,
+    5209
+  ],
+  "loc": {
+    "start": {
+      "line": 8,
+      "column": 0
+    },
+    "end": {
+      "line": 143,
+      "column": 1
+    }
+  },
+  "comments": [
+    {
+      "type": "Block",
+      "value": "*\n * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other\n * This framework is based on @see https://github.com/hypercomm/wonder\n * @author Danny Koppenhagen <mail@d-koppenhagen.de>\n * @author Johannes Hamfler <jh@z7k.de>\n ",
+      "range": [
+        0,
+        289
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * @class\n * @desc This class is the central class for controlling conversations\n ",
+      "range": [
+        306,
+        394
+      ],
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 0
+        },
+        "end": {
+          "line": 13,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * @constructor\n   * @param {WONDER} wonderInstance - The instance of wonder to which the conversation is related to\n   * @param {String} [owner] - Defines the owner of the conversation, usually the caller\n   ",
+      "range": [
+        418,
+        635
+      ],
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 19,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {GUID} id\n     * @desc A unique identifier for a conversation which is created automatically\n     ",
+      "range": [
+        679,
+        796
+      ],
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 4
+        },
+        "end": {
+          "line": 24,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {Wonder} wonderInstance\n     * @desc The wonder instance on which the conversation is located on\n     * @desc Makes backreferences possible\n     ",
+      "range": [
+        824,
+        988
+      ],
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 4
+        },
+        "end": {
+          "line": 31,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {Participant} myParticipant\n     * @desc The local participant of the conversation\n     ",
+      "range": [
+        1036,
+        1143
+      ],
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 4
+        },
+        "end": {
+          "line": 37,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {Participant} owner\n     * @desc The participant who owns the conversation which is usually the caller\n     ",
+      "range": [
+        1180,
+        1307
+      ],
+      "loc": {
+        "start": {
+          "line": 40,
+          "column": 4
+        },
+        "end": {
+          "line": 43,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {Array<Participant>} remoteParticipants\n     * @desc An array of all remote {@link Participant}s participating in that conversation\n     ",
+      "range": [
+        1345,
+        1501
+      ],
+      "loc": {
+        "start": {
+          "line": 46,
+          "column": 4
+        },
+        "end": {
+          "line": 49,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {MsgEvtHandler} msgEvtHandler\n     * @desc The message event handler instance of the conversation which handles all incoming messages from the conversation's messaging server\n     * @example conversation.msgEvtHandler = new MsgEvtHandler(wonderInstance, conversation);\n     ",
+      "range": [
+        1541,
+        1834
+      ],
+      "loc": {
+        "start": {
+          "line": 52,
+          "column": 4
+        },
+        "end": {
+          "line": 56,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {RtcEvtHandler} rtcEvtHandler\n     * @desc The rtc event handler instance of the conversation which handles all events related to a rtc peer connection#\n     * @TODO: Move this to the Participant-class as a peer connection is established to another participant.\n     * This needs to be done and working before multiparty code is written.\n     * @example conversation.rtcEvtHandler = new RtcEvtHandler(wonderInstance, conversation);\n     ",
+      "range": [
+        1911,
+        2367
+      ],
+      "loc": {
+        "start": {
+          "line": 59,
+          "column": 4
+        },
+        "end": {
+          "line": 65,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {DataChannelEvtHandler} dataChannelEvtHandler\n     * @desc The data cannel event handler for data channel events of a specific channel.\n     * The event handler is registered only if a data channel is required.\n     * @TODO: check if this isn't needed anymore as the codec has the handler\n     * @example conversation.dataChannelEvtHandler = new dataChannelEvtHandler(wonderInstance, conversation);\n     ",
+      "range": [
+        2444,
+        2867
+      ],
+      "loc": {
+        "start": {
+          "line": 68,
+          "column": 4
+        },
+        "end": {
+          "line": 74,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {MessagingStub} msgStub\n     * @desc The messaging stub implementation instance of the messaging server which is used in this conversation\n     ",
+      "range": [
+        2912,
+        3075
+      ],
+      "loc": {
+        "start": {
+          "line": 77,
+          "column": 4
+        },
+        "end": {
+          "line": 80,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {String} msgSrv\n     * @desc A URL as a string to a messaging server which is used in this conversation\n     ",
+      "range": [
+        3106,
+        3234
+      ],
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 4
+        },
+        "end": {
+          "line": 86,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n     * @type {DataChannelBroker} dataChannelBroker\n     * @desc The broker which stores and handles codecs and its data channels which are used in this conversation\n     ",
+      "range": [
+        3264,
+        3440
+      ],
+      "loc": {
+        "start": {
+          "line": 89,
+          "column": 4
+        },
+        "end": {
+          "line": 92,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * @desc Leaves the conversation on which the function is executed on\n   * @example conversation.leave();\n   ",
+      "range": [
+        3484,
+        3601
+      ],
+      "loc": {
+        "start": {
+          "line": 97,
+          "column": 2
+        },
+        "end": {
+          "line": 100,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Line",
+      "value": " this will trigger the iceconnectionstatechange event on the remote end",
+      "range": [
+        3751,
+        3824
+      ],
+      "loc": {
+        "start": {
+          "line": 105,
+          "column": 6
+        },
+        "end": {
+          "line": 105,
+          "column": 79
+        }
+      }
+    },
+    {
+      "type": "Line",
+      "value": " remote end needs to check pc.iceConnectionState == disconnected",
+      "range": [
+        3831,
+        3897
+      ],
+      "loc": {
+        "start": {
+          "line": 106,
+          "column": 6
+        },
+        "end": {
+          "line": 106,
+          "column": 72
+        }
+      }
+    },
+    {
+      "type": "Line",
+      "value": " as the message is delivered trough the pc event a separate message isn't mandatory here",
+      "range": [
+        4008,
+        4098
+      ],
+      "loc": {
+        "start": {
+          "line": 108,
+          "column": 6
+        },
+        "end": {
+          "line": 108,
+          "column": 96
+        }
+      }
+    },
+    {
+      "type": "Line",
+      "value": " now disconnect from the remote messaging server",
+      "range": [
+        4154,
+        4204
+      ],
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 49
+        },
+        "end": {
+          "line": 110,
+          "column": 99
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * @desc Adds a new remote participant to the conversation\n   * @param {Participant} participant - The remote participant which should be added to the conversation\n   ",
+      "range": [
+        4213,
+        4388
+      ],
+      "loc": {
+        "start": {
+          "line": 114,
+          "column": 2
+        },
+        "end": {
+          "line": 117,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n   * @desc Searches an existing participant in the conversation's remote participants\n   * and return it if it exists\n   * @param {Identity} identity - The identity of the remote participant to be returned\n   * @return {Participant}\n   ",
+      "range": [
+        4686,
+        4928
+      ],
+      "loc": {
+        "start": {
+          "line": 128,
+          "column": 2
+        },
+        "end": {
+          "line": 133,
+          "column": 5
+        }
+      }
+    }
+  ]
+}

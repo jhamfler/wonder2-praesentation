@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">libs/modules/RtcEvtHandler.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  <a href="identifiers.html">Identifier</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="git+ssh://git@gitlab.com/hftl/wonder_2.0.git">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/wonder.js~WONDER.html">WONDER</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">modules</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Conversation.js~Conversation.html">Conversation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/DataChannelEvtHandler.js~DataChannelEvtHandler.html">DataChannelEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Demand.js~Demand.html">Demand</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Identity.js~Identity.html">Identity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Idp.js~Idp.html">Idp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Message.js~Message.html">Message</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MessageFactory.js~MessageFactory.html">MessageFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/MsgEvtHandler.js~MsgEvtHandler.html">MsgEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/Participant.js~Participant.html">Participant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/libs/modules/RtcEvtHandler.js~RtcEvtHandler.html">RtcEvtHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-errorHandler">errorHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DataChannelEvtType">DataChannelEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-MessageType">MessageType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-PayloadType">PayloadType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-RtcEvtType">RtcEvtType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-GUID">GUID</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">libs/modules/RtcEvtHandler.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * @desc WebRTC framework to facilitate the development of Applications which seamlessly interoperate with each other
+ * This framework is based on @see https://github.com/hypercomm/wonder
+ * @author Danny Koppenhagen &lt;mail@d-koppenhagen.de&gt;
+ * @author Johannes Hamfler &lt;jh@z7k.de&gt;
+ */
+
+&apos;use strict&apos;;
+
+/**
+ * @class
+ * @desc This class is an event handler vor events coming from a peer connection
+ */
+class RtcEvtHandler {
+  /**
+   * @constructor
+   * @param {WONDER} wonderInstance - The instance of the WONDER class used as a backreference
+   * @param {Conversation} conversation - An reference to the corresponding conversation
+   */
+  constructor(wonderInstance, conversation) {
+    /**
+     * @type {WONDER} wonderInstance
+     * @desc Backreference to the wonder instance
+     */
+    this.wonderInstance = wonderInstance;
+
+    /**
+     * @type {Conversation} conversation
+     * @desc An reference to the corresponding conversation
+     */
+    this.conversation = conversation;
+
+    /**
+     * @type {Array} msgbuf
+     * @desc An array for buffering ICE candidate messages before they are sent
+     */
+    this.msgbuf = [];
+  }
+
+
+  /**
+   * @desc This event handler processes events coming from a peer connection.
+   * @param {Object} evt - an event containing the RTC events
+   * @example
+   * participant.peerConnection.ondatachannel = conversation.rtcEvtHandler.onEvt.bind(conversation.rtcEvtHandler);
+   * @TODO The event handler should be in the participant as the peer connection is also there.
+   */
+  onEvt(evt) {
+    var that = this;
+
+    switch (evt.type) {
+      case RtcEvtType.onaddstream:
+        console.log(&apos;[RtcEvtHandler onEvt] onaddstream!&apos;, evt);
+        break;
+
+      case RtcEvtType.onaddlocalstream:
+        console.log(&apos;[RtcEvtHandler onEvt] onaddlocalstream&apos;, evt);
+        break;
+
+      case RtcEvtType.onnegotiationneeded:
+        console.log(&apos;[RtcEvtHandler onEvt] onnegotiationneeded&apos;, evt);
+        that.conversation.myParticipant.peerConnection.createOffer(
+          function(offer) {
+            that.conversation.myParticipant.peerConnection.setLocalDescription(
+              offer,
+              function() {
+                var msg = MessageFactory.updateSdp(
+                  that.conversation.myParticipant.identity,
+                  that.conversation.remoteParticipants[0].identity,
+                  that.conversation.id,
+                  offer
+                );
+                that.conversation.msgStub.sendMessage(msg);
+              },
+              errorHandler
+            );
+          },
+          errorHandler
+        );
+        break;
+
+      case RtcEvtType.onicecandidate:
+        console.log(&apos;[RtcEvtHandler onEvt] icecandidate: &apos;, evt);
+        // candidate exists in e.candidate
+        // its triggered when the local machine wants ice
+
+        if (!evt.candidate) return; // when there is no ice candidate present we cannot establish a connection (STUN/TURN needed); or it is the last candidate
+        console.log(&apos;[RtcEvtHandler onEvt] conversation: &apos;, this.conversation);
+        console.log(evt);
+
+        var newcandidate = new RTCIceCandidate({ // @TODO remove this and test it
+          sdpMLineIndex: 0,
+          candidate: evt.candidate.candidate,
+          sdpMid: evt.candidate.sdpMid
+        });
+
+        var msg = MessageFactory.updateIceCandidates(
+          that.conversation.myParticipant.identity,
+          that.conversation.remoteParticipants[0].identity,
+          that.conversation.id,
+          evt.candidate
+        ); // create a message with the icecandidates in it
+
+        if (that.conversation.msgEvtHandler.ice) { // send directly when allowed
+          that.conversation.msgStub.sendMessage(msg);
+          // and all others
+          for (var i = that.msgbuf.length - 1; i &gt;= 0; i--) {
+            that.conversation.msgStub.sendMessage(that.msgbuf[i]);
+            that.msgbuf.splice(i, 1);
+          }
+        } else {
+          that.msgbuf.push(msg);
+        }
+        break;
+
+      case RtcEvtType.onsignalingstatechange:
+        console.log(&apos;[RtcEvtHandler onEvt] onsignalingstatechange&apos;, evt);
+        break;
+
+      case RtcEvtType.onremovestream:
+        console.log(&apos;[RtcEvtHandler onEvt] onremovestream&apos;, evt);
+
+        break;
+
+      case RtcEvtType.oniceconnectionstatechange:
+        console.log(&quot;[RtcEvtHandler onEvt] iceConnectionStatechange NOW: &quot;, evt);
+        break;
+
+      case RtcEvtType.ondatachannel:
+        console.log(&apos;[RtcEvtHandler onEvt] ondatachannel&apos;, evt);
+        if (that.conversation.dataChannelEvtHandler)
+          evt.channel.onmessage = that.conversation.dataChannelEvtHandler.onEvt.bind(that.conversation.dataChannelEvtHandler);
+        else {
+          // @TODO remove static link to the participant, get it more dynamically to support multiparty conversations
+          console.log(&quot;that.conversation.remoteParticipants[0].demand&quot;,that.conversation.remoteParticipants[0].demand);
+          console.log(that.conversation.remoteParticipants[0].demand.out.data);
+          var codec = that.conversation.dataChannelBroker.getDataChannelCodec(
+            that.conversation.myParticipant.identity,
+            that.conversation.remoteParticipants[0].identity,
+            that.conversation.remoteParticipants[0].demand.out.data
+          );
+          evt.channel.onmessage = codec.onDataMessage.bind(codec);
+          evt.channel.payloadType = that.conversation.remoteParticipants[0].demand.out.data;
+        }
+        break;
+
+      default:
+        console.log(&apos;[RtcEvtHandler onEvt] default&apos;, evt);
+        break;
+    }
+
+    this.wonderInstance.onRtcEvt(evt);
+  }
+
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.3.1)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
