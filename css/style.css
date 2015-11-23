@@ -34,7 +34,7 @@
   color: #00008B !important;
 }
 .yellow {
-  color: #FFE06F !important;
+  color: #E2BB03 !important;
 }
 
 
@@ -89,14 +89,14 @@
 /* source code */
 .reveal pre code{
   line-height: 1.1em;
-  background-color: #FAFAFA;
+  background-color: #cacaca;
   color: #585858;
 }
 .hljs-keyword{
   color: #8888ff;
 }
 .reveal code{ /* inline code */
-  background-color: #D8D8D8;
+  background-color: #cacaca;
   color: #8B0000;
   border-radius: 10px;
   padding: 0px 5px;

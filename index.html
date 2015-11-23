@@ -32,7 +32,7 @@
     link.type = 'text/css';
     link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
-</script>
+  </script>
 
   <!--[if lt IE 9]>
   <script data-src="lib/js/html5shiv.js"></script>
@@ -48,7 +48,7 @@
       <section data-markdown section>
         <script type="text/template">
           # Kolloquium
-          #### Analyse der „Signalling-On-The-Fly“-Interoperabilitäts-Lösung fürWebRTC sowie Entwurf und prototypische Realisierung eines optimierten Signalisierungskonzeptes
+          #### Analyse der „Signalling-On-The-Fly“-Interoperabilitäts-Lösung für WebRTC sowie Entwurf und prototypische Realisierung eines optimierten Signalisierungskonzeptes
           ![Wonderv2Logo](img/shield.svg)<!-- .element: width="20%" -->
           <aside class="notes">
           -
@@ -59,20 +59,36 @@
 
 
       <!-- Gleiderung-->
-      <section data-markdown>
-        <script type="text/template">
-          # Gliederung
-          * Einleitung
-          * Analyse
-          * Konzeption / Zielsetzung
-          * Realisierung
-          * Abschließende Betrachtungen
-            * Fazit
-            * Ausblick
-          <aside class="notes">
-          -
-          </aside>
-        </script>
+      <section>
+        <section data-markdown>
+          <script type="text/template">
+            # Gliederung
+            <i class="fa fa-2x fa-list"></i>
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Gliederung
+            - Einführung
+            - Motivation
+            - Festlegungen
+            - WONDERv2-Framework
+            - Teilproblematiken
+              - Nachladeproblematik
+              - Signalisierung
+              - Identitätsmanagement
+              - Datenkanäle
+              - Automatisierung
+            - Fazit
+            - Ausblick
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
       </section>
 
 
@@ -90,17 +106,32 @@
         </section>
         <section data-markdown>
           <script type="text/template">
-            ## SigOFly <i class="fa fa-paper-plane"></i>
-            * Dynamisches Laden von Signalisierungsprotokollen
-              * Messaging Stubs stellen Funktionen bereit
-            * Implementierendes Framework: WONDER
-              * WebRTC-Framework
-              * Keine festgelegte Signalisierung
+            ## SigOFly-Mechanismus <i class="fa fa-paper-plane"></i>
+            * Dynamisches Nachladen von Signalisierungsprotokollen
+            * **Messaging Stubs** stellen Funktionen bereit
+              * Javascript-Code
+              * Verbindung zwischen Framework und Signalisierungsprotokoll
+
             <aside class="notes">
             -
             </aside>
           </script>
         </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## WONDERv1-Framework <i class="fa fa-code"></i>
+            * Javascript-Framework zur Etablierung von WebRTC
+              * implementiert SigOFly-Mechanismus
+            * Messaging Stubs werden mittels **Require.js** nachgeladen
+            * Kommunikation von WebRTC Anwendungen in verschiedenen Signalisierungsdomänen
+
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+
+        <!--
         <section data-markdown>
           <script type="text/template">
             ## Überwindung von NAPT <i class="fa fa-server"></i>
@@ -115,7 +146,8 @@
         <section data-markdown>
           <script type="text/template">
             #### STUN
-            ![stun](img/stun.svg)<!-- .element: width="90%" -->
+            ![stun](img/stun.svg)
+          --><!-- .element: width="90%" --><!--
             <aside class="notes">
             -
             </aside>
@@ -124,7 +156,8 @@
         <section data-markdown>
           <script type="text/template">
             #### TURN
-            ![Wonderv2Logo](img/turn.gif)<!-- .element: width="92%" -->
+            ![Wonderv2Logo](img/turn.gif)
+          --><!-- .element: width="92%" --><!--
             <aside class="notes">
             -
             </aside>
@@ -176,11 +209,416 @@
             </aside>
           </script>
         </section>
+        -->
       </section>
 
 
 
+      <!-- Motivation-->
+      <section>
+        <section data-markdown>
+          <script type="text/template">
+            # Motivation
+            <i class="fa fa-4x fa-question"></i>
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Motivation
+            - Modularisierung des WONDER-Frameworks
+            - Separierung logischer Komponenten
+            - Schaffen einfacher Schnittstellen für Anwendungsentwickler
+            - SigOFly abbilden auf Datenkanal-Codecs
+            - Etablierung eines standartisierten Identitätsmanagements
+            - Einfacheres Setup
+
+            <aside class="notes">
+            </aside>
+          </script>
+        </section>
+      </section>
+
+
+
+      <!-- Festlegungen-->
+      <section>
+        <section data-markdown>
+          <script type="text/template">
+            # Festlegungen
+            <i class="fa fa-4x fa-gears"></i>
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Festlegungen
+            - ECMA-Script 262 Version 6
+            - Server-Umgebung: Node.js
+
+            <aside class="notes">
+            Klassenbasiertes Konzept;
+            Import / Export von Modulen;
+            Promises für asynchrone Operationen;
+            Umwandlung in ECMA-262 Version 5.1 (ES5) möglich
+            </aside>
+          </script>
+        </section>
+      </section>
+
+
+
+      <!-- WONDERv2-Framework-->
+      <section>
+        <section data-markdown>
+          <script type="text/template">
+            # WONDERv2-Framework
+            <i class="fa fa-4x fa-code"></i>
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Medienanforderung <i class="fa fa-video-camera"></i> <i class="fa fa-microphone"></i> <i class="fa fa-file-code-o"></i>
+            #### Vor der Neukozeption:
+            ```javascript|contenteditable|spellcheck=false|data-show-source=./samples/js/demandOld.js
+            loading...
+            ```
+            * Keine Alternativen Möglicheiten
+            * `direction` muss aufwendig zerlegt werden
+            <aside class="notes">
+              -
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Medienanforderung <i class="fa fa-video-camera"></i> <i class="fa fa-microphone"></i> <i class="fa fa-file-code-o"></i>
+            #### Nach der Neukonzeption:
+            ```javascript|contenteditable|spellcheck=false|data-show-source=./samples/js/demand.js
+            loading...
+            ```
+            * Verschiedene Aufrufmöglichkeiten
+              * Konvertierung innerhalb des Frameworks
+            * Zugriff auf `direction` über Objektschlüssel
+            <aside class="notes">
+              -
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## API <i class="fa fa-code"></i>
+            #### Vor der Neukonzeption:
+            ```javascript|contenteditable|spellcheck=false|data-show-source=./samples/js/minimal_js_w1.js
+            loading...
+            ```
+            * Schnittstellen: `Conversation`, `IdP`, `MessagingStub`
+
+            <aside class="notes">
+            Binden und Abfangen von Events; Verschachtelte Aufrufe
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## API <i class="fa fa-code"></i>
+            #### Nach der Neukonzeption:
+            ```javascript|contenteditable|spellcheck=false|data-show-source=./samples/js/minimal_js_w2.js
+            loading...
+            ```
+            * Schnittstelle: `wonder`
+
+            <aside class="notes">
+            weniger Parameter; einfacherer Zugriff; Events nach Abarbeitung durch Framework
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            <h2>Dokumentation <i class="fa fa-file-text-o"></i></h2>
+            #### JSDoc / ESDoc
+            <div class="device-preview" style="overflow: hidden;">
+              <iframe data-src="/docs" class="device-screen">
+                <i class="fa fa-spinner fa-pulse"></i>
+              </iframe>
+            </div>
+
+            <aside class="notes">
+            vorher: JSDoc; nachher: ESDoc
+            </aside>
+          </script>
+        </section>
+      </section>
+
+
+
+      <!-- Teilproblematiken -->
+      <section>
+        <section data-markdown>
+          <script type="text/template">
+            # Teilproblematiken
+            <i class="fa fa-2x fa-bug"></i> <i class="fa fa-4x fa-search"></i>
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+
+        <!-- Nachladeproblematik -->
+        <section data-markdown>
+          <script type="text/template">
+            ## Nachladeproblematik <i class="fa fa-desktop"></i> <i class="fa fa-arrow-left"></i> <i class="fa fa-file-code-o"></i>
+            * Konzept des Nachladens der Messaging Stubs mit **Require.js** wurde übernommen
+            * Nachladen von Modulen des Frameworks
+              * Hintergrund: Auslagerung von Multi-Party-Code und nicht essentiellen Funktionen
+              * Abhängikeiten werden bei Bedarf geladen
+
+            <img data-src="img/requirejs.png" width="20%"></img>
+
+            <aside class="notes">
+            - AMD Module
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Nachladeproblematik <i class="fa fa-desktop"></i> <i class="fa fa-arrow-left"></i> <i class="fa fa-file-code-o"></i>
+            #### Messaging Stubs Vor der Neukonzeption:
+            ```javascript|contenteditable|spellcheck=false|data-show-source=./samples/stubs/ms_nodejs_connect_old.js
+            loading...
+            ```
+            <i class="red fa fa-exclamation"></i> Messaging Stubs greifen auf Framework-Funktionen zu <i class="red fa fa-exclamation"></i>
+            * Identifizierung über Stub-Name
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Nachladeproblematik <i class="fa fa-desktop"></i> <i class="fa fa-arrow-left"></i> <i class="fa fa-file-code-o"></i>
+            #### Messaging Stubs Nach der Neukonzeption:
+            ```javascript|contenteditable|spellcheck=false|data-show-source=./samples/stubs/ms_nodejs_connect_new.js
+            loading...
+            ```
+            * Stubs benötigen keinen Zugriff auf Funktionen des Frameworks
+            * Identifizierung über die Stub-URI
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+
+        <!-- Signalisierung zwischen WONDERv2-Frameworks -->
+        <section data-markdown>
+          <script type="text/template">
+            ## Signalisierung <i class="fa fa-desktop"></i> <i class="fa fa-arrow-left"></i> <i class="fa fa-file-code-o"></i> <i class="fa fa-arrow-right"></i> <i class="fa fa-server"></i>
+            * Austausch von `Message`-Objekten
+            * Messaging Stubs dienen als Schnittstelle
+            * Framework-Modul `callSingle` als Handler der Nachrichten
+              * Kommunikation zwischen zwei Teilnehmern
+              * zukünftige Implementierungen für Multi-Party-Konversationen
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Signalisierung <i class="fa fa-desktop"></i> <i class="fa fa-arrow-left"></i> <i class="fa fa-file-code-o"></i> <i class="fa fa-arrow-right"></i> <i class="fa fa-server"></i>
+            #### Exkurs: Multi-Party-Konversationen
+            Sowohl Signaisierungsnachrichten als auch Medeinverbindungen müssen mehrfach aufgebaut werden.
+            - Hohes Datenaufkommen für RTC-Nutzdaten
+            - Verschiedene Möglichkeiten
+              - Peer-To-Peer
+              - MCU
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+
+        <!-- Identitätsmanagement -->
+        <section data-markdown>
+          <script type="text/template">
+            ## Identitätsmanagement <i class="fa fa-user"></i>
+            * Zuordnung: Identitätsinformationen &#8596; Nutzernamen
+            * Auslieferung signalisierungsrelevanter Informationen:
+              * Messaging-Stub-URI
+              * Messaging-Server-URI
+            * URIs zu Datenkanal-Codecs
+            * Support bestehnder IdP's
+              * Konfiguration durch Entwickler (wie in WONDERv1)
+
+            <aside class="notes">
+            In WONDERv1: IdP statische implementierung der Backup-Variante
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Identitätsmanagement <i class="fa fa-user"></i>
+            * Einfache Anbindung bestehender Datenbanken
+            * Herstellung einer Kompatibilität zu anderen IdM-Systemen
+            * Skalierbarkeit der Identitätsinformationen
+            * Möglichkeit einer Authentifizierung
+
+            <div class="fragment">
+              <br/>
+              <i class="yellow fa fa-lightbulb-o fa-2x"></i> Implementierung des Standards Webfinger
+              <br/>
+              <img data-src="img/WebFinger.svg" width="15%"></img>
+            </div>
+
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+
+        <!-- Datenkanäle -->
+        <section data-markdown>
+          <script type="text/template">
+            ## Datenkanäle <i class="fa fa-comments-o"></i> <i class="fa fa-file-o"></i>
+            #### Vor der Neukonzeption:
+            * Statisch implementiert
+            * Unterscheidung nach Art des Payloads
+              * `chat` - Übertragung von Nachrichten
+              * `file` - Übertragung von Dateien
+            * Keine weiteren Datentypen (`image`, `voice`, ...)
+
+            <p class="fragment">
+              <i class="red fa fa-exclamation"></i> Problem: Hinzufügen neuer Codecs
+              &#x2192; Notwendigkeit der Aktualisierung des Frameworks bei Nutzern
+            </p>
+
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Datenkanäle <i class="fa fa-comments-o"></i> <i class="fa fa-file-o"></i>
+            #### Nach der Neukonzeption:
+            * Codec-On-The-Fly
+            * Codecs können unabhängig vom Framework entwickelt werden
+            * Zuordung über eine Karte:
+
+            <img data-src="img/codecmap.svg" width="65%"></img>
+
+            <aside class="notes">
+            - Codec Plain = backup; weiter Codecs: image, file, plain, chat
+            </aside>
+          </script>
+        </section>
+
+        <!-- Automatisierung -->
+        <section data-markdown>
+          <script type="text/template">
+            <img data-src="img/npm.svg" class="corner left"></img>
+            <img data-src="img/gulp.svg" class="corner right"></img>
+            ## Automatisierung <i class="fa fa-terminal"></i>
+            * Installation und Konfiguration
+            * Start der Server
+            * Erstellung der Dokumentation
+            * Erstellung des Frameworks
+
+            ```ruby|cmd|contenteditable|small
+            $ npm install -g gulp
+            $ npm install
+            $ gulp
+            ```
+
+            <aside class="notes">
+            - Hilfe = Anzeige verfügbarer Befehle
+            </aside>
+          </script>
+        </section>
+      </section>
+
+
+
+      <!-- Ausblick-->
+      <section>
+        <section data-markdown>
+          <script type="text/template">
+            # Ausblick
+            <i class="fa fa-2x fa-eye"></i>
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Ausblick
+            - Parallele Nutzung mehrerer Datenkanäle mit unterschiedlichen Payload-Typen
+            - Übertragung von Statusinformationen
+            - Unterstützung von Multi-Party-Konversationen
+            - Nutzung von ECMA-Script 6 `Export` / `Import` Funktionen
+            - Authentifizierung mit OpenID Connect
+
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+      </section>
+
+
+
+      <!-- Fazit-->
+      <section>
+        <section data-markdown>
+          <script type="text/template">
+            # Fazit
+            <i class="fa fa-2x fa-flag"></i>
+            <aside class="notes">
+            -
+            </aside>
+          </script>
+        </section>
+        <section>
+            <h2>Fazit</h2>
+            <ul>
+              <li class="fragment">Modularisierung <i class="fa fa-check green"></i></li>
+              <li class="fragment">Separate Server <i class="fa fa-check green"></i></li>
+              <li class="fragment">Nachladen von Codecs <i class="fa fa-check green"></i></li>
+              <li class="fragment">Vorbereitung für Multi-Party-Calls <i class="fa fa-check green"></i></li>
+              <li class="fragment">Einfache Schnittstellen <i class="fa fa-check green"></i></li>
+              <li class="fragment">Automatisierung <i class="fa fa-check green"></i></li>
+            </ul>
+            <aside class="notes">
+
+            </aside>
+          </script>
+        </section>
+      </section>
+
+
+
+      <!-- Ende -->
+      <section data-markdown>
+        <script type="text/template">
+          ## Vielen Dank für ihre Aufmerksamkeit
+
+          <aside class="notes">
+          -
+          </aside>
+        </script>
+      </section>
+
+
       <!-- Analyse-->
+      <!--
       <section>
         <section data-markdown>
           <script type="text/template">
@@ -321,11 +759,12 @@
           </script>
         </section>
       </section>
-
+      -->
 
 
 
       <!-- Konzeption / Ziele-->
+      <!--
       <section>
         <section data-markdown>
           <script type="text/template">
@@ -364,13 +803,10 @@
             </aside>
           </script>
         </section>
-        <section>
-          <h2>Dokumentation <i class="fa fa-file-text-o"></i></h2>
-          <div class="device-preview" style="overflow: hidden;">
-            <iframe data-src="/docs" class="device-screen">
-              <i class="fa fa-spinner fa-pulse"></i>
-            </iframe>
-          </div>
+        <section data-markdown>
+          ## Dokumentation <i class="fa fa-file-text-o"></i>
+          * Dokumenation innerhalb des Quelltextes
+          * GUI
         </section>
         <section data-markdown>
           <script type="text/template">
@@ -453,17 +889,17 @@
             * Start der Server
             * Erstellung der Dokumentation
             * Erstellung des Frameworks
-            * Hilfe
             <aside class="notes">
             - Hilfe = Anzeige verfügbarer Befehle
             </aside>
           </script>
         </section>
       </section>
-
+      -->
 
 
       <!-- Realisierung -->
+      <!--
       <section>
         <section data-markdown>
           <script type="text/template">
@@ -512,6 +948,25 @@
         </section>
         <section data-markdown>
           <script type="text/template">
+            ## WONDERv2 - API <i class="fa fa-code"></i>
+            ```javascript|contenteditable|spellcheck=false|data-show-source=./samples/js/minimal_js_w2.js
+            loading...
+            ```
+            <aside class="notes">
+              -
+            </aside>
+          </script>
+        </section>
+        <section>
+          <h2>Dokumentation <i class="fa fa-file-text-o"></i></h2>
+          <div class="device-preview" style="overflow: hidden;">
+            <iframe data-src="/docs" class="device-screen">
+              <i class="fa fa-spinner fa-pulse"></i>
+            </iframe>
+          </div>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
             <img data-src="img/npm.svg" class="corner left"></img>
             <img data-src="img/gulp.svg" class="corner right"></img>
             ## Automatisierung <i class="fa fa-terminal"></i>
@@ -531,6 +986,7 @@
           </script>
         </section>
       </section>
+      -->
 
     </div>
 
