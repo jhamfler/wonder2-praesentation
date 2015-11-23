@@ -230,7 +230,7 @@
             ## Motivation
             - Modularisierung des WONDER-Frameworks
             - Separierung logischer Komponenten
-            - Schaffen einfacher Schnittstellen für Anwendungsentwickler
+            - Entwicklung einfacher Schnittstellen für Anwendungsentwickler
             - SigOFly abbilden auf Datenkanal-Codecs
             - Etablierung eines standartisierten Identitätsmanagements
             - Einfacheres Setup
@@ -290,7 +290,7 @@
             ```javascript|contenteditable|spellcheck=false|data-show-source=./samples/js/demandOld.js
             loading...
             ```
-            * Keine Alternativen Möglicheiten
+            * Keine alternativen Möglicheiten
             * `direction` muss aufwendig zerlegt werden
             <aside class="notes">
               -
@@ -378,7 +378,7 @@
             * Konzept des Nachladens der Messaging Stubs mit **Require.js** wurde übernommen
             * Nachladen von Modulen des Frameworks
               * Hintergrund: Auslagerung von Multi-Party-Code und nicht essentiellen Funktionen
-              * Abhängikeiten werden bei Bedarf geladen
+              * Abhängigkeiten werden bei Bedarf geladen
 
             <img data-src="img/requirejs.png" width="20%"></img>
 
@@ -390,7 +390,7 @@
         <section data-markdown>
           <script type="text/template">
             ## Nachladeproblematik <i class="fa fa-desktop"></i> <i class="fa fa-arrow-left"></i> <i class="fa fa-file-code-o"></i>
-            #### Messaging Stubs Vor der Neukonzeption:
+            #### Messaging Stubs vor der Neukonzeption:
             ```javascript|contenteditable|spellcheck=false|data-show-source=./samples/stubs/ms_nodejs_connect_old.js
             loading...
             ```
@@ -404,7 +404,7 @@
         <section data-markdown>
           <script type="text/template">
             ## Nachladeproblematik <i class="fa fa-desktop"></i> <i class="fa fa-arrow-left"></i> <i class="fa fa-file-code-o"></i>
-            #### Messaging Stubs Nach der Neukonzeption:
+            #### Messaging Stubs nach der Neukonzeption:
             ```javascript|contenteditable|spellcheck=false|data-show-source=./samples/stubs/ms_nodejs_connect_new.js
             loading...
             ```
@@ -434,7 +434,7 @@
           <script type="text/template">
             ## Signalisierung <i class="fa fa-desktop"></i> <i class="fa fa-arrow-left"></i> <i class="fa fa-file-code-o"></i> <i class="fa fa-arrow-right"></i> <i class="fa fa-server"></i>
             #### Exkurs: Multi-Party-Konversationen
-            Sowohl Signaisierungsnachrichten als auch Medeinverbindungen müssen mehrfach aufgebaut werden.
+            Sowohl Signaisierungsnachrichten als auch Medienverbindungen müssen mehrfach aufgebaut werden.
             - Hohes Datenaufkommen für RTC-Nutzdaten
             - Verschiedene Möglichkeiten
               - Peer-To-Peer
@@ -510,7 +510,7 @@
             #### Nach der Neukonzeption:
             * Codec-On-The-Fly
             * Codecs können unabhängig vom Framework entwickelt werden
-            * Zuordung über eine Karte:
+            * Zuordnung über eine Karte:
 
             <img data-src="img/codecmap.svg" width="65%"></img>
 
@@ -858,7 +858,7 @@
           <script type="text/template">
             ## Datenkanäle <i class="fa fa-comments-o"></i> <i class="fa fa-file-o"></i>
             * Dynamisches Nachladen
-            * Zuordung über Karte
+            * Zuordnung über Karte
 
             <div>
               <img data-src="img/codecmap.svg"></img>
