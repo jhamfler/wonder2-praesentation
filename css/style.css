@@ -46,9 +46,10 @@
   width: 10%;
   float: left;
   margin-right: 3%;
+  padding-left: 50px;
 }
 .reveal .slide-footer-content {
-  width: 87%;
+  width: 80%;
   float: left;
 }
 .reveal .slide-footer-logo img {
@@ -62,6 +63,11 @@
   bottom: 15px;
   opacity: 0.5;
   z-index: 31;
+}
+.reveal .slide-number{
+  right: 80px;
+  font-size: 0.8em;
+  bottom: 30px;
 }
 
 
