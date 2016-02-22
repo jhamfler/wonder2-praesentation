@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Kolloquium | Danny Koppenhagen</title>
+  <title>Kolloquium | Johannes Hamfler</title>
 
-  <meta name="description" content="Kolloquium | Danny Koppenhagen">
-  <meta name="author" content="Danny Koppenhagen">
+  <meta name="description" content="Kolloquium | Johannes Hamfler">
+  <meta name="author" content="Johannes Hamfler">
 
   <link rel="shortcut icon" href="img/shield.png" >
 
@@ -73,7 +73,7 @@
           <script type="text/template">
             ## Gliederung
             - Einführung
-            - Motivation
+            - Zielstellung
             - Festlegungen
             - WONDERv2-Framework
             - Teilproblematiken
@@ -98,9 +98,9 @@
         <section data-markdown>
           <script type="text/template">
             # Einleitung
-            <i class="fa fa-2x fa-info-circle"></i>
+            <!-- <i class="fa fa-2x fa-info-circle"></i>
             <aside class="notes">
-            -
+            - -->
             </aside>
           </script>
         </section>
@@ -108,9 +108,10 @@
           <script type="text/template">
             ## SigOFly-Mechanismus <i class="fa fa-paper-plane"></i>
             * Dynamisches Nachladen von Signalisierungsprotokollen
-            * **Messaging Stubs** stellen Funktionen bereit
+            * **Messaging Stubs** stellen Schnittstellen zu den Signalisierungsprotokollen bereit
               * Javascript-Code
               * Verbindung zwischen Framework und Signalisierungsprotokoll
+              * Verbindung zwischen Netzwerk und Signalisierungsprotokoll
 
             <aside class="notes">
             -
@@ -120,10 +121,9 @@
         <section data-markdown>
           <script type="text/template">
             ## WONDERv1-Framework <i class="fa fa-code"></i>
-            * Javascript-Framework zur Etablierung von WebRTC
-              * implementiert SigOFly-Mechanismus
-            * Messaging Stubs werden mittels **Require.js** nachgeladen
-            * Kommunikation von WebRTC-Anwendungen in verschiedenen Signalisierungsdomänen
+            * Javascript-Framework zur Nutzung von SigOFly und WebRTC
+            * Messaging Stubs wurden dynamisch nachgeladen
+            * Ermöglicht Kommunikation von WebRTC-Anwendungen in verschiedenen Signalisierungsdomänen
 
             <aside class="notes">
             -
@@ -214,26 +214,26 @@
 
 
 
-      <!-- Motivation-->
+      <!-- Zielstellung-->
       <section>
         <section data-markdown>
           <script type="text/template">
-            # Motivation
-            <i class="fa fa-4x fa-question"></i>
+            # Zielstellung
+            <!-- <i class="fa fa-4x fa-question"></i>
             <aside class="notes">
-            -
+            - -->
             </aside>
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
-            ## Motivation
+            ## Zielstellung
             - Modularisierung des WONDER-Frameworks
             - Separierung logischer Komponenten
-            - Entwicklung einfacher Schnittstellen für Anwendungsentwickler
-            - SigOFly abbilden auf Datenkanal-Codecs
-            - Etablierung eines standardisierten Identitätsmanagements
-            - Einfacheres Setup
+            - Erstellung einfacher Schnittstellen für Anwendungsentwickler
+            - Realisierung von mehr als zwei Codecs für den Datenkanal
+            - Verbesserung des Identitätsmanagements
+            - Setup einfach gestalten
 
             <aside class="notes">
             </aside>
@@ -244,7 +244,7 @@
 
 
       <!-- Festlegungen-->
-      <section>
+      <!-- <section>
         <section data-markdown>
           <script type="text/template">
             # Festlegungen
@@ -268,9 +268,31 @@
             </aside>
           </script>
         </section>
+      </section> -->
+
+      <section>
+        <section data-markdown>
+          <script type="text/template">
+            # Nachladeproblematik
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Signalisierungsprotokolle <i class="fa fa-video-camera"></i> <i class="fa fa-microphone"></i> <i class="fa fa-file-code-o"></i>
+            #### Vor der Neukonzeption:
+            <div data-insert-source="./samples/js/demandOld.js"></div>
+            <pre><code src="./samples/js/demandOld.js">
+              lalala
+            </code></pre>
+
+            * Keine Alternativen
+            * `direction` muss aufwendig zerlegt werden
+            <aside class="notes">
+              -
+            </aside>
+          </script>
+        </section>
       </section>
-
-
 
       <!-- WONDERv2-Framework-->
       <section>
@@ -287,9 +309,11 @@
           <script type="text/template">
             ## Medienanforderung <i class="fa fa-video-camera"></i> <i class="fa fa-microphone"></i> <i class="fa fa-file-code-o"></i>
             #### Vor der Neukonzeption:
-            ```javascript|contenteditable|spellcheck=false|data-show-source=./samples/js/demandOld.js
-            loading...
-            ```
+            <div data-insert-source="./samples/js/demandOld.js"></div>
+            <pre><code src="./samples/js/demandOld.js">
+              lalala
+            </code></pre>
+
             * Keine Alternativen
             * `direction` muss aufwendig zerlegt werden
             <aside class="notes">
@@ -997,7 +1021,7 @@
         <img src="img/hftl_icon.png" width="30%"></img>
       </div>
       <div class="slide-footer-content">
-        Danny Koppenhagen
+        Johannes Hamfler
       </div>
     </div>
   </div>

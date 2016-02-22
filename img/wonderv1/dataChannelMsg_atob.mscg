@@ -1,0 +1,23 @@
+msc {
+  a [label="", linecolor="#e0e0e0"],
+  msgsrvb [label="", linecolor="#e0e0e0"],
+  b [label="", linecolor="#e0e0e0"];
+
+  a box a [label="Domain Alice", textbgcolour="#7fff7f"],
+  msgsrvb box b [label="Domain Bob", textbgcolour="#7fff7f"];
+
+  a rbox a [label="Alice", textbgcolour="#ff7f7f"],
+  msgsrvb rbox msgsrvb [label="Messaging Server", textbgcolour="#ff7f7f"],
+  b rbox b [label="Bob", textbgcolour="#ff7f7f"];
+
+  --- [label="PeerConnection established"];
+  a => a [label="participant\n.createRemotePeer\n(identity,\n myParticipant,\n contextId,\n resourceConstraints,\n rtcEvtHandler,\n msgHandler,\n iceServers)\n"];
+
+  a -> msgsrvb [label="invitation for a data channel\n\n + SDP offer"];
+  msgsrvb -> b [label="invitation for a data channel\n\n + SDP offer"];
+  |||;
+  b -> msgsrvb [label="answer for a data channel\n\n + SDP answer"];
+  msgsrvb -> a [label="answer for a data channel\n\n + SDP answer"];
+  |||;
+  a <=> b [label="peer to peer data channel"];
+}

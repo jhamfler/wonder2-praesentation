@@ -1,0 +1,24 @@
+msc {
+  a [label="", linecolor="#e0e0e0"],
+  idp [label="", linecolor="#e0e0e0"],
+  stub [label="", linecolor="#e0e0e0"],
+  msgsrv [label="", linecolor="#e0e0e0"];
+
+  a box msgsrv [label="Domain Alice", textbgcolour="#7fff7f"];
+
+  a rbox a [label="Alice", textbgcolour="#ff7f7f"],
+  idp rbox idp [label="Identity Provider", textbgcolour="#ff7f7f"],
+  stub rbox stub [label="Stub Provider", textbgcolour="#ff7f7f"],
+  msgsrv rbox msgsrv [label="Messaging Server", textbgcolour="#ff7f7f"];
+
+  --- [label="WONDERv2-Framework was loaded before"];
+
+  a => a [label="idp.createIdentity\n('alice@domain.org',\nfunction)\n"];
+  a -> idp [label="get 'alice@domain.org'\n"];
+
+  idp -> a [label="Identity of alice\n (Stub-URIs)\n\n"];
+  a -> stub [label="get messaging stub"];
+  stub -> a [label="messaging stub + messaging server address"];
+  a -> msgsrv [label="connect('alice@domain.org')"];
+  a <=>  msgsrv [label="websocket connection established"];
+}

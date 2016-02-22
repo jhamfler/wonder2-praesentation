@@ -1,0 +1,34 @@
+msc {
+  a [label="", linecolor="#e0e0e0"],
+  codeca [label="", linecolor="#e0e0e0"],
+  msgsrvb [label="", linecolor="#e0e0e0"],
+  codecb [label="", linecolor="#e0e0e0"],
+  b [label="", linecolor="#e0e0e0"];
+
+  a box codeca [label="Domain Alice", textbgcolour="#7fff7f"],
+  msgsrvb box b [label="Domain Bob", textbgcolour="#7fff7f"];
+
+  a rbox a [label="Alice", textbgcolour="#ff7f7f"],
+  codeca rbox codeca [label="Codec Provider", textbgcolour="#ff7f7f"],
+  msgsrvb rbox msgsrvb [label="Messaging Server", textbgcolour="#ff7f7f"],
+  codecb rbox codecb [label="Codec Provider", textbgcolour="#ff7f7f"],
+  b rbox b [label="Bob", textbgcolour="#ff7f7f"];
+
+  --- [label="PeerConnection established"];
+  a => a [label="wonder.\ndataChannelMsg(\nmessage,\ntype,\nconversationId,\n'bob@domain.org')"];
+
+  a -> codecb [label="get codec for payloadtype"];
+  codecb -> a [label="codec of payloadtype"];
+
+
+  a -> msgsrvb [label="invitation for a data channel + SDP offer"];
+  msgsrvb -> b [label="invitation for a data channel + SDP offer"];
+
+  b -> codeca [label="get codec for payloadtype"];
+  codeca -> b [label="codec of payloadtype"];
+
+  b -> msgsrvb [label="answer for a data channel + SDP answer"];
+  msgsrvb -> a [label="answer for a data channel + SDP answer"];
+
+  a <=> b [label="peer to peer data channel"];
+}

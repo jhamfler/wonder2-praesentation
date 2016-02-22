@@ -1,0 +1,45 @@
+msc {
+  a [label="", linecolor="#e0e0e0"],
+  idpb [label="", linecolor="#e0e0e0"],
+  stubb [label="", linecolor="#e0e0e0"],
+  msgsrvb [label="", linecolor="#e0e0e0"],
+  b [label="", linecolor="#e0e0e0"];
+
+  a box a [label="Domain Alice", textbgcolour="#7fff7f"],
+  b box idpb [label="Domain Bob", textbgcolour="#7fff7f"];
+
+  a rbox a [label="Alice", textbgcolour="#ff7f7f"],
+  idpb rbox idpb [label="Identity Provider", textbgcolour="#ff7f7f"],
+  stubb rbox stubb [label="Stub Provider", textbgcolour="#ff7f7f"],
+  msgsrvb rbox msgsrvb [label="Messaging Server", textbgcolour="#ff7f7f"],
+  b rbox b [label="Bob", textbgcolour="#ff7f7f"];
+
+
+  --- [label="Alice and Bob are logged in"];
+
+  
+a => a [label="wonder.call(\n'bob@domain.org',\ntrue)"];
+  a -> idpb [label="\nGET 'bob@domain.org'\n\n"];
+  idpb -> a [label="Identity of bob\n (Stub-URIs, Messaging-\nServer-URIs, Codec-URIs, ...)\n\n\n"];
+  a -> stubb [label="GET"];
+  stubb -> a [label="Messaging Stub"];
+  a -> msgsrvb [label="connect('alice@domain.org')"];
+  a <=>  msgsrvb [label="websocket connection established"];
+
+  --- [label="Alice is able to send messages to bob now"];
+
+  a ->  msgsrvb [label="invitation message (contains SDP offer)"];
+  msgsrvb ->  b [label="invitation message (contains SDP offer)"];
+
+  b => b [label="wonder.answerRequest(true)"];
+
+  b ->  msgsrvb [label="answer message (contains SDP answer)"];
+  msgsrvb -> a  [label="answer message (contains SDP answer)"];
+
+
+  a <->  msgsrvb [label="ice candidates exchange"],
+  msgsrvb <->  b [label="ice candidates exchange"];
+
+
+  a <=>  b [label="PeerConnection established\n"];
+}
