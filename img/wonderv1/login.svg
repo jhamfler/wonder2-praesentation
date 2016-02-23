@@ -1,601 +1,212 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+ width="600px" height="335px"
+ viewBox="0 0 600 335"
+ xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges"
+ stroke-width="1" text-rendering="geometricPrecision">
+<polygon fill="white" points="73,7 75,7 75,16 73,16"/>
+<text x="75" y="16" textLength="0" font-family="Helvetica" font-size="12" fill="black" text-anchor="middle">
 
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   width="525"
-   height="292.5"
-   id="svg4216"
-   xml:space="preserve"><metadata
-     id="metadata4222"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
-     id="defs4220" /><g
-     transform="matrix(1.25,0,0,-1.25,0,292.5)"
-     id="g4224"><g
-       transform="scale(0.1,0.1)"
-       id="g4226"><path
-         d="m 525,2226 0,0 0,63 0,0 0,-63 z"
-         id="path4228"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 1575,2226 0,0 0,63 0,0 0,-63 z"
-         id="path4230"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 2625,2226 0,0 0,63 0,0 0,-63 z"
-         id="path4232"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 3675,2226 0,0 0,63 0,0 0,-63 z"
-         id="path4234"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 525,2191 0,-196"
-         id="path4236"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1575,2191 0,-196"
-         id="path4238"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2625,2191 0,-196"
-         id="path4240"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3675,2191 0,-196"
-         id="path4242"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 56,2037 4088,0 0,154 -4088,0 0,-154 z"
-         id="path4244"
-         style="fill:#7fff7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 56,2191 4088,0"
-         id="path4246"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 56,2037 4088,0"
-         id="path4248"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 56,2191 0,-154"
-         id="path4250"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 4144,2191 0,-154"
-         id="path4252"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1855,2079 494.734,0 0,63 -494.734,0 0,-63 z"
-         id="path4254"
-         style="fill:#7fff7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4256"><text
-           transform="matrix(1,0,0,-1,185.5,207.9)"
-           id="text4258"><tspan
-             x="0 6.0647998 10.7352 17.732401 22.4028 24.267599 28.938 31.273199 36.875999 38.740799 40.605598 44.805599"
-             y="0"
-             id="tspan4260"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">Domain Alice</tspan></text>
-</g><path
-         d="m 525,1995 0,-196"
-         id="path4262"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1575,1995 0,-196"
-         id="path4264"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2625,1995 0,-196"
-         id="path4266"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3675,1995 0,-196"
-         id="path4268"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 98,1841 854,0 0,154 -854,0 0,-154 z"
-         id="path4270"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 56,1883 938,0 0,70 -938,0 0,-70 z"
-         id="path4272"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 140,1953 c 0,23.2 -18.805,42 -42,42 -23.1953,0 -42,-18.8 -42,-42 0,-23.2 18.8047,-42 42,-42 23.195,0 42,18.8 42,42"
-         id="path4274"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 994,1953 c 0,23.2 -18.805,42 -42,42 -23.195,0 -42,-18.8 -42,-42 0,-23.2 18.805,-42 42,-42 23.195,0 42,18.8 42,42"
-         id="path4276"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 140,1883 c 0,23.2 -18.805,42 -42,42 -23.1953,0 -42,-18.8 -42,-42 0,-23.2 18.8047,-42 42,-42 23.195,0 42,18.8 42,42"
-         id="path4278"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 994,1883 c 0,23.2 -18.805,42 -42,42 -23.195,0 -42,-18.8 -42,-42 0,-23.2 18.805,-42 42,-42 23.195,0 42,18.8 42,42"
-         id="path4280"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 98,1995 854,0"
-         id="path4282"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 98,1841 854,0"
-         id="path4284"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 56,1953 0,-70"
-         id="path4286"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 994,1953 0,-70"
-         id="path4288"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 56,1953 c 0,23.2 18.8047,42 42,42"
-         id="path4290"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 952,1995 c 23.195,0 42,-18.8 42,-42"
-         id="path4292"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 994,1883 c 0,-23.2 -18.805,-42 -42,-42"
-         id="path4294"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 98,1841 c -23.1953,0 -42,18.8 -42,42"
-         id="path4296"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 434,1883 182.016,0 0,63 -182.016,0 0,-63 z"
-         id="path4298"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4300"><text
-           transform="matrix(1,0,0,-1,43.4,188.3)"
-           id="text4302"><tspan
-             x="0 5.6027999 7.4675999 9.3324003 13.5324"
-             y="0"
-             id="tspan4304"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">Alice</tspan></text>
-</g><path
-         d="m 1148,1841 854,0 0,154 -854,0 0,-154 z"
-         id="path4306"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 1106,1883 938,0 0,70 -938,0 0,-70 z"
-         id="path4308"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 1190,1953 c 0,23.2 -18.8,42 -42,42 -23.2,0 -42,-18.8 -42,-42 0,-23.2 18.8,-42 42,-42 23.2,0 42,18.8 42,42"
-         id="path4310"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 2044,1953 c 0,23.2 -18.8,42 -42,42 -23.2,0 -42,-18.8 -42,-42 0,-23.2 18.8,-42 42,-42 23.2,0 42,18.8 42,42"
-         id="path4312"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 1190,1883 c 0,23.2 -18.8,42 -42,42 -23.2,0 -42,-18.8 -42,-42 0,-23.2 18.8,-42 42,-42 23.2,0 42,18.8 42,42"
-         id="path4314"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 2044,1883 c 0,23.2 -18.8,42 -42,42 -23.2,0 -42,-18.8 -42,-42 0,-23.2 18.8,-42 42,-42 23.2,0 42,18.8 42,42"
-         id="path4316"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 1148,1995 854,0"
-         id="path4318"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1148,1841 854,0"
-         id="path4320"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1106,1953 0,-70"
-         id="path4322"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2044,1953 0,-70"
-         id="path4324"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1106,1953 c 0,23.2 18.8,42 42,42"
-         id="path4326"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2002,1995 c 23.2,0 42,-18.8 42,-42"
-         id="path4328"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2044,1883 c 0,-23.2 -18.8,-42 -42,-42"
-         id="path4330"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1148,1841 c -23.2,0 -42,18.8 -42,42"
-         id="path4332"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1274,1883 606.871,0 0,63 -606.871,0 0,-63 z"
-         id="path4334"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4336"><text
-           transform="matrix(1,0,0,-1,127.4,188.3)"
-           id="text4338"><tspan
-             x="0 2.3352001 7.0056 11.676 16.346399 18.681601 20.5464 22.881599 27.0816 29.4168 35.0196 37.816799 42.487202 46.687199 48.551998 53.222401 57.892799"
-             y="0"
-             id="tspan4340"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">Identity Provider</tspan></text>
-</g><path
-         d="m 2198,1841 854,0 0,154 -854,0 0,-154 z"
-         id="path4342"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 2156,1883 938,0 0,70 -938,0 0,-70 z"
-         id="path4344"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 2240,1953 c 0,23.2 -18.8,42 -42,42 -23.2,0 -42,-18.8 -42,-42 0,-23.2 18.8,-42 42,-42 23.2,0 42,18.8 42,42"
-         id="path4346"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 3094,1953 c 0,23.2 -18.8,42 -42,42 -23.2,0 -42,-18.8 -42,-42 0,-23.2 18.8,-42 42,-42 23.2,0 42,18.8 42,42"
-         id="path4348"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 2240,1883 c 0,23.2 -18.8,42 -42,42 -23.2,0 -42,-18.8 -42,-42 0,-23.2 18.8,-42 42,-42 23.2,0 42,18.8 42,42"
-         id="path4350"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 3094,1883 c 0,23.2 -18.8,42 -42,42 -23.2,0 -42,-18.8 -42,-42 0,-23.2 18.8,-42 42,-42 23.2,0 42,18.8 42,42"
-         id="path4352"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 2198,1995 854,0"
-         id="path4354"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2198,1841 854,0"
-         id="path4356"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2156,1953 0,-70"
-         id="path4358"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3094,1953 0,-70"
-         id="path4360"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2156,1953 c 0,23.2 18.8,42 42,42"
-         id="path4362"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3052,1995 c 23.2,0 42,-18.8 42,-42"
-         id="path4364"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3094,1883 c 0,-23.2 -18.8,-42 -42,-42"
-         id="path4366"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2198,1841 c -23.2,0 -42,18.8 -42,42"
-         id="path4368"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2373,1883 508.852,0 0,63 -508.852,0 0,-63 z"
-         id="path4370"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4372"><text
-           transform="matrix(1,0,0,-1,237.3,188.3)"
-           id="text4374"><tspan
-             x="0 5.6027999 7.9380002 12.6084 17.278799 19.614 25.216801 28.014 32.684399 36.884399 38.749199 43.419601 48.09"
-             y="0"
-             id="tspan4376"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">Stub Provider</tspan></text>
-</g><path
-         d="m 3248,1841 854,0 0,154 -854,0 0,-154 z"
-         id="path4378"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 3206,1883 938,0 0,70 -938,0 0,-70 z"
-         id="path4380"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 3290,1953 c 0,23.2 -18.8,42 -42,42 -23.2,0 -42,-18.8 -42,-42 0,-23.2 18.8,-42 42,-42 23.2,0 42,18.8 42,42"
-         id="path4382"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 4144,1953 c 0,23.2 -18.8,42 -42,42 -23.2,0 -42,-18.8 -42,-42 0,-23.2 18.8,-42 42,-42 23.2,0 42,18.8 42,42"
-         id="path4384"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 3290,1883 c 0,23.2 -18.8,42 -42,42 -23.2,0 -42,-18.8 -42,-42 0,-23.2 18.8,-42 42,-42 23.2,0 42,18.8 42,42"
-         id="path4386"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 4144,1883 c 0,23.2 -18.8,42 -42,42 -23.2,0 -42,-18.8 -42,-42 0,-23.2 18.8,-42 42,-42 23.2,0 42,18.8 42,42"
-         id="path4388"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 3248,1995 854,0"
-         id="path4390"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3248,1841 854,0"
-         id="path4392"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3206,1953 0,-70"
-         id="path4394"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 4144,1953 0,-70"
-         id="path4396"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3206,1953 c 0,23.2 18.8,42 42,42"
-         id="path4398"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 4102,1995 c 23.2,0 42,-18.8 42,-42"
-         id="path4400"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 4144,1883 c 0,-23.2 -18.8,-42 -42,-42"
-         id="path4402"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3248,1841 c -23.2,0 -42,18.8 -42,42"
-         id="path4404"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3339,1883 676.84,0 0,63 -676.84,0 0,-63 z"
-         id="path4406"
-         style="fill:#ff7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4408"><text
-           transform="matrix(1,0,0,-1,333.9,188.3)"
-           id="text4410"><tspan
-             x="0 6.9972 11.6676 15.8676 20.0676 24.738001 29.4084 31.273199 35.9436 40.613998 42.9492 48.551998 53.222401 56.0196 60.219601 64.889999"
-             y="0"
-             id="tspan4412"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">Messaging Server</tspan></text>
-</g><path
-         d="m 525,1799 0,-119"
-         id="path4414"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1575,1799 0,-119"
-         id="path4416"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2625,1799 0,-119"
-         id="path4418"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3675,1799 0,-119"
-         id="path4420"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 259,1764 3682,0"
-         id="path4422"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:14;stroke-dashoffset:0" /><path
-         d="m 1288,1729 1628.94,0 0,63 -1628.94,0 0,-63 z"
-         id="path4424"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4426"><text
-           transform="matrix(1,0,0,-1,128.8,172.9)"
-           id="text4428"><tspan
-             x="0 7.9295998 14.4648 20.5296 26.5944 32.197201 38.262001 42.462002 47.132401 49.9296 55.062 57.8592 62.529598 69.526802 74.197197 80.262001 84.932404 87.729599 91.929604 94.264801 100.3296 105 109.2 111.5352 113.4 118.0704 122.7408 127.4112 132.0816 136.752 139.0872 143.7576 148.42799 150.7632 155.43359 158.2308"
-             y="0"
-             id="tspan4430"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">WONDERv2-Framework was loaded before</tspan></text>
-</g><path
-         d="m 525,1680 0,-350"
-         id="path4432"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1575,1680 0,-350"
-         id="path4434"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2625,1680 0,-350"
-         id="path4436"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3675,1680 0,-350"
-         id="path4438"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 525,1484 c -282.215,0 -511,18.8 -511,42 0,23.2 228.785,42 511,42"
-         id="path4440"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 525,1484 -70,-42 0,84"
-         id="path4442"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 539,1610 639.633,0 0,63 -639.633,0 0,-63 z"
-         id="path4444"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4446"><text
-           transform="matrix(1,0,0,-1,53.9,161)"
-           id="text4448"><tspan
-             x="0 1.8648 6.5352001 11.2056 13.5408 17.740801 20.538 25.208401 29.878799 32.214001 36.884399 39.219601 43.889999 48.560398 53.230801 55.566002 57.430801 59.765999"
-             y="0"
-             id="tspan4450"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">idp.createIdentity</tspan></text>
-</g><path
-         d="m 539,1533 766.547,0 0,63 -766.547,0 0,-63 z"
-         id="path4452"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4454"><text
-           transform="matrix(1,0,0,-1,53.9,153.3)"
-           id="text4456"><tspan
-             x="0 2.7972 4.6620002 9.3324003 11.1972 13.062 17.261999 21.9324 30.458401 35.128799 39.799198 46.796398 51.466801 53.3316 58.001999 60.3372 65.007599 67.804802 72.475197 74.339996"
-             y="0"
-             id="tspan4458"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">(’alice@domain.org’,</tspan></text>
-</g><path
-         d="m 539,1456 322.125,0 0,63 -322.125,0 0,-63 z"
-         id="path4460"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4462"><text
-           transform="matrix(1,0,0,-1,53.9,145.6)"
-           id="text4464"><tspan
-             x="0 2.3352001 7.0056 11.676 15.876 18.211201 20.076 24.746401 29.4168"
-             y="0"
-             id="tspan4466"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">function)</tspan></text>
-</g><path
-         d="m 539,1379 0,0 0,63 0,0 0,-63 z"
-         id="path4468"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 525,1330 0,-196"
-         id="path4470"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1575,1330 0,-196"
-         id="path4472"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2625,1330 0,-196"
-         id="path4474"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3675,1330 0,-196"
-         id="path4476"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 525,1253 1050,0"
-         id="path4478"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1575,1253 -70,-42"
-         id="path4480"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 623,1260 855.336,0 0,63 -855.336,0 0,-63 z"
-         id="path4482"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4484"><text
-           transform="matrix(1,0,0,-1,62.3,126)"
-           id="text4486"><tspan
-             x="0 4.6704001 9.3408003 11.676 14.0112 15.876 20.5464 22.4112 24.275999 28.476 33.1464 41.672401 46.3428 51.013199 58.010399 62.680801 64.545601 69.216003 71.551201 76.221603 79.018799 83.689201"
-             y="0"
-             id="tspan4488"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">get ’alice@domain.org’</tspan></text>
-</g><path
-         d="m 1050,1183 0,0 0,63 0,0 0,-63 z"
-         id="path4490"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 525,1134 0,-350"
-         id="path4492"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1575,1134 0,-350"
-         id="path4494"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2625,1134 0,-350"
-         id="path4496"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3675,1134 0,-350"
-         id="path4498"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="M 1575,980 525,980"
-         id="path4500"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 525,980 70,-42"
-         id="path4502"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 770,1064 560.254,0 0,63 -560.254,0 0,-63 z"
-         id="path4504"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4506"><text
-           transform="matrix(1,0,0,-1,77,106.4)"
-           id="text4508"><tspan
-             x="0 2.3352001 7.0056 11.676 16.346399 18.681601 20.5464 22.881599 27.0816 29.4168 34.0872 36.422401 38.757599 43.428001 45.292801 47.1576 51.357601"
-             y="0"
-             id="tspan4510"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">Identity of alice</tspan></text>
-</g><path
-         d="m 819,987 466.68,0 0,63 -466.68,0 0,-63 z"
-         id="path4512"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4514"><text
-           transform="matrix(1,0,0,-1,84.2352,98.7)"
-           id="text4516"><tspan
-             x="0 2.7972 8.3999996 10.7352 15.4056 20.076 22.873199 28.938 35.0028 37.338001 41.537998"
-             y="0"
-             id="tspan4518"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">(Stub-URIs)</tspan></text>
-</g><path
-         d="m 1050,910 0,0 0,63 0,0 0,-63 z"
-         id="path4520"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 1050,833 0,0 0,63 0,0 0,-63 z"
-         id="path4522"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 525,784 0,-196"
-         id="path4524"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1575,784 0,-196"
-         id="path4526"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2625,784 0,-196"
-         id="path4528"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3675,784 0,-196"
-         id="path4530"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 525,707 2100,0"
-         id="path4532"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2625,707 -70,-42"
-         id="path4534"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1211,714 728.336,0 0,63 -728.336,0 0,-63 z"
-         id="path4536"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4538"><text
-           transform="matrix(1,0,0,-1,121.1,71.4)"
-           id="text4540"><tspan
-             x="0 4.6704001 9.3408003 11.676 14.0112 21.0084 25.678801 29.878799 34.0788 38.749199 43.419601 45.284401 49.9548 54.625198 56.9604 61.1604 63.495602 68.166"
-             y="0"
-             id="tspan4542"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">get messaging stub</tspan></text>
-</g><path
-         d="m 525,588 0,-196"
-         id="path4544"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1575,588 0,-196"
-         id="path4546"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2625,588 0,-196"
-         id="path4548"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3675,588 0,-196"
-         id="path4550"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="M 2625,511 525,511"
-         id="path4552"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 525,511 70,-42"
-         id="path4554"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 742,518 1668.92,0 0,63 -1668.92,0 0,-63 z"
-         id="path4556"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4558"><text
-           transform="matrix(1,0,0,-1,74.2,51.8)"
-           id="text4560"><tspan
-             x="0 6.9972 11.6676 15.8676 20.0676 24.738001 29.4084 31.273199 35.9436 40.613998 42.9492 47.1492 49.484402 54.1548 58.825199 61.1604 66.066002 68.401199 75.398399 80.068802 84.268799 88.468803 93.139198 97.809601 99.6744 104.3448 109.0152 111.3504 115.5504 120.2208 123.018 127.218 131.8884 134.68559 137.0208 141.69119 146.3616 151.032 153.82919 158.4996 162.6996"
-             y="0"
-             id="tspan4562"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">messaging stub + messaging server address</tspan></text>
-</g><path
-         d="m 525,392 0,-196"
-         id="path4564"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1575,392 0,-196"
-         id="path4566"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2625,392 0,-196"
-         id="path4568"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3675,392 0,-196"
-         id="path4570"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 525,315 3150,0"
-         id="path4572"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3675,315 -70,-42"
-         id="path4574"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1568,322 1065.32,0 0,63 -1065.32,0 0,-63 z"
-         id="path4576"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4578"><text
-           transform="matrix(1,0,0,-1,156.8,32.2)"
-           id="text4580"><tspan
-             x="0 4.1999998 8.8704004 13.5408 18.211201 22.881599 27.0816 29.4168 32.214001 34.0788 38.749199 40.613998 42.478802 46.678799 51.349201 59.875198 64.545601 69.216003 76.213203 80.883598 82.748398 87.4188 89.753998 94.4244 97.221603 101.892 103.7568"
-             y="0"
-             id="tspan4582"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">connect(’alice@domain.org’)</tspan></text>
-</g><path
-         d="M 525,196 525,0"
-         id="path4584"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="M 1575,196 1575,0"
-         id="path4586"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="M 2625,196 2625,0"
-         id="path4588"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="M 3675,196 3675,0"
-         id="path4590"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 525,119 3150,0"
-         id="path4592"
-         style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3675,119 -70,-42 0,84"
-         id="path4594"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 525,119 70,-42 0,84"
-         id="path4596"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
-         d="m 1463,126 1274.56,0 0,63 -1274.56,0 0,-63 z"
-         id="path4598"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
-         transform="scale(10,10)"
-         id="g4600"><text
-           transform="matrix(1,0,0,-1,146.3,12.6)"
-           id="text4602"><tspan
-             x="0 6.0647998 10.7352 15.4056 19.6056 24.275999 28.476 32.675999 37.346401 39.681599 42.0168 46.216801 50.887199 55.557598 60.228001 64.898399 69.098396 71.433601 73.298401 77.968803 82.639198 84.974403 89.644798 93.844803 96.18 100.8504 105.5208 107.3856 109.2504 113.4504 118.1208 122.7912"
-             y="0"
-             id="tspan4604"
-             style="font-size:8.39999962px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica">websocket connection established</tspan></text>
-</g><path
-         d="M 525,42 525,0"
-         id="path4606"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 1575,42 0,-42"
-         id="path4608"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 2625,42 0,-42"
-         id="path4610"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /><path
-         d="m 3675,42 0,-42"
-         id="path4612"
-         style="fill:none;stroke:#e0e0e0;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none" /></g></g></svg>
+
+</text>
+<polygon fill="white" points="223,7 225,7 225,16 223,16"/>
+<text x="225" y="16" textLength="0" font-family="Helvetica" font-size="12" fill="black" text-anchor="middle">
+
+
+</text>
+<polygon fill="white" points="373,7 375,7 375,16 373,16"/>
+<text x="375" y="16" textLength="0" font-family="Helvetica" font-size="12" fill="black" text-anchor="middle">
+
+
+</text>
+<polygon fill="white" points="523,7 525,7 525,16 523,16"/>
+<text x="525" y="16" textLength="0" font-family="Helvetica" font-size="12" fill="black" text-anchor="middle">
+
+
+</text>
+<line x1="75" y1="22" x2="75" y2="50" stroke="#E0E0E0"/>
+<line x1="225" y1="22" x2="225" y2="50" stroke="#E0E0E0"/>
+<line x1="375" y1="22" x2="375" y2="50" stroke="#E0E0E0"/>
+<line x1="525" y1="22" x2="525" y2="50" stroke="#E0E0E0"/>
+<polygon fill="#7FFF7F" points="8,22 592,22 592,44 8,44"/>
+<line x1="8" y1="22" x2="592" y2="22" stroke="black"/>
+<line x1="8" y1="44" x2="592" y2="44" stroke="black"/>
+<line x1="8" y1="22" x2="8" y2="44" stroke="black"/>
+<line x1="592" y1="22" x2="592" y2="44" stroke="black"/>
+<polygon fill="#7FFF7F" points="263,29 336,29 336,38 263,38"/>
+<text x="264" y="38" textLength="71" font-family="Helvetica" font-size="12" fill="black">
+Domain Alice
+</text>
+<line x1="75" y1="50" x2="75" y2="78" stroke="#E0E0E0"/>
+<line x1="225" y1="50" x2="225" y2="78" stroke="#E0E0E0"/>
+<line x1="375" y1="50" x2="375" y2="78" stroke="#E0E0E0"/>
+<line x1="525" y1="50" x2="525" y2="78" stroke="#E0E0E0"/>
+<polygon fill="#FF7F7F" points="14,50 136,50 136,72 14,72"/>
+<polygon fill="#FF7F7F" points="8,56 142,56 142,66 8,66"/>
+<circle fill="#FF7F7F" cx="14" cy="56" r="6"/>
+<circle fill="#FF7F7F" cx="136" cy="56" r="6"/>
+<circle fill="#FF7F7F" cx="14" cy="66" r="6"/>
+<circle fill="#FF7F7F" cx="136" cy="66" r="6"/>
+<line x1="14" y1="50" x2="136" y2="50" stroke="black"/>
+<line x1="14" y1="72" x2="136" y2="72" stroke="black"/>
+<line x1="8" y1="56" x2="8" y2="66" stroke="black"/>
+<line x1="142" y1="56" x2="142" y2="66" stroke="black"/>
+<path d="M 8 56 A6,6 0 0,1 14,50" stroke="black" fill="none"/><path d="M 136 50 A6,6 0 0,1 142,56" stroke="black" fill="none"/><path d="M 142 66 A6,6 0 0,1 136,72" stroke="black" fill="none"/><path d="M 14 72 A6,6 0 0,1 8,66" stroke="black" fill="none"/><polygon fill="#FF7F7F" points="60,57 88,57 88,66 60,66"/>
+<text x="61" y="66" textLength="26" font-family="Helvetica" font-size="12" fill="black">
+Alice
+</text>
+<polygon fill="#FF7F7F" points="164,50 286,50 286,72 164,72"/>
+<polygon fill="#FF7F7F" points="158,56 292,56 292,66 158,66"/>
+<circle fill="#FF7F7F" cx="164" cy="56" r="6"/>
+<circle fill="#FF7F7F" cx="286" cy="56" r="6"/>
+<circle fill="#FF7F7F" cx="164" cy="66" r="6"/>
+<circle fill="#FF7F7F" cx="286" cy="66" r="6"/>
+<line x1="164" y1="50" x2="286" y2="50" stroke="black"/>
+<line x1="164" y1="72" x2="286" y2="72" stroke="black"/>
+<line x1="158" y1="56" x2="158" y2="66" stroke="black"/>
+<line x1="292" y1="56" x2="292" y2="66" stroke="black"/>
+<path d="M 158 56 A6,6 0 0,1 164,50" stroke="black" fill="none"/><path d="M 286 50 A6,6 0 0,1 292,56" stroke="black" fill="none"/><path d="M 292 66 A6,6 0 0,1 286,72" stroke="black" fill="none"/><path d="M 164 72 A6,6 0 0,1 158,66" stroke="black" fill="none"/><polygon fill="#FF7F7F" points="180,57 269,57 269,66 180,66"/>
+<text x="181" y="66" textLength="87" font-family="Helvetica" font-size="12" fill="black">
+Identity Provider
+</text>
+<polygon fill="#FF7F7F" points="314,50 436,50 436,72 314,72"/>
+<polygon fill="#FF7F7F" points="308,56 442,56 442,66 308,66"/>
+<circle fill="#FF7F7F" cx="314" cy="56" r="6"/>
+<circle fill="#FF7F7F" cx="436" cy="56" r="6"/>
+<circle fill="#FF7F7F" cx="314" cy="66" r="6"/>
+<circle fill="#FF7F7F" cx="436" cy="66" r="6"/>
+<line x1="314" y1="50" x2="436" y2="50" stroke="black"/>
+<line x1="314" y1="72" x2="436" y2="72" stroke="black"/>
+<line x1="308" y1="56" x2="308" y2="66" stroke="black"/>
+<line x1="442" y1="56" x2="442" y2="66" stroke="black"/>
+<path d="M 308 56 A6,6 0 0,1 314,50" stroke="black" fill="none"/><path d="M 436 50 A6,6 0 0,1 442,56" stroke="black" fill="none"/><path d="M 442 66 A6,6 0 0,1 436,72" stroke="black" fill="none"/><path d="M 314 72 A6,6 0 0,1 308,66" stroke="black" fill="none"/><polygon fill="#FF7F7F" points="337,57 412,57 412,66 337,66"/>
+<text x="338" y="66" textLength="73" font-family="Helvetica" font-size="12" fill="black">
+Stub Provider
+</text>
+<polygon fill="#FF7F7F" points="464,50 586,50 586,72 464,72"/>
+<polygon fill="#FF7F7F" points="458,56 592,56 592,66 458,66"/>
+<circle fill="#FF7F7F" cx="464" cy="56" r="6"/>
+<circle fill="#FF7F7F" cx="586" cy="56" r="6"/>
+<circle fill="#FF7F7F" cx="464" cy="66" r="6"/>
+<circle fill="#FF7F7F" cx="586" cy="66" r="6"/>
+<line x1="464" y1="50" x2="586" y2="50" stroke="black"/>
+<line x1="464" y1="72" x2="586" y2="72" stroke="black"/>
+<line x1="458" y1="56" x2="458" y2="66" stroke="black"/>
+<line x1="592" y1="56" x2="592" y2="66" stroke="black"/>
+<path d="M 458 56 A6,6 0 0,1 464,50" stroke="black" fill="none"/><path d="M 586 50 A6,6 0 0,1 592,56" stroke="black" fill="none"/><path d="M 592 66 A6,6 0 0,1 586,72" stroke="black" fill="none"/><path d="M 464 72 A6,6 0 0,1 458,66" stroke="black" fill="none"/><polygon fill="#FF7F7F" points="475,57 574,57 574,66 475,66"/>
+<text x="476" y="66" textLength="97" font-family="Helvetica" font-size="12" fill="black">
+Messaging Server
+</text>
+<line x1="75" y1="78" x2="75" y2="95" stroke="#E0E0E0"/>
+<line x1="225" y1="78" x2="225" y2="95" stroke="#E0E0E0"/>
+<line x1="375" y1="78" x2="375" y2="95" stroke="#E0E0E0"/>
+<line x1="525" y1="78" x2="525" y2="95" stroke="#E0E0E0"/>
+<line x1="37" y1="83" x2="563" y2="83" stroke="black" stroke-dasharray="2,2"/>
+<polygon fill="white" points="182,79 417,79 417,88 182,88"/>
+<text x="183" y="88" textLength="233" font-family="Helvetica" font-size="12" fill="black">
+WONDERv2-Framework was loaded before
+</text>
+<line x1="75" y1="95" x2="75" y2="145" stroke="#E0E0E0"/>
+<line x1="225" y1="95" x2="225" y2="145" stroke="#E0E0E0"/>
+<line x1="375" y1="95" x2="375" y2="145" stroke="#E0E0E0"/>
+<line x1="525" y1="95" x2="525" y2="145" stroke="#E0E0E0"/>
+<path d="M 75 123 A73,6 0 0,1 75,111" stroke="black" fill="none"/><polygon fill="black" points="75,123 65,129 65,117"/>
+<polygon fill="white" points="75,96 172,96 172,105 75,105"/>
+<text x="76" y="105" textLength="95" font-family="Helvetica" font-size="12" fill="black">
+idp.createIdentity(
+</text>
+<polygon fill="white" points="75,107 183,107 183,116 75,116"/>
+<text x="76" y="116" textLength="106" font-family="Helvetica" font-size="12" fill="black">
+'alice@domain.org',
+</text>
+<polygon fill="white" points="75,118 123,118 123,127 75,127"/>
+<text x="76" y="127" textLength="46" font-family="Helvetica" font-size="12" fill="black">
+function)
+</text>
+<polygon fill="white" points="75,129 77,129 77,138 75,138"/>
+<text x="76" y="138" textLength="0" font-family="Helvetica" font-size="12" fill="black">
+
+</text>
+<line x1="75" y1="145" x2="75" y2="173" stroke="#E0E0E0"/>
+<line x1="225" y1="145" x2="225" y2="173" stroke="#E0E0E0"/>
+<line x1="375" y1="145" x2="375" y2="173" stroke="#E0E0E0"/>
+<line x1="525" y1="145" x2="525" y2="173" stroke="#E0E0E0"/>
+<line x1="75" y1="156" x2="225" y2="156" stroke="black"/>
+<line x1="225" y1="156" x2="215" y2="162" stroke="black"/>
+<polygon fill="white" points="87,146 211,146 211,155 87,155"/>
+<text x="88" y="155" textLength="122" font-family="Helvetica" font-size="12" fill="black">
+get 'alice@domain.org'
+</text>
+<polygon fill="white" points="148,157 150,157 150,166 148,166"/>
+<text x="149" y="166" textLength="0" font-family="Helvetica" font-size="12" fill="black">
+
+</text>
+<line x1="75" y1="173" x2="75" y2="223" stroke="#E0E0E0"/>
+<line x1="225" y1="173" x2="225" y2="223" stroke="#E0E0E0"/>
+<line x1="375" y1="173" x2="375" y2="223" stroke="#E0E0E0"/>
+<line x1="525" y1="173" x2="525" y2="223" stroke="#E0E0E0"/>
+<line x1="225" y1="195" x2="75" y2="195" stroke="black"/>
+<line x1="75" y1="195" x2="85" y2="201" stroke="black"/>
+<polygon fill="white" points="109,174 190,174 190,183 109,183"/>
+<text x="110" y="183" textLength="79" font-family="Helvetica" font-size="12" fill="black">
+identity of alice
+</text>
+<polygon fill="white" points="115,185 184,185 184,194 115,194"/>
+<text x="116" y="194" textLength="67" font-family="Helvetica" font-size="12" fill="black">
+ (Stub-URIs)
+</text>
+<polygon fill="white" points="148,196 150,196 150,205 148,205"/>
+<text x="149" y="205" textLength="0" font-family="Helvetica" font-size="12" fill="black">
+
+</text>
+<polygon fill="white" points="148,207 150,207 150,216 148,216"/>
+<text x="149" y="216" textLength="0" font-family="Helvetica" font-size="12" fill="black">
+
+</text>
+<line x1="75" y1="223" x2="75" y2="251" stroke="#E0E0E0"/>
+<line x1="225" y1="223" x2="225" y2="251" stroke="#E0E0E0"/>
+<line x1="375" y1="223" x2="375" y2="251" stroke="#E0E0E0"/>
+<line x1="525" y1="223" x2="525" y2="251" stroke="#E0E0E0"/>
+<line x1="75" y1="234" x2="375" y2="234" stroke="black"/>
+<line x1="375" y1="234" x2="365" y2="240" stroke="black"/>
+<polygon fill="white" points="171,224 277,224 277,233 171,233"/>
+<text x="172" y="233" textLength="104" font-family="Helvetica" font-size="12" fill="black">
+get messaging stub
+</text>
+<line x1="75" y1="251" x2="75" y2="279" stroke="#E0E0E0"/>
+<line x1="225" y1="251" x2="225" y2="279" stroke="#E0E0E0"/>
+<line x1="375" y1="251" x2="375" y2="279" stroke="#E0E0E0"/>
+<line x1="525" y1="251" x2="525" y2="279" stroke="#E0E0E0"/>
+<line x1="375" y1="262" x2="75" y2="262" stroke="black"/>
+<line x1="75" y1="262" x2="85" y2="268" stroke="black"/>
+<polygon fill="white" points="104,252 344,252 344,261 104,261"/>
+<text x="105" y="261" textLength="238" font-family="Helvetica" font-size="12" fill="black">
+messaging stub + messaging server address
+</text>
+<line x1="75" y1="279" x2="75" y2="307" stroke="#E0E0E0"/>
+<line x1="225" y1="279" x2="225" y2="307" stroke="#E0E0E0"/>
+<line x1="375" y1="279" x2="375" y2="307" stroke="#E0E0E0"/>
+<line x1="525" y1="279" x2="525" y2="307" stroke="#E0E0E0"/>
+<line x1="75" y1="290" x2="525" y2="290" stroke="black"/>
+<line x1="525" y1="290" x2="515" y2="296" stroke="black"/>
+<polygon fill="white" points="222,280 376,280 376,289 222,289"/>
+<text x="223" y="289" textLength="152" font-family="Helvetica" font-size="12" fill="black">
+connect('alice@domain.org')
+</text>
+<line x1="75" y1="307" x2="75" y2="335" stroke="#E0E0E0"/>
+<line x1="225" y1="307" x2="225" y2="335" stroke="#E0E0E0"/>
+<line x1="375" y1="307" x2="375" y2="335" stroke="#E0E0E0"/>
+<line x1="525" y1="307" x2="525" y2="335" stroke="#E0E0E0"/>
+<line x1="75" y1="318" x2="525" y2="318" stroke="black"/>
+<polygon fill="black" points="525,318 515,324 515,312"/>
+<polygon fill="black" points="75,318 85,324 85,312"/>
+<polygon fill="white" points="207,308 391,308 391,317 207,317"/>
+<text x="208" y="317" textLength="182" font-family="Helvetica" font-size="12" fill="black">
+websocket connection established
+</text>
+<line x1="75" y1="329" x2="75" y2="335" stroke="#E0E0E0"/>
+<line x1="225" y1="329" x2="225" y2="335" stroke="#E0E0E0"/>
+<line x1="375" y1="329" x2="375" y2="335" stroke="#E0E0E0"/>
+<line x1="525" y1="329" x2="525" y2="335" stroke="#E0E0E0"/>
+</svg>

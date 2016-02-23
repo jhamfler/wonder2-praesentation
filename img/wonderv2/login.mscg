@@ -13,10 +13,10 @@ msc {
 
   --- [label="WONDERv2-Framework was loaded before"];
 
-  a => a [label="wonder.login(\nalice@domain.org,\ncredentials)"];
+  a => a [label="wonder.login(\n'alice@domain.org',\ncredentials)"];
   a -> idp [label="get 'alice@domain.org'"];
 
-  idp -> a [label="Identity of alice\n (Stub-URIs, Messaging-\nServer-URIs, Codec-URIs, ...)\n\n\n"];
+  idp -> a [label="identity of alice\n (Stub-URIs, Messaging-\nServer-URIs, Codec-URIs, ...)\n\n\n"];
   a -> stub [label="get messaging stub"];
   stub -> a [label="messaging stub"];
   a -> msgsrv [label="connect('alice@domain.org', credentials)"];

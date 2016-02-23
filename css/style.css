@@ -13,13 +13,14 @@
 .reveal .slides{
   width: 95% !important;
   margin-top: 0;
+  top:0
 }
 
 
 
 /* headline colors */
 .reveal section>h1, .reveal section>h2, .reveal section>h3{
-  color: #E20074 !important;
+  color: #E00070 !important;
 }
 
 

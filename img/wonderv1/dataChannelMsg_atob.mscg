@@ -11,7 +11,7 @@ msc {
   b rbox b [label="Bob", textbgcolour="#ff7f7f"];
 
   --- [label="PeerConnection established"];
-  a => a [label="participant\n.createRemotePeer\n(identity,\n myParticipant,\n contextId,\n resourceConstraints,\n rtcEvtHandler,\n msgHandler,\n iceServers)\n"];
+  a => a [label="participant\n.createRemotePeer(\nidentity,\n myParticipant,\n contextId,\n resourceConstraints,\n rtcEvtHandler,\n msgHandler,\n iceServers)\n"];
 
   a -> msgsrvb [label="invitation for a data channel\n\n + SDP offer"];
   msgsrvb -> b [label="invitation for a data channel\n\n + SDP offer"];

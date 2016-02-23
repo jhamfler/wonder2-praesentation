@@ -15,7 +15,7 @@ msc {
   b rbox b [label="Bob", textbgcolour="#ff7f7f"];
 
   --- [label="PeerConnection established"];
-  a => a [label="wonder.\ndataChannelMsg(\nmessage,\ntype,\nconversationId,\n'bob@domain.org')"];
+  a => a [label="wonder\n.dataChannelMsg(\nmessage,\ntype,\nconversationId,\n'bob@domain.org')"];
 
   a -> codecb [label="get codec for payloadtype"];
   codecb -> a [label="codec of payloadtype"];

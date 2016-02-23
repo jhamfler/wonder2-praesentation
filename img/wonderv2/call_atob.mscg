@@ -19,11 +19,11 @@ msc {
 
   
 a => a [label="wonder.call(\n'bob@domain.org',\ntrue)"];
-  a -> idpb [label="\nGET 'bob@domain.org'\n\n"];
-  idpb -> a [label="Identity of bob\n (Stub-URIs, Messaging-\nServer-URIs, Codec-URIs, ...)\n\n\n"];
-  a -> stubb [label="GET"];
-  stubb -> a [label="Messaging Stub"];
-  a -> msgsrvb [label="connect('alice@domain.org')"];
+  a -> idpb [label="\nget 'bob@domain.org'\n\n"];
+  idpb -> a [label="identity of bob\n (Stub-URIs, Messaging-\nServer-URIs, Codec-URIs, ...)\n\n\n"];
+  a -> stubb [label="get messaging stub"];
+  stubb -> a [label="messaging stub"];
+  a -> msgsrvb [label="connect('alice@domain.org', credentials, msgSrv, callback)"];
   a <=>  msgsrvb [label="websocket connection established"];
 
   --- [label="Alice is able to send messages to bob now"];

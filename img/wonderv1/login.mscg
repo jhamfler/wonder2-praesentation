@@ -13,10 +13,10 @@ msc {
 
   --- [label="WONDERv2-Framework was loaded before"];
 
-  a => a [label="idp.createIdentity\n('alice@domain.org',\nfunction)\n"];
+  a => a [label="idp.createIdentity(\n'alice@domain.org',\nfunction)\n"];
   a -> idp [label="get 'alice@domain.org'\n"];
 
-  idp -> a [label="Identity of alice\n (Stub-URIs)\n\n"];
+  idp -> a [label="identity of alice\n (Stub-URIs)\n\n"];
   a -> stub [label="get messaging stub"];
   stub -> a [label="messaging stub + messaging server address"];
   a -> msgsrv [label="connect('alice@domain.org')"];
