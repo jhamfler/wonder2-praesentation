@@ -11,7 +11,8 @@
 
 /* max content width */
 .reveal .slides{
-  width: 80% !important;
+  width: 95% !important;
+  margin-top: 0;
 }
 
 

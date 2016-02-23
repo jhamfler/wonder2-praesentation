@@ -31,7 +31,7 @@ a => a [label="wonder.call(\n'bob@domain.org',\ntrue)"];
   a ->  msgsrvb [label="invitation message (contains SDP offer)"];
   msgsrvb ->  b [label="invitation message (contains SDP offer)"];
 
-  b => b [label="wonder.answerRequest(true)"];
+  b => b [label="wonder.\nanswerRequest(\ntrue)"];
 
   b ->  msgsrvb [label="answer message (contains SDP answer)"];
   msgsrvb -> a  [label="answer message (contains SDP answer)"];
