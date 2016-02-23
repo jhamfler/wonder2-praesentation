@@ -190,9 +190,9 @@ messaging stub + messaging server address
 <line x1="525" y1="279" x2="525" y2="307" stroke="#E0E0E0"/>
 <line x1="75" y1="290" x2="525" y2="290" stroke="black"/>
 <line x1="525" y1="290" x2="515" y2="296" stroke="black"/>
-<polygon fill="white" points="222,280 376,280 376,289 222,289"/>
-<text x="223" y="289" textLength="152" font-family="Helvetica" font-size="12" fill="black">
-connect('alice@domain.org')
+<polygon fill="white" points="190,280 409,280 409,289 190,289"/>
+<text x="191" y="289" textLength="217" font-family="Helvetica" font-size="12" fill="black">
+connect('alice@domain.org', credentials)
 </text>
 <line x1="75" y1="307" x2="75" y2="335" stroke="#E0E0E0"/>
 <line x1="225" y1="307" x2="225" y2="335" stroke="#E0E0E0"/>

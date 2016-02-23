@@ -19,6 +19,6 @@ msc {
   idp -> a [label="identity of alice\n (Stub-URIs)\n\n"];
   a -> stub [label="get messaging stub"];
   stub -> a [label="messaging stub + messaging server address"];
-  a -> msgsrv [label="connect('alice@domain.org')"];
+  a -> msgsrv [label="connect('alice@domain.org', credentials)"];
   a <=>  msgsrv [label="websocket connection established"];
 }
