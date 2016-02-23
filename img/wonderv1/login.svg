@@ -105,7 +105,7 @@ Messaging Server
 <line x1="37" y1="83" x2="563" y2="83" stroke="black" stroke-dasharray="2,2"/>
 <polygon fill="white" points="182,79 417,79 417,88 182,88"/>
 <text x="183" y="88" textLength="233" font-family="Helvetica" font-size="12" fill="black">
-WONDERv2-Framework was loaded before
+WONDERv1-Framework was loaded before
 </text>
 <line x1="75" y1="95" x2="75" y2="145" stroke="#E0E0E0"/>
 <line x1="225" y1="95" x2="225" y2="145" stroke="#E0E0E0"/>

@@ -11,7 +11,7 @@ msc {
   stub rbox stub [label="Stub Provider", textbgcolour="#ff7f7f"],
   msgsrv rbox msgsrv [label="Messaging Server", textbgcolour="#ff7f7f"];
 
-  --- [label="WONDERv2-Framework was loaded before"];
+  --- [label="WONDERv1-Framework was loaded before"];
 
   a => a [label="idp.createIdentity(\n'alice@domain.org',\nfunction)\n"];
   a -> idp [label="get 'alice@domain.org'\n"];
