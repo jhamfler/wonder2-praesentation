@@ -242,34 +242,6 @@
       </section>
 
 
-
-      <!-- Festlegungen-->
-      <!-- <section>
-        <section data-markdown>
-          <script type="text/template">
-            # Festlegungen
-            <i class="fa fa-4x fa-gears"></i>
-            <aside class="notes">
-            -
-            </aside>
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            ## Festlegungen
-            - ECMA-Script 262 Version 6
-            - Server-Umgebung: Node.js
-
-            <aside class="notes">
-            Klassenbasiertes Konzept;
-            Import / Export von Modulen;
-            Promises für asynchrone Operationen;
-            Umwandlung in ECMA-262 Version 5.1 (ES5) möglich
-            </aside>
-          </script>
-        </section>
-      </section> -->
-
       <section>
         <section data-markdown>
           <script type="text/template">
@@ -279,19 +251,59 @@
         <section data-markdown>
           <script type="text/template">
             ## Signalisierungsprotokolle
+            ### Stubinstanziierung
+            <img data-src="img/stubs/stubs1.svg" width="40%"><br>
+            <img data-src="img/stubs/stubs2.svg" width="40%">
+            <aside class="notes" data-markdown>
+              - Immer der Letzte gewinnt
+              - Mit Require.js tritt das auch auf, wenn Stubs Namen haben
 
-            <aside class="notes">
-              -
+              #### Lösung:
+              - URIs referenzieren Stubs anstatt Namen
             </aside>
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
+            ## Signalisierungsprotokolle
+            ### Signalisierungsservernutzung
+            <img data-src="img/stubs/msgsrv1.svg" width="50%"><br>
+            <img data-src="img/stubs/msgsrv2.svg" width="50%">
+            <aside class="notes" data-markdown>
+              - Immer der erste gewinnt, da "Require.js module.config().connectURL Variable"
+
+              #### Lösung:
+              - URIs der MsgSrv in Identität vorhalten
+            </aside>
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Signalisierungsprotokolle
+            ### Schnittstellentiefe im Stub
+            <img data-src="img/stubs/reuse1.svg" width="40%"><br>
+            <img data-src="img/stubs/reuse2.svg" width="40%">
+            <aside class="notes" data-markdown>
+              - Idp.getInstance().createIdentity(function(identity){...that.basestub.send(message)...})
+
+              #### Lösung:
+              - Speicherung einer Funktion und einer URI im Stub
+              - WONDERinterne funktionen werden von WONDER ausgeführt
+            </aside>
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
             ## Frameworkmodule WONDERv1
             <img data-src="img/dependency/w1.svg" width="65%">
+            <aside class="notes" data-markdown>
+              - Viele Abhängigkeiten
+              - Große Aufruftiefe
 
-            <aside class="notes">
-              -
+              #### Lösung:
+              - Auflösen der gegenseitigen Abhängigkeiten
+              - Spezialfunktionen mit Rückgabewerten
             </aside>
           </script>
         </section>
@@ -299,8 +311,10 @@
           <script type="text/template">
             ## Frameworkmodule WONDERv2
             <img data-src="img/dependency/w2.svg" width="90%">
-            <aside class="notes">
-              -
+            <aside class="notes" data-markdown>
+              - zusätliche Abstraktionsschicht WONDER-Klasse
+              - wenig gegenseitige Abhängigkeiten (Aufrufe)
+
             </aside>
           </script>
         </section>
@@ -310,14 +324,19 @@
         <section data-markdown>
           <script type="text/template">
             # Signalisierung zwischen WONDER-Frameworks
+            <aside class="notes" data-markdown>
+              - High-Level-Sicht
+            </aside>
           </script>
         </section>
         <section data-markdown>
           <script type="text/template">
             ## Login WONDERv1
             <img data-src="img/wonderv1/login.svg" width="80%"></img>
-            <aside class="notes">
-              -
+            <aside class="notes" data-markdown>
+              - idp.createIdentity muss vom Implementierer kommen
+              - Stub URIs kommen mit der Identität
+              - MsgSrv Addresse im Stub erscheint erstmal positiv, da man sich die nicht erst von woanders holen muss
             </aside>
           </script>
         </section>
@@ -325,8 +344,9 @@
           <script type="text/template">
             ## Login WONDERv2
             <img data-src="img/wonderv2/login.svg" width="80%"></img>
-            <aside class="notes">
-              -
+            <aside class="notes" data-markdown>
+              - wonder.login ähnlich wie bei WONDERv1
+              - Identität hat mehr Informationen als bei WONDERv1
             </aside>
           </script>
         </section>
@@ -334,8 +354,9 @@
           <script type="text/template">
             ## Gegenüberstellung Login WONDERv1 - WONDERv2
             <img data-src="img/wonderv1/login.svg" width="51%"></img><img data-src="img/wonderv2/login.svg" width="49%"></img>
-            <aside class="notes">
-              -
+            <aside class="notes" data-markdown>
+              - jetzt möglich verschiedene MsgSrv mit einem Stub zu kontaktieren
+              - für jede Identität zusätzliche Codecs vorhanden
             </aside>
           </script>
         </section>
