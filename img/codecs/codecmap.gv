@@ -1,0 +1,39 @@
+digraph codecmap {
+  {
+    alice1 [label="alice"]
+    alice2 [label="alice"]
+    alice3 [label="alice"]
+
+    bob1 [label="bob"]
+    bob2 [label="bob"]
+
+    carol1 [label="carol"]
+    carol2 [label="carol"]
+
+    file1 [label="file"]
+    file2 [label="file"]
+
+    chat1 [label="chat"]
+    chat2 [label="chat"]
+
+  }
+
+rankdir="LR"
+
+  Codecmap -> alice1  [label="from"]
+  alice1-> bob1  [label="to"]
+  bob1 -> file1 [label="with payload"]
+  bob1 -> plain [label="with payload"]
+  alice1-> carol1  [label="to"]
+  carol1 -> chat1 [label="with payload"]
+
+  Codecmap -> bob2  [label="from"]
+  bob2-> alice2  [label="to"]
+  alice2-> file2 [label="with payload"]
+
+  Codecmap -> carol2  [label="from"]
+  carol2-> alice3  [label="to"]
+  alice3-> chat2 [label="with payload"]
+  alice3-> image [label="with payload"]
+}
+
