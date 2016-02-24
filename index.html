@@ -81,11 +81,8 @@
               - Login
               - Call
               - Datenkanal
-
             - Fazit
             - Ausblick
-
-
             <aside class="notes">
             -
             </aside>
@@ -127,7 +124,7 @@
             ## WONDERv1-Framework <i class="fa fa-code"></i>
             * Javascript-Framework zur Nutzung von SigOFly und WebRTC
             * Messaging Stubs wurden dynamisch nachgeladen
-            * Ermöglicht Kommunikation von WebRTC-Anwendungen in verschiedenen Signalisierungsdomänen
+            * Ermöglicht Kommunikation unter WebRTC-Anwendungen in verschiedenen Signalisierungsdomänen
 
             <aside class="notes">
             -
@@ -179,7 +176,7 @@
       <section>
         <section data-markdown>
           <script type="text/template">
-            # Nachladeproblematik
+            # Nachlade-problematik
             ##<i class="fa fa-desktop"></i> <i class="fa fa-arrow-left"></i> <i class="fa fa-file-code-o"></i>
             <aside class="notes" data-markdown>
               - Danny ist eher auf Code-Teil eingegangen
@@ -209,7 +206,7 @@
             <img data-src="img/stubs/msgsrv1.svg" width="50%"><br>
             <img data-src="img/stubs/msgsrv2.svg" width="50%">
             <aside class="notes" data-markdown>
-              - Immer der erste gewinnt, da "Require.js module.config().connectURL Variable"
+              - Immer der eigene Stub gewinnt, da "Require.js module.config().connectURL Variable"
 
               #### Lösung:
               - URIs der MsgSrv in Identität vorhalten
@@ -253,6 +250,8 @@
             <aside class="notes" data-markdown>
               - zusätliche Abstraktionsschicht WONDER-Klasse
               - wenig gegenseitige Abhängigkeiten (Aufrufe)
+
+              - Ansicht zeigt Aufrufabhängigkeiten für Two-Party-Call
 
             </aside>
           </script>
@@ -307,7 +306,11 @@
           <script type="text/template">
             ## Call Alice to Bob WONDERv1
             <img data-src="img/wonderv1/call_atob.svg" width=60%></img>
-
+            <aside class="notes" data-markdown>
+              - Alice fragt eigenen IdP
+              - Wenn Bob in anderer Domäne, dann muss die Domäne im IdP sein
+              - kein standardisierter IdP, keine vernetzung mit anderen IdPs
+            </aside>
           </script>
 
         </section>
@@ -315,8 +318,9 @@
           <script type="text/template">
             ## Call Alice to Bob WONDERv2
             <img data-src="img/wonderv2/call_atob.svg" width="60%"></img>
-            <aside class="notes">
-              -
+            <aside class="notes" data-markdown>
+              - keine tiefe Schnittstelle
+              - nicht nur Stur-URIs, sondern auch MsgSrv-URIs und Codec-URIs
             </aside>
           </script>
         </section>
@@ -385,7 +389,7 @@
               <li class="fragment">Unabhängige Stubs erstellt <i class="fa fa-check green"></i></li>
               <li class="fragment">Implementierungsschnittstellen vereinfacht <i class="fa fa-check green"></i></li>
               <li class="fragment">Erste Schritte mit WONDER vereinfacht <i class="fa fa-check green"></i></li>
-              <li class="fragment">Dynamisches Nachladen von Codecs, Module und Stubs ermöglicht <i class="fa fa-check green"></i></li>
+              <li class="fragment">Nachladen von Codecs, Module und Stubs ermöglicht <i class="fa fa-check green"></i></li>
               <li class="fragment">Wiederverwendbarkeit von Stubs erreicht <i class="fa fa-check green"></i></li>
               <li class="fragment">Separate Server bzw. logische Komponenten vorhanden <i class="fa fa-check green"></i></li>
               <li class="fragment">Vorbereitung für Multi-Party-Calls getroffen <i class="fa fa-check green"></i></li>
@@ -396,8 +400,8 @@
             <aside class="notes" data-markdown>
               - Unabhängige Stubs: verschiedene Messaging Server möglich, verschiede Domänen
               - Wiederverwendbare Stubs: Stubs können losgelöst von Wonder funktionieren
+              - Erste Schritte: wonder.call() und Server Setup einfach
             </aside>
-          </script>
         </section>
       </section>
 
@@ -413,11 +417,14 @@
         <section data-markdown>
           <script type="text/template">
             ## Ausblick
-            - Parallele Nutzung mehrerer Datenkanäle mit unterschiedlichen Payload-Typen
-            - Übertragung von Statusinformationen
-            - Unterstützung von Multi-Party-Konversationen
-            - Nutzung von ECMA-Script 6 Import / Export
-            - Authentifizierung mit OpenID Connect
+              * Parallele Nutzung mehrerer Datenkanäle mit unterschiedlichen Payload-Typen
+              * Übertragung von Statusinformationen
+              * Unterstützung von Multi-Party-Konversationen
+              * Nutzung von ECMA-Script 6 Import / Export
+              * Authentifizierung mit OpenID Connect
+              <aside class="notes" data-markdown>
+                - Satusinfos: Presence, Frameworkstatus, Verbindungsstatus
+              </aside>
           </script>
         </section>
       </section>
